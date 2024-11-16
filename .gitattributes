@@ -1,0 +1,3 @@
+src/assets/projects/03Facilitator.svg filter=lfs diff=lfs merge=lfs -text
+*.mov filter=lfs diff=lfs merge=lfs -text
+*.svg filter=lfs diff=lfs merge=lfs -text
