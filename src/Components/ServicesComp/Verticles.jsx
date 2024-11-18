@@ -19,9 +19,9 @@ export const verticals = [
 export const verticals2 = [
     {index:1,id:1,icon:"",title:" "},  
     {index:2,id:5,icon:retail,title:"Retail"},
-    {index:3,id:7,icon:"",title:" "},  
+    {index:3,id:3,icon:"",title:" "},  
     {index:4,id:6,icon:automotive,title:"Automotive"},
-    {index:5,id:7,icon:"",title:" "},  
+    {index:5,id:5,icon:"",title:" "},  
     {index:6,id:7,icon:healthcare,title:"Health Care"},  
     {index:7,id:7,icon:"",title:" "},  
  
@@ -35,7 +35,7 @@ const Verticles = ()=>{
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
                     {
                         verticals.map((items,index)=>{
-                            return   <div key={index} className={`${index==4||index==5||index==6?"hidden":""} flex flex-col justify-center items-center`}>
+                            return   <div key={index} className={`md:${index==4||index==5||index==6?"hidden":""} lg:${index==4||index==5||index==6?"hidden":""} flex flex-col justify-center items-center`}>
                             <div className="border-dashed border-2 border-darkblue rounded-full p-4 w-fit relative">
                                 <div className="absolute -top-3 left-24 px-[7px] py-[5px] rounded-full flex shadow-md shadow-darkblue bg-white">
                                     <p className="mx-auto my-auto text-darkblue font-bold text-xl">{`0${items.id}`}</p>
@@ -50,10 +50,10 @@ const Verticles = ()=>{
                     }
                 </div>
 
-                <div className=" grid grid-cols-2 md:grid-cols-7 gap-6 md:gap-0 md:mt-10 ">
+                <div className="hidden md:grid md:grid-cols-7 lg:grid lg:grid-cols-7">
                     {
                         verticals2.map((items,index)=>{
-                            return   <div key={index} className={`${index==2||index==4||index==6||index==0?"invisible":""} lg:${index==2||index==4||index==6||index==0?"invisible":""} ${index==2||index==4||index==6||index==0?"hidden":""}flex flex-col justify-center items-center mt-10`}>
+                            return   <div key={index} className={`${index==2||index==4||index==6||index==0?"invisible":""} flex flex-col justify-center items-center mt-10`}>
                             <div className="border-dashed border-2 border-darkblue rounded-full p-4 w-fit relative">
                                 <div className="absolute -top-3 left-24 px-[7px] py-[5px] rounded-full flex shadow-md shadow-darkblue bg-white">
                                     <p className="mx-auto my-auto text-darkblue font-bold text-xl">{`0${items.id}`}</p>
