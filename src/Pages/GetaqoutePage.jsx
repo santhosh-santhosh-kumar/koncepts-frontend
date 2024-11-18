@@ -141,7 +141,7 @@ const Budget = [
                         {
                             MultipleSevices.map(({id,value,activebg} ,index)=>{
                                 return <button
-                                onClick={()=>handleservice(id,value)} 
+                                onClick={()=>{handleservice(id,value);window.scrollTo({ top: 250, behavior: 'smooth' })}} 
                                 key={index} 
                                 className={`${getButtonBgClass(HandleServiceBg[id],'bg-darkblue', activebg)} hover:scale-110 transition-all duration-300 text-white rounded-md p-3 flex flex-col justify-between gap-y-12`}
                                 >
@@ -158,7 +158,7 @@ const Budget = [
                             {
                                 Deadline.map(({id,value,activebg},index)=>{
                                     return <button 
-                                    onClick={()=>handledeadline(id,value)}
+                                    onClick={()=>{handledeadline(id,value);window.scrollTo({ top: 500, behavior: 'smooth' })}}
                                     key={index} 
                                     className={`${getButtonBgClass(HandleDeadlineBg[id], 'bg-darkblue', activebg)} ${FieldDeadlineDis ? "" :"hover:scale-110 transition-all duration-300"} text-white rounded-md p-3 flex flex-col justify-between gap-y-12`}
                                     >

@@ -7,7 +7,7 @@ const ContactDetails = {
         { id: 2, detail: "Phone No", type: "text", name: "PhoneNumber" },
         { id: 3, detail: "E-mail", type: "email", name: "email" },
         { id: 4, detail: "Country", type: "text", name: "country" },
-        { id: 4, detail: "Budget", type: "text", name: "budget" },
+        { id: 5, detail: "Budget", type: "text", name: "budget" },
     ],
     
     checkbox: [
@@ -73,8 +73,7 @@ console.log(contactData.budget)
 
         try {
             const response = await axios.post('http://localhost:5555/api/contact', contactData);
-            console.log('Success:', response.data);
-            console.log(response)
+            console.log(response.data)
             alert("successfully submitted")
         } catch (error) {
             console.error('Error:', error);
@@ -110,7 +109,7 @@ console.log(contactData.budget)
                                                     <label htmlFor="" className="text-[15px] md:text-xl">Project Details</label>
                                                 </div>
                                                 <div className="w-[75%] border-b py-[9px] border-darkblue relative after:w-[0] after:absolute after:content-[''] after:bg-darkblue after:h-[2px] after:-bottom-[2px] after:left-0 after:duration-1000 group-hover:after:w-[100%] group-focus-within:after:w-[100%]">
-                                                    <textarea onChange={handleChange} rows={3} cols={6} className="outline-none w-full text-[16px] md:text-xl text-darkblue px-4"></textarea>
+                                                    <textarea name='projectDetails' onChange={handleChange} rows={3} cols={6} className="outline-none w-full text-[16px] md:text-xl text-darkblue px-4"></textarea>
                                                 </div>
                                     </div>
                             </div>
@@ -138,7 +137,7 @@ console.log(contactData.budget)
                      
                         
                         <div className="flex justify-center mt-3">
-                            <button type="submit" className="bg-darkblue hover:bg-darkblue/80 rounded-full font-bold text-white text-lg px-5 py-3">Submit</button>
+                            <button className="bg-darkblue hover:bg-darkblue/80 rounded-full font-bold text-white text-lg px-5 py-3">Submit</button>
                         </div>
                     </form>
                 </div>
