@@ -257,7 +257,7 @@ const handleMouseEnter=(id)=>{
     part1reviews: [
       {
         id: 1,
-        review1: 'We hereby share our appreciation to Koncepts D & D IT Solutions for an outstanding job in creating an excellent Logo.Similarly, they designed a world-class business card and Book cover.',
+        review1: 'We hereby share our appreciation to Koncepts D & D IT Solutions for an outstanding job in creating an excellent Logo.Similarly, they designed a world-class business card and Book cover.....',
         reviewer: "Senthil Raj",
         des: "Infinite Potentials",
         img:witness
@@ -266,14 +266,15 @@ const handleMouseEnter=(id)=>{
         id: 2,
         review1: 'I am really happy with your service, it is exceptional, Koncepts Design and Developments is just great.',
         // review2:"Sridhar is an outstanding customer focused individual. Koncepts is very professional and their knowledge is incredible, they also solve problems very fast. Sridhar has been managing our website post the design and development…",
-        review3:"We are looking forward to getting into new venues of Digital Marketing along with them… Great work Koncepts and Sridhar…",
+        review3:"We are looking forward to getting into new venues of Digital Marketing.....",
+        //  along with them… Great work Koncepts and Sridhar…",
         reviewer: "Mohammed Kalimullah",
         des: "Shazab Futuretech Solutions ",
         img:witness
       },
       {
         id: 3,
-        review1: 'Koncepts IT solution’s topmost priority is customer satisfaction. They never tire of designing options till they satisfy us – that too with a smile. All the best Koncepts.',
+        review1: 'Koncepts IT solution’s topmost priority is customer satisfaction. They never tire of designing options till they satisfy us – that too with a smile. All the best Koncepts......',
         reviewer: "Rajesh Daswani",
         des: "IAAS Academy",
         img:witness

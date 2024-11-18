@@ -5,13 +5,16 @@ const WhatWeDo = ({ id, title, details, serviceOffered, activeId, previousId, se
 
     useEffect(() => {
         const observer = new IntersectionObserver(
-            ([entry]) => {
+            ([entry]) => {  
                 if (entry.isIntersecting) {
                     setActiveId(id); // Set this card as active when it appears in view
                 }
+                if(id==4){
+                    setActiveId(id)
+                }
             },
             {
-                threshold: 0.8, // Adjust threshold to trigger at 60% visibility
+                // threshold: 0.8, // Adjust threshold to trigger at 60% visibility
             }
         );
 
@@ -24,16 +27,19 @@ const WhatWeDo = ({ id, title, details, serviceOffered, activeId, previousId, se
 
     const heightAdj = (id) => {
         if (id === 5) {
-            return "h-auto pb-10";
+            return "h-100 pb-10";
         }
     };
-
+    console.log(previousId,id,previousId === id)
     return (
+        
         <div
+        
             ref={cardRef}
             className={`sticky ${heightAdj(id)} top-0 headj bg-white transition-all duration-500 ${
                 previousId === id ? "blur-sm" : "blur-none"
-            }`}
+                
+            } ${id==4?"blur-none":" te"}`}
         >
             <div className="container pt-24">
                 <div>

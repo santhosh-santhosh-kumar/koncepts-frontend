@@ -18,8 +18,8 @@ const Footer = ()=>{
                         <div className="w-1/2 md:w-1/4 my-[45px]">
                         <ul className="pl-0">
                             {navlinks.map((items,index)=>(
-                                <li className="py-2 hover:text-3xl" key={index}>
-                                    <NavLink to={items.to} className="no-underline text-lg text-black" onClick={()=>window.scrollTo(0,0)}>{items.lable}</NavLink>
+                                <li className="py-2 " key={index}>
+                                    <NavLink to={items.to} className="no-underline hover:text-3xl text-lg text-black" onClick={()=>window.scrollTo(0,0)}>{items.lable}</NavLink>
                                 </li>
                             ))}
                         </ul>

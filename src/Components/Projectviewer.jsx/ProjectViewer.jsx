@@ -2,19 +2,17 @@ import Slide  from "../../Pages/Slide";
 import React, { useEffect, useState } from 'react';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
-import Project01 from "../../assets/Images/home/01Architecture-temp.svg";
-import Project02 from "../../assets/Images/home/Consultant-temp.svg";
-// // import Project03 from "../../assets/projects/03Facilitator.svg";
-// import Project04 from "../../assets/projects/04Real Estate.svg";
-// import Project05 from "../../assets/projects/05Teaching and Coaching.svg";
-// import Project06 from "../../assets/projects/06Sangumark Lungi.svg";
-// import Project07 from "../../assets/projects/07Events.svg";
-// import Project08 from "../../assets/projects/08IT-Industry.svg";
-import Logo1 from "../../assets/Images/flowimg1.png";
-import Logo2 from "../../assets/Images/flowimg2.png";
-import Logo3 from "../../assets/Images/flowimg3.png";
-import Brochure1 from "../../assets/Images/home/01Brochure.svg";
-import Brochure2 from "../../assets/Images/flowimg5.png";
+import Project01 from "../../assets/Images/projects/01Architecture.svg";
+import Project02 from "../../assets/Images/projects/02IAAS Academy01.svg";
+import Project03 from "../../assets/Images/projects/03Facilitator01.svg";
+import Project04 from "../../assets/Images/projects/04Real Estate01.svg";
+import Project05 from "../../assets/Images/projects/05Teaching and Coaching01.svg";
+import Project06 from "../../assets/Images/projects/06Sangumark Lungi01.svg";
+import Project07 from "../../assets/Images/projects/07Events01.svg";
+import Project08 from "../../assets/Images/projects/08IT-Industry01.svg";
+import Project09 from "../../assets/Images/projects/09Logistics01.svg";
+import Logo from "../../assets/Images/home/banner02.jpg";
+import Brochure from "../../assets/Images/projects/01Brochure01.svg";
 
 const MapComponent = () => {
   const [isHovered, setIsHovered] = useState(false);
@@ -30,25 +28,21 @@ const MapComponent = () => {
     { src:Project01, label: 'Website'},
     { src:Project01, label: 'Architecture' },
     { src:Project02, label: 'IAAS Academy' },
-    { src:" ", label: 'Facilitator' },
-    { src:" ", label: 'Real Estate' },
-    { src:" ", label: 'Teaching and Coaching' },
-    { src:" ", label: 'Sangumark Lungi' },
-    { src:" ", label: 'Events' },
-    { src:" ", label: 'IT-Industry' },
+    { src:Project03, label: 'Facilitator' },
+    { src:Project04, label: 'Real Estate' },
+    { src:Project05, label: 'Teaching and Coaching' },
+    { src:Project06, label: 'Sangumark Lungi' },
+    { src:Project07, label: 'Events' },
+    { src:Project08, label: 'IT-Industry' },
+    { src:Project09, label: 'IT-Industry' },
   ];
 
   const logoOverlays = [
-    { src: Logo1, label: 'Logo' },
-    { src: Logo1, label: 'Logo 1' },
-    { src: Logo2, label: 'Logo 2' },
-    { src: Logo3, label: 'Logo 3' },
+    { src: Logo, label: 'Logo' },
   ];
 
   const brochureOverlays = [
-    { src: Brochure1, label: 'Brochure' },
-    { src: Brochure1, label: 'Brochure 1' },
-    { src: Brochure2, label: 'Brochure 2' },
+    { src: Brochure, label: 'Brochure' },
   ];
 
   const imageBounds = [
@@ -172,7 +166,7 @@ const MapComponent = () => {
         {/* Dropdown for Logos */}
         <div className="relative z-10 mb-4 mt-2">
           <select
-            className={`block  font-bold w-full border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded leading-tight focus:outline-none 
+            className={`block  font-bold w-full border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded leading-tight focus:outline-none
               ${imageType === "logo" ? "bg-darkblue text-white" : "bg-myyellow text-gray-600"}`}
             onChange={handleLogoDropdownChange}
             value={logoOverlays[logoIndex]?.label}
