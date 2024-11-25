@@ -19,7 +19,7 @@ const Footer = ()=>{
                         <ul className="pl-0">
                             {navlinks.map((items,index)=>(
                                 <li className="py-2 " key={index}>
-                                    <NavLink to={items.to} className="no-underline hover:text-3xl text-lg text-black" onClick={()=>window.scrollTo(0,0)}>{items.lable}</NavLink>
+                                    <NavLink to={items.to} className="no-underline  text-lg text-black" onClick={()=>window.scrollTo(0,0)}>{items.lable}</NavLink>
                                 </li>
                             ))}
                         </ul>
@@ -34,7 +34,7 @@ const Footer = ()=>{
                         <ul className="w-1/2 md:w-1/4 pl-0">
                             <p className="font-bold text-xl">Openning</p>
                             {hiringing.map((items,index)=>(
-                                <li key={index} onClick={()=>{navigate("/carrier"); window.scrollTo(0,0)}} className={`${items.id === 2 ? "list-disc text-sm py-1 ml-7":"list-none py-2"} cursor-pointer`}>{items.openning}</li>
+                                <li key={index} onClick={()=>{navigate("/career"); window.scrollTo(0,0)}} className={`${items.id === 2 ? "list-disc text-sm py-1 ml-7":"list-none py-2"} cursor-pointer`}>{items.openning}</li>
                             ))}
                         </ul>
                         <ul className="w-1/2 md:w-1/4 pl-0">

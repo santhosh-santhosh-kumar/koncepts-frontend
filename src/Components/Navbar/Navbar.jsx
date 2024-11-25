@@ -30,8 +30,8 @@ export const navlinks = [
     // },
 
     {
-        lable:"Carrier",
-        to:"/carrier"
+        lable:"Career",
+        to:"/career"
     },
 
     {
