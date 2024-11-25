@@ -34,7 +34,6 @@ const MapComponent = () => {
 
     const mapWidth = 4500;
     const mapHeight = 2400;
-
     const centerCoordinates = [-mapHeight / 2, mapWidth / 2];
     initialMap.setView(centerCoordinates, 1);
 

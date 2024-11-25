@@ -72,7 +72,7 @@ console.log(contactData.budget)
         }
 
         try {
-            const response = await axios.post('http://localhost:5555/api/contact', contactData);
+            const response = await axios.post('https://localhost:5000/api/contact', contactData);
             console.log(response.data)
             alert("successfully submitted")
         } catch (error) {

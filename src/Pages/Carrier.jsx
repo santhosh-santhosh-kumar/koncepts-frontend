@@ -86,7 +86,7 @@ const Carrier = () => {
         const formData = new FormData();
         Object.entries(carrierData).forEach(([key, value]) => formData.append(key, value));
         try {
-            const response = await axios.post('http://localhost:5555/api/carrier', formData, {
+            const response = await axios.post('https://localhost:5000/api/carrier', formData, {
                 headers: { 'Content-Type': 'multipart/form-data' },
             });
             alert("Successfully submitted");

@@ -19,7 +19,7 @@ const Footer = ()=>{
                         <ul className="pl-0">
                             {navlinks.map((items,index)=>(
                                 <li className="py-2 " key={index}>
-                                    <NavLink to={items.to} className="no-underline hover:text-3xl text-lg text-black" onClick={()=>window.scrollTo(0,0)}>{items.lable}</NavLink>
+                                    <NavLink to={items.to} className="no-underline text-lg text-black" onClick={()=>window.scrollTo(0,0)}>{items.lable}</NavLink>
                                 </li>
                             ))}
                         </ul>
