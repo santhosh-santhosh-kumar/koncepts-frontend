@@ -19,11 +19,7 @@ const Footer = ()=>{
                         <ul className="pl-0">
                             {navlinks.map((items,index)=>(
                                 <li className="py-2 " key={index}>
-<<<<<<< HEAD
-                                    <NavLink to={items.to} className="no-underline text-lg text-black" onClick={()=>window.scrollTo(0,0)}>{items.lable}</NavLink>
-=======
-                                    <NavLink to={items.to} className="no-underline  text-lg text-black" onClick={()=>window.scrollTo(0,0)}>{items.lable}</NavLink>
->>>>>>> refs/remotes/origin/main
+                                    <NavLink to={items.to} className="links no-underline text-lg text-black" activeClassName="active2" onClick={()=>window.scrollTo(0,0)}>{items.lable}</NavLink>
                                 </li>
                             ))}
                         </ul>
@@ -51,7 +47,6 @@ const Footer = ()=>{
                     <div>
                     </div>
                 </div>
-                
             </div>
         </div>
         </>

@@ -55,7 +55,7 @@ function App() {
           <Route path='/portfolio' element={<Portfolio/>}/>
           <Route path='/portfolio/:id' element={<PortfolioProject/>}/>
           <Route path='/casestudy' element={<Casestudy/>}/>
-          <Route path='/carrier' element={<Carrier/>}/>
+          <Route path='/career' element={<Carrier/>}/>
           <Route path='/contact' element={<Contact/>}/>
           <Route path='/getaquote' element={<GetaquotePage/>}/>
           <Route path='/web_development' element={<ServiceWebDevelopment/>}/>
