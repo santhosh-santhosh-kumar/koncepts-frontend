@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState,useRef  } from 'react';
 import axios from 'axios';
 
 const ContactDetails = {
+    
     inputs: [
         { id: 1, detail: "Name", type: "text", name: "name" },
         { id: 2, detail: "Phone No", type: "text", name: "PhoneNumber" },
@@ -34,8 +35,16 @@ const Contact = () => {
     });
 
     const[errors, setErrors] = useState({});
+    const [text, setText] = useState('');
+    const textareaRef = useRef(null);
 
     const handleChange = (e) => {
+        
+          setText(e.target.value);
+        //   textareaRef.current.style.height = 'auto';
+          textareaRef.current.style.height = `${textareaRef.current.scrollHeight}px`;
+     
+    
         const { name, value } = e.target;
         setContactData({ ...contactData, [name]: value });
     };
@@ -104,12 +113,13 @@ console.log(contactData.budget)
                                         {errors[item.name] && <p className="text-red-500 text-[15px] font-light">{errors[item.name]}</p>}
                                     </div>
                                 ))}
-                                   <div className="flex w-full group items-center mb-2">
-                                                <div className="w-[25%] border-b border-darkblue py-[25px] md:py-[40px]">
+                                   <div className="flex w-full group items-start mb-2">
+                                                <div className="w-[25%] border-b border-darkblue py-[25px] md:py-[20px]">
                                                     <label htmlFor="" className="text-[15px] md:text-xl">Project Details</label>
                                                 </div>
-                                                <div className="w-[75%] border-b py-[9px] border-darkblue relative after:w-[0] after:absolute after:content-[''] after:bg-darkblue after:h-[2px] after:-bottom-[2px] after:left-0 after:duration-1000 group-hover:after:w-[100%] group-focus-within:after:w-[100%]">
-                                                    <textarea name='projectDetails' onChange={handleChange} rows={3} cols={6} className="outline-none w-full text-[16px] md:text-xl text-darkblue px-4"></textarea>
+                                                <div className="w-[75%] border-b py-[17px] border-darkblue relative after:w-[0] after:absolute after:content-[''] after:bg-darkblue after:h-[2px] after:-bottom-[2px] after:left-0 after:duration-1000 group-hover:after:w-[100%] group-focus-within:after:w-[100%]">
+
+                                                    <textarea name='projectDetails' value={text} onChange={handleChange} rows="1" className="overflow-y-hidden resize-none outline-none w-full text-[16px] md:text-xl text-darkblue px-4"  ref={textareaRef}></textarea>
                                                 </div>
                                     </div>
                             </div>
@@ -137,7 +147,7 @@ console.log(contactData.budget)
                      
                         
                         <div className="flex justify-center mt-3">
-                            <button className="bg-darkblue hover:bg-darkblue/80 rounded-full font-bold text-white text-lg px-5 py-3">Submit</button>
+                            <button className="bg-darkblue hover:bg-darkblue/80 rounded-full font-bold text-white text-lg px-5 py-3 transition-all hover:rounded-tr-3xl hover:rounded-bl-3xl duration-700">Submit</button>
                         </div>
                     </form>
                 </div>

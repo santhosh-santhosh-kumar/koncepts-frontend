@@ -57,7 +57,7 @@ const About = () => {
   const [text2, setText2] = useState(content2);
   const [text3, setText3] = useState(content3);
   const [image, setImage] = useState(travel1);
-  const [color, setColor] = useState("#0a2b6d");
+  const [color, setColor] = useState(0);
 
 const handleMouseEnter=(id)=>{
   domains.map((value)=>{
@@ -70,7 +70,9 @@ const handleMouseEnter=(id)=>{
   })
 }
   
-
+const handleChangeColor=(id)=>{
+  setColor(id-1)
+}
 // const handleMouseLeave = () => {
 //   setImage('default-image.jpg');
 // };
@@ -451,9 +453,9 @@ const handleMouseEnter=(id)=>{
                 <span
                 
                 onMouseEnter={() => handleMouseEnter(id)}
-          // onMouseLeave={handleMouseLeave}
+               onClick={()=>handleChangeColor(id)}
                   key={index}
-                  className={`border-1 w-40 lg:mr-2 mb-2 border-black lg:px-4  py-2 px-4  rounded-full font-bold text-[14px] text-center tracking-widest block uppercase hover:bg-darkblue hover:text-white`}
+                  className={`${index==color?"bg-darkblue text-white":""} border-1 w-40 lg:mr-2 mb-2 border-black lg:px-4  py-2 px-4  rounded-full font-bold text-[14px] text-center tracking-widest block uppercase hover:bg-darkblue hover:text-white`}
                 >
                   {title}
                 </span>
