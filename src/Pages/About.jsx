@@ -377,7 +377,7 @@ const handleChangeColor=(id)=>{
           <div className="flex flex-col md:flex-row gap-3 mt-10 items-center">
             <Link
               to={"/services"}
-              className="border-2 border-darkblue w-fit text-white bg-darkblue no-underline rounded-full p-3 flex items-center gap-3 transition-all duration-300 hover:scale-95"
+              className="border-2 border-darkblue w-fit text-white bg-darkblue no-underline rounded-lg p-3 flex items-center gap-3 transition-all duration-300 hover:scale-95"
             >
               <span className="font-ContentText font-semibold capitalize">
                 Explore our services
@@ -386,12 +386,12 @@ const handleChangeColor=(id)=>{
             </Link>
             <Link
               to={"/portfolio"}
-              className="border-2 border-darkblue text-darkblue w-fit no-underline rounded-full p-3 flex items-center gap-3 transition-all duration-300 hover:scale-95"
+              className="border-2 bg-darkblue text-white w-fit no-underline rounded-lg p-3 flex items-center gap-3 transition-all duration-300 hover:scale-95"
             >
               <span className="font-ContentText font-semibold capitalize">
                 Explore our portfolio
               </span>
-              <GoArrowRight size={25} className="text-darkblue" />
+              <GoArrowRight size={25} className="text-white" />
             </Link>
           </div>
         </div>
@@ -455,7 +455,7 @@ const handleChangeColor=(id)=>{
                 onMouseEnter={() => handleMouseEnter(id)}
                onClick={()=>handleChangeColor(id)}
                   key={index}
-                  className={`${index==color?"bg-darkblue text-white":""} border-1 w-40 lg:mr-2 mb-2 border-black lg:px-4  py-2 px-4  rounded-full font-bold text-[14px] text-center tracking-widest block uppercase hover:bg-darkblue hover:text-white`}
+                  className={`${index==color?"bg-darkblue text-white":""} border-1 w-40 lg:mr-2 mb-2 border-black lg:px-4  py-2 px-4  rounded-lg font-bold text-[14px] text-center tracking-widest block uppercase hover:bg-darkblue hover:text-white`}
                 >
                   {title}
                 </span>
@@ -486,7 +486,7 @@ const handleChangeColor=(id)=>{
       {/* what clients says */}
       <div className="w-full md:flex border">
         <div className="aboutExpCardContainer w-full md:w-1/2 my-auto">
-          <h3 className="font-ContentText text-lg font-bold pb-4">
+          <h3 className="font-ContentText text-lg font-bold pb-2">
             Clients Reviews
           </h3>
           <h1 className="font-Heading text-6xl font-bold">What they say</h1>

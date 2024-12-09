@@ -39,6 +39,11 @@ const Services = ()=>{
                 "Being up to date with the evolving web standards is a difficult task and this is where the services of Koncepts come in handy. Our team design & development team helps enable startups and big companies to envision their business goals. We make sure the user experience strikes a chord with its target audience by delivering the business vision, mission and services and product roadmap.",
                 "Koncepts also custom development of software, providing end-to-end solutions for the challenges of scaling any business. This helps the clients to bestow strategic application development to have organic footfall and conversion. We also provide bespoke solutions for your specific web application needs. ",
             ]
+        },
+        {
+            id:5,
+            title:"",
+            details:["",""]
         }
     ]
     const [activeId, setActiveId] = useState(null);
