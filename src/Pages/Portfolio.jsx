@@ -78,18 +78,18 @@ const Portfolio=()=>{
                     <h1 className='font-Heading leading-tight text-center text-2xl md:text-4xl font-bold text-gray-800'>We have thougtfully shaped innumerable websites over the years <span className='block pt-2'>and successfully launched the same for</span> <span className='text-gray-500 block pt-2'> many satisfied clients.</span></h1> 
                 </div>
             </div>
-            <div className='h-[200vh] flex flex-col'>
-                <div className='grid grid-cols-2 absolute gap-2 md:gap-40'>
+            <div className='h-[500vh] flex flex-col'>
+                <div className='grid grid-cols-3 absolute gap-2 md:gap-40'>
                     <img src={RunningImg1} className='h-[100px] md:h-[250px] w-[400px] mr-[200px] -z-[9] rellax' data-rellax-speed="3"/>
-                    <img src={RunningImg2} className='h-[100px] md:h-[250px] w-[400px] rellax -z-[9]' data-rellax-speed="-1"/>
+                    <img src={RunningImg2} className='h-[100px] md:h-[250px] w-[400px] rellax -z-[9]' data-rellax-speed="1"/>
                     <img src={RunningImg3} className='h-[100px] md:h-[250px] w-[400px] rellax' data-rellax-speed="4"/>
-                    <img src={RunningImg4} className='h-[100px] md:h-[250px] w-[400px] rellax' data-rellax-speed="-3"/>
-                    <img src={RunningImg5} className='h-[100px] md:h-[250px] w-[400px] rellax' data-rellax-speed="-2"/>
-                    <img src={RunningImg6} className='h-[100px] md:h-[250px] w-[400px] rellax' data-rellax-speed="-2"/>
-                    <img src={RunningImg7} className='h-[100px] md:h-[250px] w-[400px] rellax' data-rellax-speed="-2"/>
-                    <img src={RunningImg8} className='h-[100px] md:h-[250px] w-[400px] rellax' data-rellax-speed="-2"/>
-                    <img src={RunningImg9} className='h-[100px] md:h-[250px] w-[400px] rellax' data-rellax-speed="-2"/>
-                    <img src={RunningImg10} className='h-[100px] md:h-[250px] w-[400px] rellax' data-rellax-speed="-2"/>
+                    <img src={RunningImg4} className='h-[100px] md:h-[250px] w-[400px] rellax' data-rellax-speed="3"/>
+                    <img src={RunningImg5} className='h-[100px] md:h-[250px] w-[400px] rellax' data-rellax-speed="2"/>
+                    <img src={RunningImg6} className='h-[100px] md:h-[250px] w-[400px] rellax' data-rellax-speed="4"/>
+                    <img src={RunningImg7} className='h-[100px] md:h-[250px] w-[400px] rellax' data-rellax-speed="2"/>
+                    <img src={RunningImg8} className='h-[100px] md:h-[250px] w-[400px] rellax' data-rellax-speed="-6"/>
+                    <img src={RunningImg9} className='h-[100px] md:h-[250px] w-[400px] rellax' data-rellax-speed="2"/>
+                    <img src={RunningImg10} className='h-[100px] md:h-[250px] w-[400px] rellax' data-rellax-speed="-5"/>
                   
                 </div>
                

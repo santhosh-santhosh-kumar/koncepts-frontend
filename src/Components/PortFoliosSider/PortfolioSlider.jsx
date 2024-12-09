@@ -1,6 +1,6 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useInView } from "react-intersection-observer"; // Import Intersection Observer
-import Flowimg1 from "../../assets/Images/flowimg1.png";
+import Flowimg1 from "../../assets/Images/flowimg1a.jpg";
 import Flowimg2 from "../../assets/Images/flowimg2.png";
 import Flowimg3 from "../../assets/Images/flowimg3.png";
 import Flowimg4 from "../../assets/Images/flowimg4.png";
@@ -38,10 +38,11 @@ const Portfolioslider = () => {
                 onClick={() => {navigate(`/portfolio/${title}`, { state: { id, title, img, details } });window.scrollTo(0,0)}}
                 key={id}
                 ref={ref} // Attach the ref to the div
-                style={{ backgroundImage: `url(${img})` }}
-                className="relative bg-cover bg-center h-64 rounded-lg overflow-hidden"
+                //style={{ backgroundImage: `url(${img})` }}
+                className="relative bg-cover bg-center object-cover rounded-lg overflow-hidden"
                 
               >
+                <img src={img} alt="" />
                 {/* Overlay with Animation */}
                 <div
                   className={`absolute bottom-0 left-0 w-1/2 h-full bg-black/20 bg-opacity-30 flex items-center justify-center p-4 transform transition-transform duration-700 ease-in-out ${
