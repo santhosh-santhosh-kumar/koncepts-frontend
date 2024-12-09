@@ -18,11 +18,11 @@ const AboutExpCard = ({
     <>
     <div className="aboutExpCardContainer border-1 border-collapse border-gray-200">
     <div className="md:flex items-start ">
-        <div>
-            <div className="border-4 py-16 px-0">
-                <img src={ProfilePic} className="w-full h-full" alt="" />
+        
+            <div className="border-3 w-full h-full">
+                <img src={ProfilePic} className="w-full  h-full object-cover" alt="" />
             </div>
-        </div>
+       
 
         <div>
             <div className="flex pl-40">

@@ -7,7 +7,7 @@ import { SiInstagram } from "react-icons/si";
 import { FaFacebookF } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { ImWhatsapp } from "react-icons/im";
-import EmptyPic from "../assets/Images/about/Emptypic.png";
+import EmptyPic from "../assets/Images/Pillars/sridharnatarajan.jpg";
 import Aboutcardicon from "../assets/Images/about/aboutcardicon.png";
 import MindsetCard from "../Components/Aboutcomp/Mindsetcards";
 import { Link } from "react-router-dom";
@@ -47,7 +47,11 @@ import responsive from "../assets/animated-icons/about/responsive.gif";
 import travelicon from "../assets/animated-icons/services/tourist-route.gif";
 import camera from "../assets/animated-icons/about/camera.gif";
 import witness from "../assets/animated-icons/about/witness.gif";
-import travel1 from "../assets/Images/travel1.jpg";
+import travel1 from "../assets/Images/Business Domains/Travel.jpg";
+import travel2 from "../assets/Images/Business Domains/E-commerce.jpg"
+import travel3 from "../assets/Images/Business Domains/Hospitality.jpg"
+import travel4 from "../assets/Images/Business Domains/Real-Estate.jpg"
+import travel5 from "../assets/Images/Business Domains/Retail.jpg"
 
 const About = () => {
   let content1="We bring your travel vision to life with cutting-edge web development solutions designed to engage, inspire, and convert visitors into loyal customers.";
@@ -73,9 +77,6 @@ const handleMouseEnter=(id)=>{
 const handleChangeColor=(id)=>{
   setColor(id-1)
 }
-// const handleMouseLeave = () => {
-//   setImage('default-image.jpg');
-// };
   const domains=[
     {
       id:1,
@@ -105,7 +106,7 @@ const handleChangeColor=(id)=>{
       ProfilePic: EmptyPic,
       Name: "Sridhar Natrajan",
       title: "Founder, UX/UI LEAD",
-      exp: 9,
+      exp: 15,
       profession: "design",
       icon: Aboutcardicon,
       about1:
@@ -136,7 +137,7 @@ const handleChangeColor=(id)=>{
       ProfilePic: EmptyPic,
       Name: "Sridhar Natrajan",
       title: "Founder, UX/UI LEAD",
-      exp: 9,
+      exp: 15,
       profession: "design",
       icon: Aboutcardicon,
       about1:
@@ -159,31 +160,6 @@ const handleChangeColor=(id)=>{
         <ImWhatsapp />,
       ],
     },
-    // {
-    //     id:1,
-    //     ProfilePic:EmptyPic,
-    //     Name:"Sridhar Natrajan",
-    //     title:"Founder, UX/UI LEAD",
-    //     exp:9,
-    //     profession:"design",
-    //     icon:Aboutcardicon,
-    //     about1:"Founder and lead designer at UXIS, specializes in deep UX/UI design for complex product interfaces. Achieving an 88% success rate in planned KPIs after redesigns.",
-    //     about2:'The author of the course "UX Thinking and Structuring Before Creating UI" and the winner of the Telegram competition for redesigning the Android app.',
-    //     proficient:['finance','banking','telecommunication','healthcare','accessiblity','travel and leisure','ai chats','other'],
-    //     socialmedia:[<FaLinkedinIn/>,<SiInstagram/>,<FaFacebookF/>,<FaXTwitter/>,<ImWhatsapp/>]
-    // },        {
-    //     id:1,
-    //     ProfilePic:EmptyPic,
-    //     Name:"Sridhar Natrajan",
-    //     title:"Founder, UX/UI LEAD",
-    //     exp:9,
-    //     profession:"design",
-    //     icon:Aboutcardicon,
-    //     about1:"Founder and lead designer at UXIS, specializes in deep UX/UI design for complex product interfaces. Achieving an 88% success rate in planned KPIs after redesigns.",
-    //     about2:'The author of the course "UX Thinking and Structuring Before Creating UI" and the winner of the Telegram competition for redesigning the Android app.',
-    //     proficient:['finance','banking','telecommunication','healthcare','accessiblity','travel and leisure','ai chats','other'],
-    //     socialmedia:[<FaLinkedinIn/>,<SiInstagram/>,<FaFacebookF/>,<FaXTwitter/>,<ImWhatsapp/>]
-    // }
   ];
   const MindSet = {
     Part1: [

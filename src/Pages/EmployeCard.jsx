@@ -13,7 +13,9 @@ import { SiInstagram } from "react-icons/si";
 import { FaFacebookF } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { ImWhatsapp } from "react-icons/im";
-import EmptyPic from "../assets/Images/about/Emptypic.png";
+import EmptyPic1 from "../assets/Images/Pillars/saravanan.jpg";
+import EmptyPic2 from "../assets/Images/Pillars/naresh.jpg";
+import EmptyPic3 from "../assets/Images/Pillars/santhosh.jpg";
 import Aboutcardicon from "../assets/Images/about/aboutcardicon.png";
 import MindsetCard from "../Components/Aboutcomp/Mindsetcards";
 import { Link } from "react-router-dom";
@@ -65,16 +67,16 @@ function EmployeCard(  {id,
   const employeeCard = [
     {
       id: 1,
-      ProfilePic: EmptyPic,
-      Name: "Saravana Prabhu",
+      ProfilePic: EmptyPic1,
+      Name: "Saravana Prabu",
       title: "Designer",
       exp: 6,
       profession: "design",
       icon: Aboutcardicon,
       about1:
-        "Founder and lead designer at UXIS, specializes in deep UX/UI design for complex product interfaces. Achieving an 88% success rate in planned KPIs after redesigns.",
+        "Founder and lead designer at UXIS, specializes in deep UX/UI design for complex product interfaces. Achieving an 88% ",
       about2:
-        'The author of the course "UX Thinking and Structuring Before Creating UI" and the winner of the Telegram competition for redesigning the Android app.',
+        'The author of the course "UX Thinking and Structuring Before Creating UI" and the winner of the Telegram ',
       proficient: [
         "finance",
         "banking",
@@ -88,33 +90,31 @@ function EmployeCard(  {id,
       socialmedia: [
         <FaLinkedinIn />,
         <SiInstagram />,
-        // <FaFacebookF />,
-        // <FaXTwitter />,
         <ImWhatsapp />,
       ],
     },
     {
         id:2,
-        ProfilePic:EmptyPic,
+        ProfilePic:EmptyPic2,
         Name:"Naresh",
         title:"Full Stack Developer",
         exp:1,
         profession:"design",
         icon:Aboutcardicon,
-        about1:"Founder and lead designer at UXIS, specializes in deep UX/UI design for complex product interfaces. Achieving an 88% success rate in planned KPIs after redesigns.",
-        about2:'The author of the course "UX Thinking and Structuring Before Creating UI" and the winner of the Telegram competition for redesigning the Android app.',
+        about1:"Founder and lead designer at UXIS, specializes in deep UX/UI design for complex product interfaces. Achieving an 88%",
+        about2:'The author of the course "UX Thinking and Structuring Before Creating UI" and the winner of the Telegram',
         proficient:['finance','banking','telecommunication','healthcare','accessiblity','travel and leisure','ai chats','other'],
         socialmedia:[<FaLinkedinIn/>,<SiInstagram/>,<ImWhatsapp/>]
     },        {
         id:3,
-        ProfilePic:EmptyPic,
+        ProfilePic:EmptyPic3,
         Name:"Santhosh",
         title:"Full Stack Developer",
         exp:1,
         profession:"design",
         icon:Aboutcardicon,
-        about1:"Founder and lead designer at UXIS, specializes in deep UX/UI design for complex product interfaces. Achieving an 88% success rate in planned KPIs after redesigns.",
-        about2:'The author of the course "UX Thinking and Structuring Before Creating UI" and the winner of the Telegram competition for redesigning the Android app.',
+        about1:"A creative full-stack developer who thrives on pushing the boundaries of web development. Whether it’s  ",
+        about2:'I’m not just a developer; I’m a problem solver, innovator, and dream builder. With a passion for crafting seamless digital experiences, ',
         proficient:['finance','banking','telecommunication','healthcare','accessiblity','travel and leisure','ai chats','other'],
         socialmedia:[<FaLinkedinIn/>,<SiInstagram/>,<ImWhatsapp/>]
     }
@@ -150,8 +150,8 @@ function EmployeCard(  {id,
             <div className="aboutExpCardContainer border-collapse border-gray-200">
               <div className="lg:flex md:flex items-start justify-between">
                 
-                  <div className="border-4 py-20 mt-0 ">
-                    <img src={value.ProfilePic} className="w-full h-full" alt="" />
+                  <div className="border-3 mt-0 w-full h-full ">
+                    <img src={value.ProfilePic} className="w-full h-full object-cover" alt="" />
                   </div>
                
 

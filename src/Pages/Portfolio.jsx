@@ -2,12 +2,12 @@
 import React, { useEffect, useRef } from 'react';
 import Rellax from "rellax";
 import Lenis from 'lenis';
-import Flowimg1 from "../assets/Images/flowimg1.png"
-import Flowimg2 from "../assets/Images/flowimg2.png"
-import Flowimg3 from "../assets/Images/flowimg3.png"
-import Flowimg4 from "../assets/Images/flowimg4.png"
-import Flowimg5 from "../assets/Images/flowimg5.png"
-import Flowimg6 from "../assets/Images/flowimg6.png"
+import Flowimg1 from "../assets/Images/homepage-projects/01DrAshokkumar.png"
+import Flowimg2 from "../assets/Images/homepage-projects/02IaasAcademy.png"
+import Flowimg3 from "../assets/Images/homepage-projects/03JandJTrading.png"
+import Flowimg4 from "../assets/Images/homepage-projects/04sangumark.png"
+import Flowimg5 from "../assets/Images/homepage-projects/05Shazab.png"
+// import Flowimg6 from "../assets/Images/homepage-projects"
 import Cards from '../Components/StackingCards/Cards';
 import { useScroll } from 'framer-motion';
 import Portfolioslider from '../Components/PortFoliosSider/PortfolioSlider';
@@ -18,6 +18,7 @@ const Portfolio=()=>{
     {id:1,title:"Card 1",description1:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi beatae obcaecati ex. Accusamus, reiciendis. Ducimus amet voluptatem tenetur porro? Quod et minus facere in, velit accusamus sit ratione? Consequatur, id.",description2:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi beatae obcaecati ex. Accusamus, reiciendis. Ducimus amet voluptatem tenetur porro? Quod et minus facere in, velit accusamus sit ratione? Consequatur, id.",img:Flowimg2, tags:["figma","e-commerce","landing page"]},
     {id:1,title:"Card 1",description1:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi beatae obcaecati ex. Accusamus, reiciendis. Ducimus amet voluptatem tenetur porro? Quod et minus facere in, velit accusamus sit ratione? Consequatur, id.",description2:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi beatae obcaecati ex. Accusamus, reiciendis. Ducimus amet voluptatem tenetur porro? Quod et minus facere in, velit accusamus sit ratione? Consequatur, id.",img:Flowimg3, tags:["figma","e-commerce","landing page"]},
     {id:1,title:"Card 1",description1:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi beatae obcaecati ex. Accusamus, reiciendis. Ducimus amet voluptatem tenetur porro? Quod et minus facere in, velit accusamus sit ratione? Consequatur, id.",description2:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi beatae obcaecati ex. Accusamus, reiciendis. Ducimus amet voluptatem tenetur porro? Quod et minus facere in, velit accusamus sit ratione? Consequatur, id.",img:Flowimg4, tags:["figma","e-commerce","landing page"]},
+    {id:1,title:"Card 1",description1:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi beatae obcaecati ex. Accusamus, reiciendis. Ducimus amet voluptatem tenetur porro? Quod et minus facere in, velit accusamus sit ratione? Consequatur, id.",description2:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi beatae obcaecati ex. Accusamus, reiciendis. Ducimus amet voluptatem tenetur porro? Quod et minus facere in, velit accusamus sit ratione? Consequatur, id.",img:Flowimg5, tags:["figma","e-commerce","landing page"]},
    ]
 
     useEffect(() => {
@@ -74,7 +75,7 @@ const Portfolio=()=>{
                     <img src={Flowimg3} className='h-[100px] md:h-[250px] w-[400px] rellax' data-rellax-speed="4"/>
                     <img src={Flowimg4} className='h-[100px] md:h-[250px] w-[400px] rellax' data-rellax-speed="-3"/>
                     <img src={Flowimg5} className='h-[100px] md:h-[250px] w-[400px] rellax' data-rellax-speed="-2"/>
-                    <img src={Flowimg6} className='h-[100px] md:h-[250px] w-[400px] rellax -z-[9]' data-rellax-speed="5"/>
+                  
                 </div>
                
             </div>
