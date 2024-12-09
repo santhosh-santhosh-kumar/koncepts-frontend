@@ -7,7 +7,17 @@ import Flowimg2 from "../assets/Images/homepage-projects/02IaasAcademy.png"
 import Flowimg3 from "../assets/Images/homepage-projects/03JandJTrading.png"
 import Flowimg4 from "../assets/Images/homepage-projects/04sangumark.png"
 import Flowimg5 from "../assets/Images/homepage-projects/05Shazab.png"
-// import Flowimg6 from "../assets/Images/homepage-projects"
+import RunningImg1 from "../assets/Images/portfolio/Archivite-Architecture.jpg";
+import RunningImg2 from "../assets/Images/portfolio/brochure.jpg";
+import RunningImg3 from "../assets/Images/portfolio/ecogroup.jpg";
+import RunningImg4 from "../assets/Images/portfolio/iaasacademy.jpg";
+import RunningImg5 from "../assets/Images/portfolio/infinitepotentials.jpg";
+import RunningImg6 from "../assets/Images/portfolio/jesuscomfortindia.jpg";
+import RunningImg7 from "../assets/Images/portfolio/logo.jpg";
+import RunningImg8 from "../assets/Images/portfolio/pscs.jpg";
+import RunningImg9 from "../assets/Images/portfolio/shazab.jpg";
+import RunningImg10 from "../assets/Images/portfolio/team16.jpg";
+
 import Cards from '../Components/StackingCards/Cards';
 import { useScroll } from 'framer-motion';
 import Portfolioslider from '../Components/PortFoliosSider/PortfolioSlider';
@@ -70,11 +80,16 @@ const Portfolio=()=>{
             </div>
             <div className='h-[200vh] flex flex-col'>
                 <div className='grid grid-cols-2 absolute gap-2 md:gap-40'>
-                    <img src={Flowimg1} className='h-[100px] md:h-[250px] w-[400px] mr-[200px] -z-[9] rellax' data-rellax-speed="3"/>
-                    <img src={Flowimg2} className='h-[100px] md:h-[250px] w-[400px] rellax -z-[9]' data-rellax-speed="-1"/>
-                    <img src={Flowimg3} className='h-[100px] md:h-[250px] w-[400px] rellax' data-rellax-speed="4"/>
-                    <img src={Flowimg4} className='h-[100px] md:h-[250px] w-[400px] rellax' data-rellax-speed="-3"/>
-                    <img src={Flowimg5} className='h-[100px] md:h-[250px] w-[400px] rellax' data-rellax-speed="-2"/>
+                    <img src={RunningImg1} className='h-[100px] md:h-[250px] w-[400px] mr-[200px] -z-[9] rellax' data-rellax-speed="3"/>
+                    <img src={RunningImg2} className='h-[100px] md:h-[250px] w-[400px] rellax -z-[9]' data-rellax-speed="-1"/>
+                    <img src={RunningImg3} className='h-[100px] md:h-[250px] w-[400px] rellax' data-rellax-speed="4"/>
+                    <img src={RunningImg4} className='h-[100px] md:h-[250px] w-[400px] rellax' data-rellax-speed="-3"/>
+                    <img src={RunningImg5} className='h-[100px] md:h-[250px] w-[400px] rellax' data-rellax-speed="-2"/>
+                    <img src={RunningImg6} className='h-[100px] md:h-[250px] w-[400px] rellax' data-rellax-speed="-2"/>
+                    <img src={RunningImg7} className='h-[100px] md:h-[250px] w-[400px] rellax' data-rellax-speed="-2"/>
+                    <img src={RunningImg8} className='h-[100px] md:h-[250px] w-[400px] rellax' data-rellax-speed="-2"/>
+                    <img src={RunningImg9} className='h-[100px] md:h-[250px] w-[400px] rellax' data-rellax-speed="-2"/>
+                    <img src={RunningImg10} className='h-[100px] md:h-[250px] w-[400px] rellax' data-rellax-speed="-2"/>
                   
                 </div>
                

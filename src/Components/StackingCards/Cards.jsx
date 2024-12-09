@@ -6,19 +6,14 @@ import { useRef } from "react";
       const scale = useTransform(progress,range,[1,targetscale])
     return(
         <motion.div style={{scale}} className="h-[100vh]  sticky top-0 flex items-center justify-center">
-<<<<<<< HEAD
         <div className='bg-white flex flex-col md:flex-row md:items-start items-center relative border-[3px] border-dashed  p-3 rounded-3xl'>
         <div className='w-full md:w-1/2 '>  
-=======
-        <div className='bg-gray-500 flex flex-col md:flex-row items-start relative border border-dashed p-3 rounded-3xl'>
-        <div className='w-full md:w-1/2 '>
->>>>>>> c58205ae9c86893b39c2514411b40f08a6c8c5fa
         <img src={img} alt="" className='w-full h-full'/>
         </div>
         <div className='w-full md:w-1/2 pt-4'>
         <div className="flex items-center flex-wrap gap-2">
         {tags.map((tags,index)=>(
-                <p key={index} className='px-3 w-fit py-2  text-lg bg-[#f6f6fa] font-ContentText rounded-lg  mx-1'>{tags}</p>
+                <p key={index} className='px-[20px] w-fit py-[4px]  text-lg bg-[#f6f6fa] font-ContentText rounded-lg  mx-1'>{tags}</p>
             ))}
         </div>
             <div className="pt-4 font-ContentText text-lg">

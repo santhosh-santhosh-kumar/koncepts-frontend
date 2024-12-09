@@ -48,10 +48,12 @@ import travelicon from "../assets/animated-icons/services/tourist-route.gif";
 import camera from "../assets/animated-icons/about/camera.gif";
 import witness from "../assets/animated-icons/about/witness.gif";
 import travel1 from "../assets/Images/Business Domains/Travel.jpg";
-import travel2 from "../assets/Images/Business Domains/E-commerce.jpg"
-import travel3 from "../assets/Images/Business Domains/Hospitality.jpg"
-import travel4 from "../assets/Images/Business Domains/Real-Estate.jpg"
-import travel5 from "../assets/Images/Business Domains/Retail.jpg"
+import travel2 from "../assets/Images/Business Domains/E-commerce.jpg";
+import travel3 from "../assets/Images/Business Domains/Hospitality.jpg";
+import travel4 from "../assets/Images/Business Domains/Real-Estate.jpg";
+import travel5 from "../assets/Images/Business Domains/Retail.jpg";
+import travel6 from "../assets/Images/Business Domains/Automotive.jpg";
+import travel7 from "../assets/Images/Business Domains/Health-Care.jpg";
 
 const About = () => {
   let content1="We bring your travel vision to life with cutting-edge web development solutions designed to engage, inspire, and convert visitors into loyal customers.";
@@ -90,12 +92,57 @@ const handleChangeColor=(id)=>{
     {
       id:2,
       title:"E-commerce",
-      content1:"1",
-      content2:"2",
-      content3:"2",
-      img:luckygame
+      content1:"We bring your travel vision to life with cutting-edge web development solutions designed to engage, inspire, and convert visitors into loyal customers.",
+      content2:"From user-friendly booking systems to stunning designs, we build travel websites that deliver.",
+      content3:"From user-friendly booking systems to stunning designs, we build travel websites that deliver.",
+      img:travel2
 
-    }
+    },
+    {
+      id:3,
+      title:"Hospitality",
+      content1:"We bring your travel vision to life with cutting-edge web development solutions designed to engage, inspire, and convert visitors into loyal customers.",
+      content2:"From user-friendly booking systems to stunning designs, we build travel websites that deliver.",
+      content3:"From user-friendly booking systems to stunning designs, we build travel websites that deliver.",
+      img:travel3
+
+    },
+    {
+      id:4,
+      title:"Real Estate",
+      content1:"We bring your travel vision to life with cutting-edge web development solutions designed to engage, inspire, and convert visitors into loyal customers.",
+      content2:"From user-friendly booking systems to stunning designs, we build travel websites that deliver.",
+      content3:"From user-friendly booking systems to stunning designs, we build travel websites that deliver.",
+      img:travel4
+
+    },
+    {
+      id:5,
+      title:"Retail",
+      content1:"We bring your travel vision to life with cutting-edge web development solutions designed to engage, inspire, and convert visitors into loyal customers.",
+      content2:"From user-friendly booking systems to stunning designs, we build travel websites that deliver.",
+      content3:"From user-friendly booking systems to stunning designs, we build travel websites that deliver.",
+      img:travel5
+
+    },
+    {
+      id:6,
+      title:"Automotive",
+      content1:"We bring your travel vision to life with cutting-edge web development solutions designed to engage, inspire, and convert visitors into loyal customers.",
+      content2:"From user-friendly booking systems to stunning designs, we build travel websites that deliver.",
+      content3:"From user-friendly booking systems to stunning designs, we build travel websites that deliver.",
+      img:travel6
+
+    },
+    {
+      id:7,
+      title:"Health Care",
+      content1:"We bring your travel vision to life with cutting-edge web development solutions designed to engage, inspire, and convert visitors into loyal customers.",
+      content2:"From user-friendly booking systems to stunning designs, we build travel websites that deliver.",
+      content3:"From user-friendly booking systems to stunning designs, we build travel websites that deliver.",
+      img:travel7
+
+    },
   ]
 
  

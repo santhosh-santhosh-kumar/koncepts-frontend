@@ -117,7 +117,7 @@ console.log(contactData.budget)
                                                 <div className="w-[25%] border-b border-darkblue py-[25px] md:py-[20px]">
                                                     <label htmlFor="" className="text-[15px] md:text-xl">Project Details</label>
                                                 </div>
-                                                <div className="w-[75%] border-b py-[17px] border-darkblue relative after:w-[0] after:absolute after:content-[''] after:bg-darkblue after:h-[2px] after:-bottom-[2px] after:left-0 after:duration-1000 group-hover:after:w-[100%] group-focus-within:after:w-[100%]">
+                                                <div className="w-[75%] border-b py-[17px] border-darkblue relative after:w-[0] after:absolute after:content-[''] after:bg-darkblue after:h-[3px] after:-bottom-[2px] after:left-0 after:duration-1000 group-hover:after:w-[100%] group-focus-within:after:w-[100%]">
 
                                                     <textarea name='projectDetails' value={text} onChange={handleChange} rows="1" className="overflow-y-hidden resize-none outline-none w-full text-[16px] md:text-xl text-darkblue px-4"  ref={textareaRef}></textarea>
                                                 </div>

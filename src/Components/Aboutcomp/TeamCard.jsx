@@ -1,12 +1,12 @@
 import React from 'react';
 import './TeamCard.css';
-import founder from "../../assets/Images/tech.jpg";
+// import founder from "../../assets/Images/tech.jpg";
 
 const Persons = [
-    { id: 1, name: "Sridhar Natrajan", description: "Founder and CEO", image: founder },
-    { id: 2, name: "Santhosh", description: "Full Stack Developer", image: founder },
-    { id: 3, name: "Naresh", description: "React Developer", image: founder },
-    { id: 4, name: "Ravi Kumar", description: "UI/UX Specialist", image: founder }
+    // { id: 1, name: "Sridhar Natrajan", description: "Founder and CEO", image: founder },
+    // { id: 2, name: "Santhosh", description: "Full Stack Developer", image: founder },
+    // { id: 3, name: "Naresh", description: "React Developer", image: founder },
+    // { id: 4, name: "Ravi Kumar", description: "UI/UX Specialist", image: founder }
 ];
 
 function TeamCard() {

@@ -4,6 +4,7 @@ const WhatWeDo = ({
   id,
   title,
   details,
+  img,
   serviceOffered,
   activeId,
   previousId,
@@ -40,29 +41,30 @@ const WhatWeDo = ({
   };
 
   return (
+    <>
     <div
       ref={cardRef}
       className={`sticky ${heightAdj(
         id
-      )} top-0 headj bg-white transition-all duration-500 ${
+      )} top-10 headj bg-white transition-all duration-500 ${
         previousId === id ? "blur-sm" : "blur-none"
       } ${id == 4 ? "blur-none" : " te"}`}
     >
-      <div className="container pt-24">
-        <div>
+      <div className="flex items-start gap-x-6  px-20  container mt-36 p-5">
+        <div className="w-6/12">
           {id != 5 ? (
             <div className="flex items-center gap-3 font-ContentText">
               <h3 className="text-sm font-bold borderdarkblue rounded-full px-2 py-2 -rotate-12">
                 0{id}
               </h3>
               <div className="w-72 h-[2px] bg-darkblue"></div>
-              <h3 className="text-[15px] md:text-3xl">a fresh perspective</h3>
+              <h3 className="text-[15px] md:text-2xl">a fresh perspective</h3>
             </div>
           ) : (
             ""
           )}
           <div className="">
-            <h1 className="font-Heading text-3xl md:text-6xl">{title}</h1>
+            <h1 className="font-Heading text-3xl md:text-[40px]">{title}</h1>
             {details.map((item, index) => (
               <p
                 key={index}
@@ -92,9 +94,13 @@ const WhatWeDo = ({
             )}
           </div>
         </div>
-        <div>{/* Image or other content can go here */}</div>
+        <div className="w-6/12 h-full">
+        <img src={img} className="object-cover w-full h-full" alt="" />
+      </div>
+
       </div>
     </div>
+    </>
   );
 };
 
