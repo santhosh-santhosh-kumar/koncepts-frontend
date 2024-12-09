@@ -1,21 +1,23 @@
 const ClientsCard = ({id,logo})=>{
-    const logoadj=(id)=>{
-        if(id === 6){
-            return 'w-100';
-        }
-    }
 
-    const logoad2=(id)=>{
-        if(id === 7){
-            return 'jathi';
-        }
-    }
-    
  
     return(
-        <div className="w-full border border-gray-200 flex justify-center px-2">
-            <div className={`${logoadj(id)} ${logoad2(id)}  m-auto ${id==1?"p-4":""} ${id==3?"p-6":""} ${id==4?"p-4":""} ${id==5?"p-4":""} ${id==10?"p-4":""}`}>
-                <img loading="lazy" src={logo} className={`${id==1?"w-40 h-70":""} ${id==2?"w-60 h-50":""} ${id==3?"w-40 h-50":""} ${id==4?"w-80 h-50":""} ${id==5?"w-80 h-50":""} ${id==8?"w-60 h-50":""} ${id==10?"w-60 h-50":""} ${id==12?"w-60 h-50":""}`} alt="" />
+        <div className="w-full border border-gray-200 flex justify-center items-center py-3 px-2">
+            <div className={`px-2 py-3 
+                ${id === 1 ? 'w-40' : ''} 
+                ${id === 2 ? 'w-44' : ''} 
+                ${id === 3 ? 'w-64' : ''} 
+                ${id === 4 ? 'w-60' : ''} 
+                ${id === 5 ? 'w-60' : ''} 
+                ${id === 6 ? 'w-80' : ''} 
+                ${id === 7 ? 'w-40' : ''} 
+                ${id === 8 ? 'w-56' : ''} 
+                ${id === 9 ? 'w-56' : ''} 
+                ${id === 10 ? 'w-52' : ''} 
+                ${id === 11 ? 'w-48' : ''} 
+                ${id === 12 ? 'w-56' : ''} 
+                `}>
+                <img loading="lazy" src={logo} className={`w-full h-full`} alt="" />
             </div>
         </div>
             

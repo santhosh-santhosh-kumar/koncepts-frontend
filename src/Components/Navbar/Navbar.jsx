@@ -80,7 +80,7 @@ export const navlinks = [
                         <ul className="flex gap-3 mr-28 mt-2">
                             {
                                 navlinks.map((items,index)=>(
-                                    <li key={index} className="text-lg font-semibold">
+                                    <li key={index} className="text-lg font-Heading">
                                         <NavLink to={items.to} activeClassName="active2" className="links no-underline text-darkblue">
                                             {items.lable}
                                         </NavLink>
