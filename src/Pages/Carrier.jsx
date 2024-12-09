@@ -135,7 +135,7 @@ const Carrier = () => {
                                                 <div className="w-[35%] border-b border-darkblue py-3">
                                                     <label htmlFor={item.name} className="text-[15px] md:text-xl">{item.detail}</label>
                                                 </div>
-                                                <div className="w-[65%] border-b border-darkblue relative">
+                                                <div className="w-[75%] border-b border-darkblue relative after:w-[0] after:absolute after:content-[''] after:bg-darkblue after:h-[2px] after:-bottom-[2px] after:left-0 after:duration-1000 group-hover:after:w-[100%] group-focus-within:after:w-[100%]">
                                                     <input onChange={handleChange} type={item.type} name={item.name} id={item.name} className="outline-none w-full text-[16px] md:text-xl text-darkblue px-2 py-3"/>
                                                 </div>
                                             </div>

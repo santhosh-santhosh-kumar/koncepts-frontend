@@ -147,7 +147,7 @@ console.log(contactData.budget)
                      
                         
                         <div className="flex justify-center mt-3">
-                            <button className="bg-darkblue hover:bg-darkblue/80 rounded-full font-bold text-white text-lg px-5 py-3 transition-all hover:rounded-tr-3xl hover:rounded-bl-3xl duration-700">Submit</button>
+                            <button className="bg-darkblue hover:bg-darkblue/80 rounded-lg font-bold text-white text-lg px-3 py-2 transition-all hover:rounded-tr-3xl hover:rounded-bl-3xl duration-700">Submit</button>
                         </div>
                     </form>
                 </div>

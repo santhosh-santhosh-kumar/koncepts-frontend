@@ -66,9 +66,9 @@ function EmployeCard(  {id,
     {
       id: 1,
       ProfilePic: EmptyPic,
-      Name: "Sridhar Natrajan",
-      title: "Founder, UX/UI LEAD",
-      exp: 9,
+      Name: "Saravana Prabhu",
+      title: "Designer",
+      exp: 6,
       profession: "design",
       icon: Aboutcardicon,
       about1:
@@ -96,9 +96,9 @@ function EmployeCard(  {id,
     {
         id:2,
         ProfilePic:EmptyPic,
-        Name:"Sridhar Natrajan",
-        title:"Founder, UX/UI LEAD",
-        exp:10,
+        Name:"Naresh",
+        title:"Full Stack Developer",
+        exp:1,
         profession:"design",
         icon:Aboutcardicon,
         about1:"Founder and lead designer at UXIS, specializes in deep UX/UI design for complex product interfaces. Achieving an 88% success rate in planned KPIs after redesigns.",
@@ -108,9 +108,9 @@ function EmployeCard(  {id,
     },        {
         id:3,
         ProfilePic:EmptyPic,
-        Name:"Sridhar Natrajan",
-        title:"Founder, UX/UI LEAD",
-        exp:11,
+        Name:"Santhosh",
+        title:"Full Stack Developer",
+        exp:1,
         profession:"design",
         icon:Aboutcardicon,
         about1:"Founder and lead designer at UXIS, specializes in deep UX/UI design for complex product interfaces. Achieving an 88% success rate in planned KPIs after redesigns.",
@@ -161,7 +161,7 @@ function EmployeCard(  {id,
                       {value.exp}+
                     </p>
                     <p className="w-20 text-sm font-medium">
-                      years of experience in {profession}
+                      <span className={`${value.id==1?"hidden":"visible"}`}>years</span><span className={`${value.id!==1?"hidden":"visible"}`}>months</span> of experience in {profession}
                     </p>
                     <img src={value.icon} className="w-20 h-16 inline" alt="" />
                   </div>

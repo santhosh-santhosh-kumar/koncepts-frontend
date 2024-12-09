@@ -47,7 +47,7 @@ const ReviewSlider = () => {
         <SwiperSlide className="w-full h-full flex justify-center items-center px-20" key={index}>
           <div className='flex gap-y-6 flex-col justify-between'>
             <div className='w-full'>
-              <h1 className='text-sm md:text-2xl lg:text-2xl text-justify px-10'>{item.review}</h1>
+              <h1 className='text-sm md:text-2xl lg:text-2xl  px-10'>{item.review}</h1>
             </div>
             <div className='flex gap-3 px-10'>
               <div className='w-14 h-14'>
