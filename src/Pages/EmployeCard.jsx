@@ -86,21 +86,3 @@ import React from "react";
     }
 
 export default EmployeeCard;
-
-
-// <button 
-// onClick={handlePrev} 
-// className="absolute left-3 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white rounded-full p-3 z-50 hover:bg-gray-600 transition-all"
-// aria-label="Previous Slide"
-// >
-// <AiOutlineLeft size={24} />
-// </button>
-
-// {/* Custom Right Arrow */}
-// <button 
-// onClick={handleNext} 
-// className="absolute right-3 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white rounded-full p-3 z-50 hover:bg-gray-600 transition-all"
-// aria-label="Next Slide"
-// >
-// <AiOutlineRight size={24} />
-// </button>

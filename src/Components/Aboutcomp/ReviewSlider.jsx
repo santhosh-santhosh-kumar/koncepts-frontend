@@ -45,15 +45,15 @@ const ReviewSlider = () => {
     >
       {SliderReview.map((item, index) => (
         <SwiperSlide className="w-full h-full flex justify-center items-center px-20" key={index}>
-          <div className='flex gap-y-6 flex-col justify-between'>
+          <div className='flex gap-y-6 flex-col justify-between '>
             <div className='w-full'>
-              <h1 className='text-sm md:text-2xl lg:text-2xl  px-10'>{item.review}</h1>
+              <h1 className='text-sm md:text-2xl lg:text-2xl  md:px-10 md:mt-0 mt-4'>{item.review}</h1>
             </div>
-            <div className='flex gap-3 px-10'>
-              <div className='w-14 h-14'>
-                <img src={item.pic} className='w-full h-full' alt={item.author} />
+            <div className='flex md:gap-3 px-10 flex-wrap'>
+              <div className='md:w-14 md:h-14'>
+                <img src={item.pic} className='md:w-full  md:h-full  object-cover' alt={item.author} />
               </div>
-              <div>
+              <div className='mt-4 md:md-0'>
                 <p className='mb-0 font-bold'>{item.author}</p>
                 <p>{item.des}</p>
               </div>

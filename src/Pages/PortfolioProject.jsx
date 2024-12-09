@@ -53,11 +53,11 @@ const PortfolioProject = ()=>{
                         </div>
                     </div>
                 </div>
-                <div className="mt-5 border w-fit mx-auto group">
+                <div className="mt-5 w-fit mx-auto group">
                 <div className="relative">
-                    <div className="bg-darkblue transform translate-x-5 group-hover:translate-x-0 w-40 h-5 transition-all duration-700"></div>
-                    <div className="bg-darkblue transform -translate-x-5 group-hover:-translate-x-0 w-40 h-5 transition-all duration-700"></div>
-                    <a href="" className="absolute top-2 left-7"><button className="text-white text-lg">View Project</button></a>
+                    <div className="bg-darkblue transform translate-x-4 group-hover:translate-x-0 w-40 h-5 transition-all duration-700 "></div>
+                    <div className="bg-darkblue transform -translate-x-4 group-hover:-translate-x-0 w-40 h-5 transition-all duration-700"></div>
+                    <a href="" className="absolute top-2 left-7"><button className="text-white text-lg ">View Project</button></a>
                 </div>
                 </div>
             </div>

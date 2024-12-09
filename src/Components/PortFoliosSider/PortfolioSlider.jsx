@@ -1,11 +1,10 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useInView } from "react-intersection-observer"; // Import Intersection Observer
-import Flowimg1 from "../../assets/Images/flowimg1a.jpg";
-import Flowimg2 from "../../assets/Images/flowimg2.png";
-import Flowimg3 from "../../assets/Images/flowimg3.png";
-import Flowimg4 from "../../assets/Images/flowimg4.png";
-import Flowimg5 from "../../assets/Images/flowimg5.png";
-import Flowimg6 from "../../assets/Images/flowimg6.png";
+import Flowimg1 from "../../assets/Images/showcase/amjad.jpg";
+import Flowimg2 from "../../assets/Images/showcase/jesus.jpg";
+import Flowimg5 from "../../assets/Images/showcase/nextyours.jpg";
+import Flowimg3 from "../../assets/Images/showcase/team16.jpg";
+import Flowimg4 from "../../assets/Images/showcase/theoasispublicschool.jpg";
 import { useNavigate } from "react-router-dom";
 
 
@@ -17,7 +16,7 @@ const Portfolioslider = () => {
     { id: 3, title: "Project three", img: Flowimg3, details: "Project 3" },
     { id: 4, title: "Project four", img: Flowimg4, details: "Project 4" },
     { id: 5, title: "Project five", img: Flowimg5, details: "Project 5" },
-    { id: 6, title: "Project six", img: Flowimg6, details: "Project 6" },
+    // { id: 6, title: "Project six", img: Flowimg6, details: "Project 6" },
   ];
   
 
@@ -38,19 +37,19 @@ const Portfolioslider = () => {
                 onClick={() => {navigate(`/portfolio/${title}`, { state: { id, title, img, details } });window.scrollTo(0,0)}}
                 key={id}
                 ref={ref} // Attach the ref to the div
-                //style={{ backgroundImage: `url(${img})` }}
+                
                 className="relative bg-cover bg-center object-cover rounded-lg overflow-hidden"
                 
               >
                 <img src={img} alt="" />
                 {/* Overlay with Animation */}
                 <div
-                  className={`absolute bottom-0 left-0 w-1/2 h-full bg-black/20 bg-opacity-30 flex items-center justify-center p-4 transform transition-transform duration-700 ease-in-out ${
+                  className={`absolute bottom-0 left-0 w-5/12 h-full bg-black/15 bg-opacity-30 flex items-center justify-center p-4 transform transition-transform duration-700 ease-in-out ${
                     inView ? "translate-x-0" : "-translate-x-full"
                   }`}
                 >
                   <div className="text-white text-center">
-                    <h2 className="text-xl font-semibold">{title}</h2>
+                    <h2 className="text-3xl font-semibold text-[#fffdff]">{id==5?"Next Yours":title}</h2>
                     <p className="text-sm">{details}</p>
                   </div>
                 </div>

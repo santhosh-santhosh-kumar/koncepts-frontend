@@ -50,8 +50,8 @@ const WhatWeDo = ({
         previousId === id ? "blur-sm" : "blur-none"
       } ${id == 4 ? "blur-none" : " te"}`}
     >
-      <div className="flex items-start gap-x-6  px-20  container mt-36 p-5">
-        <div className="w-6/12">
+      <div className="flex flex-col-reverse md:flex-row  items-start gap-x-6  px-20  container mt-36 p-5">
+        <div className="w-full md:w-6/12">
           {id != 5 ? (
             <div className="flex items-center gap-3 font-ContentText">
               <h3 className="text-sm font-bold borderdarkblue rounded-full px-2 py-2 -rotate-12">
@@ -94,7 +94,7 @@ const WhatWeDo = ({
             )}
           </div>
         </div>
-        <div className="w-6/12 h-full">
+        <div className="w-full md:w-6/12 h-full">
         <img src={img} className="object-cover w-full h-full" alt="" />
       </div>
 

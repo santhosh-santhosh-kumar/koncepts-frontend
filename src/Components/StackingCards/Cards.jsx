@@ -5,8 +5,8 @@ import { useRef } from "react";
     const Cards = ({id,title,description1,description2,img,tags,progress,range,targetscale})=>{
       const scale = useTransform(progress,range,[1,targetscale])
     return(
-        <motion.div style={{scale}} className="h-[100vh]  sticky top-0 flex items-center justify-center">
-        <div className='bg-white flex flex-col md:flex-row md:items-start items-center relative border-[3px] border-dashed  p-3 rounded-3xl'>
+        <motion.div style={{scale}} className="h-[100vh]  sticky top-0 flex  items-center justify-center">
+        <div className='bg-white flex  flex-col md:flex-row md:items-start items-center relative border-[3px] border-dashed  p-2 rounded-3xl'>
         <div className='w-full md:w-1/2 '>  
         <img src={img} alt="" className='w-full h-full'/>
         </div>
