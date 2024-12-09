@@ -11,11 +11,11 @@ import { useNavigate } from "react-router-dom";
 const Portfolioslider = () => {
   const navigate = useNavigate();
   const Portfoliodata = [
-    { id: 1, title: "Project one", img: Flowimg1, details: "Project 1" },
-    { id: 2, title: "Project two", img: Flowimg2, details: "Project 2" },
-    { id: 3, title: "Project three", img: Flowimg3, details: "Project 3" },
-    { id: 4, title: "Project four", img: Flowimg4, details: "Project 4" },
-    { id: 5, title: "Project five", img: Flowimg5, details: "Project 5" },
+    { id: 1, title: "Project one", img: Flowimg1, details:  "lore" },
+    { id: 2, title: "Project two", img: Flowimg2, details:  "" },
+    { id: 3, title: "Project three", img: Flowimg3, details:"" },
+    { id: 4, title: "Project four", img: Flowimg4, details: "" },
+    { id: 5, title: "Project five", img: Flowimg5, details: "" },
     // { id: 6, title: "Project six", img: Flowimg6, details: "Project 6" },
   ];
   
