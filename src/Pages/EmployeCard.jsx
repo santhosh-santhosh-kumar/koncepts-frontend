@@ -5,49 +5,12 @@ import 'swiper/css/pagination';
 import 'swiper/css/free-mode';
 import 'swiper/css/navigation';
 import { useRef } from 'react';
-import { useEffect } from "react";
-import AboutExpCard from "../Components/Aboutcomp/AboutExpCard";
-import { AboutHero } from "../Components/Aboutcomp/AboutHero";
 import { FaLinkedinIn } from "react-icons/fa";
 import { SiInstagram } from "react-icons/si";
-import { FaFacebookF } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
 import { ImWhatsapp } from "react-icons/im";
 import EmptyPic from "../assets/Images/about/Emptypic.png";
 import Aboutcardicon from "../assets/Images/about/aboutcardicon.png";
-import MindsetCard from "../Components/Aboutcomp/Mindsetcards";
-import { Link } from "react-router-dom";
-import WorldClients from "../Components/Aboutcomp/Worldclients";
-import ClientsCard from "../Components/Aboutcomp/Clientscard";
-import { verticals } from "../Components/ServicesComp/Verticles";
-import ReviewSlider from "../Components/Aboutcomp/ReviewSlider";
-import { MdStar } from "react-icons/md";
-import CustomerReview from "../Components/Aboutcomp/CustomerReview";
-import StarRating from "../Components/Aboutcomp/StarRating";
-import Counter from "../Components/Aboutcomp/RunningNumbers";
-import TeamCard from "../Components/Aboutcomp/TeamCard";
-import IAAS from "../assets/Images/about/iaas.png";
-import sangumark from "../assets/Images/about/sangumak.png";
-import maxima from "../assets/Images/about/maxima.png";
-import infinityPotential from "../assets/Images/about/infinitePotential.png";
-import soulfullSpace from "../assets/Images/about/soulful.png";
-import PSCS from "../assets/Images/about/pscs-1.png";
-import jathi from "../assets/Images/about/jathi.png";
-import appDocker from "../assets/Images/about/appDocker.png";
-import TAAS from "../assets/Images/about/taas.png";
-import shazab from "../assets/Images/about/shazab-1.png";
-import whichcourse from "../assets/Images/about/which.png";
-import luckygame from "../assets/Images/about/lucky8games.png";
-import { GoArrowRight } from "react-icons/go";
-import { AiOutlineCamera } from "react-icons/ai";
-import { GiDeadEye } from "react-icons/gi";
-import { TbBrandAdonisJs } from "react-icons/tb";
-import { BiBarChartAlt } from "react-icons/bi";
-import { PiCodeBlockFill } from "react-icons/pi";
-import { CgWebsite } from "react-icons/cg";
-import { useState } from "react";
 import React from "react";
-
 function EmployeCard(  {id,
     ProfilePic,
     Name,
@@ -88,8 +51,6 @@ function EmployeCard(  {id,
       socialmedia: [
         <FaLinkedinIn />,
         <SiInstagram />,
-        // <FaFacebookF />,
-        // <FaXTwitter />,
         <ImWhatsapp />,
       ],
     },

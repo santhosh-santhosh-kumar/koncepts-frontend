@@ -9,8 +9,7 @@ export default {
       backdropBlur: ['responsive', 'hover', 'focus'],
       fontFamily:{
         "Heading":["Merriweather","serif"],
-        "ContentText":["Loto","sans-serif"],
-        "Comma":["Monoton","serif"],
+        "ContentText":["Lato","sans-serif"],
       },
       colors:{
         "darkblue":"#0a2b6d",

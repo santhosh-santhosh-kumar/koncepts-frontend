@@ -6,7 +6,7 @@ import { useRef } from "react";
       const scale = useTransform(progress,range,[1,targetscale])
     return(
         <motion.div style={{scale}} className="h-[100vh]  sticky top-0 flex items-center justify-center">
-        <div className='bg-gray-500 flex flex-col md:flex-row items-center relative border border-dashed p-3 rounded-3xl'>
+        <div className='bg-gray-500 flex flex-col md:flex-row items-start relative border border-dashed p-3 rounded-3xl'>
         <div className='w-full md:w-1/2 '>
         <img src={img} alt="" className='w-full h-full'/>
         </div>
