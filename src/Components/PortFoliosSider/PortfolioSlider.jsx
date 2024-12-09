@@ -6,16 +6,16 @@ import Flowimg5 from "../../assets/Images/showcase/nextyours.jpg";
 import Flowimg3 from "../../assets/Images/showcase/team16.jpg";
 import Flowimg4 from "../../assets/Images/showcase/theoasispublicschool.jpg";
 import { useNavigate } from "react-router-dom";
-
+import { FaArrowRight } from "react-icons/fa6";
 
 const Portfolioslider = () => {
   const navigate = useNavigate();
   const Portfoliodata = [
-    { id: 1, title: "Project one", img: Flowimg1, details:  "lore" },
-    { id: 2, title: "Project two", img: Flowimg2, details:  "" },
-    { id: 3, title: "Project three", img: Flowimg3, details:"" },
-    { id: 4, title: "Project four", img: Flowimg4, details: "" },
-    { id: 5, title: "Project five", img: Flowimg5, details: "" },
+    { id: 1, title: "A professional photo editing & retouching service provider.", img: Flowimg1, details:  "" },
+    { id: 2, title: "A professional photo editing & retouching service provider.", img: Flowimg2, details:  "" },
+    { id: 3, title: "A professional photo editing & retouching service provider.", img: Flowimg3, details:"" },
+    { id: 4, title: "A professional photo editing & retouching service provider.", img: Flowimg4, details: "" },
+    { id: 5, title: "A professional photo editing & retouching service provider.", img: Flowimg5, details: "" },
     // { id: 6, title: "Project six", img: Flowimg6, details: "Project 6" },
   ];
   
@@ -48,14 +48,18 @@ const Portfolioslider = () => {
                     inView ? "translate-x-0" : "-translate-x-full"
                   }`}
                 >
-                  <div className="text-white text-center">
-                    <h2 className="text-3xl font-semibold text-[#fffdff]">{id==5?"Next Yours":title}</h2>
-                    <p className="text-sm">{details}</p>
-                  </div>
+                  
+                  
                 </div>
+                <div className="text-white text-center absolute top-1/2  w-8/12 text-wrap flex items-center justify-center">
+                    
+                    <h2 className="text-2xl font-semibold text-[#fffdff] w-full">{id==5?"Next Yours":title}</h2>
+                    
+                  </div>
+                  
               </div>
             );
-          })}
+          })} 
         </div>
       </div>
     </div>
