@@ -8,168 +8,99 @@ import { useRef } from 'react';
 import { FaLinkedinIn } from "react-icons/fa";
 import { SiInstagram } from "react-icons/si";
 import { ImWhatsapp } from "react-icons/im";
+import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai"; // Import arrow icons
 import EmptyPic1 from "../assets/Images/Pillars/saravanan.jpg";
 import EmptyPic2 from "../assets/Images/Pillars/naresh.jpg";
 import EmptyPic3 from "../assets/Images/Pillars/santhosh.jpg";
 import Aboutcardicon from "../assets/Images/about/aboutcardicon.png";
 import React from "react";
-function EmployeCard(  {id,
-    ProfilePic,
-    Name,
-    title,
-    exp,
-    profession,
-    icon,
-    about1,
-    about2,
-    proficient,
-    socialmedia,
-    link,
-    interval = 3000 
-  }) {
-  const employeeCard = [
-    {
-      id: 1,
-      ProfilePic: EmptyPic1,
-      Name: "Saravana Prabu",
-      title: "Designer",
-      exp: 6,
-      profession: "design",
-      icon: Aboutcardicon,
-      about1:
-        "Founder and lead designer at UXIS, specializes in deep UX/UI design for complex product interfaces. Achieving an 88% ",
-      about2:
-        'The author of the course "UX Thinking and Structuring Before Creating UI" and the winner of the Telegram ',
-      proficient: [
-        "finance",
-        "banking",
-        "telecommunication",
-        "healthcare",
-        "accessiblity",
-        "travel and leisure",
-        "ai chats",
-        "other",
-      ],
-      socialmedia: [
-        <FaLinkedinIn />,
-        <SiInstagram />,
-        <ImWhatsapp />,
-      ],
-    },
-    {
-        id:2,
-        ProfilePic:EmptyPic2,
-        Name:"Naresh",
-        title:"Full Stack Developer",
-        exp:1,
-        profession:"design",
-        icon:Aboutcardicon,
-        about1:"Founder and lead designer at UXIS, specializes in deep UX/UI design for complex product interfaces. Achieving an 88%",
-        about2:'The author of the course "UX Thinking and Structuring Before Creating UI" and the winner of the Telegram',
-        proficient:['finance','banking','telecommunication','healthcare','accessiblity','travel and leisure','ai chats','other'],
-        socialmedia:[<FaLinkedinIn/>,<SiInstagram/>,<ImWhatsapp/>]
-    },        {
-        id:3,
-        ProfilePic:EmptyPic3,
-        Name:"Santhosh",
-        title:"Full Stack Developer",
-        exp:1,
-        profession:"design",
-        icon:Aboutcardicon,
-        about1:"A creative full-stack developer who thrives on pushing the boundaries of web development. Whether it’s  ",
-        about2:'I’m not just a developer; I’m a problem solver, innovator, and dream builder. With a passion for crafting seamless digital experiences, ',
-        proficient:['finance','banking','telecommunication','healthcare','accessiblity','travel and leisure','ai chats','other'],
-        socialmedia:[<FaLinkedinIn/>,<SiInstagram/>,<ImWhatsapp/>]
-    }
-  ];
-  const swiperRef = useRef(null);
-  const handleClick = () => {
-    if (swiperRef.current && swiperRef.current.swiper) {
-      swiperRef.current.swiper.slideNext();
-    }
-  };
 
-   
-    return (
-      <>
-        <Swiper
-      ref={swiperRef}
-      onClick={handleClick}
-      className='w-full h-full cursor-pointer slidercontainer'
-      modules={[FreeMode, Pagination, Autoplay, Navigation]}
-      pagination={{ clickable: true }}
-      slidesPerView={1}
-      loop={true}
-      navigation
-      autoplay={{
-        delay: 3000,
-        disableOnInteraction: false,
-      }}
-    >
-{employeeCard.map((value,index) => {
-        return (
-          <>
-                  <SwiperSlide className="w-full h-full lg:flex md:flex justify-center items-center px-10 border-1 " key={index}>
-            <div className="aboutExpCardContainer border-collapse border-gray-200">
-              <div className="lg:flex md:flex items-start justify-between">
-                
-                  <div className="border-3 mt-0 w-full h-full ">
-                    <img src={value.ProfilePic} className="w-full h-full object-cover" alt="" />
-                  </div>
-               
-
-                <div>
-                  <div className="flex pl-40">
+    const EmployeeCard = ({
+      id,
+      ProfilePic,
+      Name,
+      title,
+      exp,
+      profession,
+      icon,
+      about1,
+      about2,
+      proficient,
+      socialmedia,
+      link,
+    })=>{
+      return(
+        <div className='w-full h-full'>
+            <Swiper>
+                <SwiperSlide className='aboutExpCardContainer border-1 border-collapse border-gray-200'>
+                <div className="md:flex items-start ">
+            <div className="border-3 w-full h-full">
+                <img src={ProfilePic} className="w-full h-full object-cover" alt="" />
+            </div>
+            <div>
+                <div className="flex pl-40">
                     <p className="text-3xl md:text-5xl font-semibold text-slate-950 mr-2">
-                      {value.exp}+
+                {exp}+
                     </p>
                     <p className="w-20 text-sm font-medium">
-                      <span className={`${value.id==1?"hidden":"visible"}`}>years</span><span className={`${value.id!==1?"hidden":"visible"}`}>months</span> of experience in {profession}
+                years of experience in {profession}
                     </p>
-                    <img src={value.icon} className="w-20 h-16 inline" alt="" />
-                  </div>
-                  <div className="pl-10">
-                    <h1 className="text-3xl font-semibold ">{value.Name}</h1>
-                    <h2 className="text-[18px] font-semibold ">{value.title}</h2>
-                    <p className="font-medium text-[15px] w-full  pt-2">
-                      {value.about1}
-                    </p>
-                    <p className="font-medium text-[15px] w-full ">{value.about2}</p>
-                    <p className="font-medium text-[15px]">Porficient in:</p>
-                  </div>
+                    <img src={icon} className="w-20 h-16 inline" alt="" />
                 </div>
-              </div>
-              <div className="w-10/12 mt-10">
-                {value.proficient.map((items, index) => (
-                  <span
-                    className="border-1 mr-2 mb-2 border-black px-3 py-1 rounded-full font-bold text-[11px] inline-block uppercase"
-                    key={index}
-                  >
-                    {items}
-                  </span>
-                ))}
-              </div>
-              <div className="mt-5 lg:mb-0 md:mb-0 mb-10">
-                {value.socialmedia.map((items, index) => (
-                  <a
-                    href={link}
-                    className="inline-block text-2xl text-slate-950 mr-5 hover:scale-75 transition-transform duration-200"
-                    key={index}
-                  >
-                    {items}
-                  </a>
-                ))}
-              </div>
+                <div className="pl-10">
+                  <h1 className="text-3xl font-semibold ">{Name}</h1>
+                  <h2 className="text-[18px] font-semibold ">{title}</h2>
+                  <p className="font-medium text-[15px] w-full  pt-2">
+                    {about1}
+                  </p>
+                  <p className="font-medium text-[15px] w-full ">{about2}</p>
+                  <p className="font-medium text-[15px]">Porficient in:</p>
+                </div>    
             </div>
-            </SwiperSlide>
-          </>
-        );
-        
-      })}
-      
-    </Swiper>
-    </>
-  );
-  }
+        </div>
+        <div className="w-10/12 mt-10">
+              {proficient.map((items, index) => (
+                <span
+                  className="border-1 mr-2 mb-2 border-black px-3 py-1 rounded-full font-bold text-[11px] inline-block uppercase"
+                  key={index}
+                >
+                  {items}
+                </span>
+              ))}
+            </div>
+            <div className="mt-5">
+              {socialmedia.map((items, index) => (
+                <a
+                  href={link}
+                  className="inline-block text-2xl text-slate-950 mr-5 hover:scale-75 transition-transform duration-200"
+                  key={index}
+                >
+                  {items}
+                </a>
+              ))}
+            </div>
+                </SwiperSlide>
+            </Swiper>
+        </div>
+      )
+    }
 
-export default EmployeCard;
+export default EmployeeCard;
+
+
+// <button 
+// onClick={handlePrev} 
+// className="absolute left-3 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white rounded-full p-3 z-50 hover:bg-gray-600 transition-all"
+// aria-label="Previous Slide"
+// >
+// <AiOutlineLeft size={24} />
+// </button>
+
+// {/* Custom Right Arrow */}
+// <button 
+// onClick={handleNext} 
+// className="absolute right-3 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white rounded-full p-3 z-50 hover:bg-gray-600 transition-all"
+// aria-label="Next Slide"
+// >
+// <AiOutlineRight size={24} />
+// </button>

@@ -7,7 +7,10 @@ import { SiInstagram } from "react-icons/si";
 import { FaFacebookF } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { ImWhatsapp } from "react-icons/im";
-import EmptyPic from "../assets/Images/Pillars/sridharnatarajan.jpg";
+import SridharNatrajanImg from "../assets/Images/Pillars/sridharnatarajan.jpg";
+import NareshImg from "../assets/Images/Pillars/naresh.jpg";
+import SanthoshImg from "../assets/Images/Pillars/santhosh.jpg";
+import SaravanaPrabuImg from "../assets/Images/Pillars/saravanan.jpg";
 import Aboutcardicon from "../assets/Images/about/aboutcardicon.png";
 import MindsetCard from "../Components/Aboutcomp/Mindsetcards";
 import { Link } from "react-router-dom";
@@ -150,7 +153,7 @@ const handleChangeColor=(id)=>{
   const ExperienceCard = [
     {
       id: 1,
-      ProfilePic: EmptyPic,
+      ProfilePic: SridharNatrajanImg,
       Name: "Sridhar Natrajan",
       title: "Founder, UX/UI LEAD",
       exp: 15,
@@ -181,33 +184,45 @@ const handleChangeColor=(id)=>{
   const employeeCard = [
     {
       id: 1,
-      ProfilePic: EmptyPic,
-      Name: "Sridhar Natrajan",
-      title: "Founder, UX/UI LEAD",
-      exp: 15,
+      ProfilePic: SaravanaPrabuImg,
+      Name: "Saravana Prabu",
+      title: "Designer",
+      exp: 6,
       profession: "design",
       icon: Aboutcardicon,
-      about1:
-        "Founder and lead designer at UXIS, specializes in deep UX/UI design for complex product interfaces. Achieving an 88% success rate in planned KPIs after redesigns.",
-      about2:
-        'The author of the course "UX Thinking and Structuring Before Creating UI" and the winner of the Telegram competition for redesigning the Android app.',
-      proficient: [
-        "finance",
-        "banking",
-        "telecommunication",
-        "healthcare",
-        "accessiblity",
-        "travel and leisure",
-        "ai chats",
-        "other",
-      ],
-      socialmedia: [
-        <FaLinkedinIn />,
-        <SiInstagram />,
-        <ImWhatsapp />,
-      ],
+      about1: "Founder and lead designer at UXIS, specializes in deep UX/UI design for complex product interfaces.",
+      about2: 'The author of the course "UX Thinking and Structuring Before Creating UI" and the winner of the Telegram ',
+      proficient: ["finance", "banking", "telecommunication", "healthcare", "accessibility", "travel and leisure", "AI chats", "other"],
+      socialmedia: [<FaLinkedinIn />, <SiInstagram />, <ImWhatsapp />],
     },
+    {
+      id: 2,
+      ProfilePic: NareshImg,
+      Name: "Naresh",
+      title: "Full Stack Developer",
+      exp: 1,
+      profession: "design",
+      icon: Aboutcardicon,
+      about1: "Founder and lead designer at UXIS, specializes in deep UX/UI design for complex product interfaces.",
+      about2: 'The author of the course "UX Thinking and Structuring Before Creating UI" and the winner of the Telegram',
+      proficient: ['finance', 'banking', 'telecommunication', 'healthcare', 'accessibility', 'travel and leisure', 'AI chats', 'other'],
+      socialmedia: [<FaLinkedinIn />, <SiInstagram />, <ImWhatsapp />]
+    },
+    {
+      id: 3,
+      ProfilePic: SanthoshImg,
+      Name: "Santhosh",
+      title: "Full Stack Developer",
+      exp: 1,
+      profession: "design",
+      icon: Aboutcardicon,
+      about1: "A creative full-stack developer who thrives on pushing the boundaries of web development.",
+      about2: 'I’m not just a developer; I’m a problem solver, innovator, and dream builder.',
+      proficient: ['finance', 'banking', 'telecommunication', 'healthcare', 'accessibility', 'travel and leisure', 'AI chats', 'other'],
+      socialmedia: [<FaLinkedinIn />, <SiInstagram />, <ImWhatsapp />]
+    }
   ];
+
   const MindSet = {
     Part1: [
       {
@@ -339,7 +354,15 @@ const handleChangeColor=(id)=>{
             </>
           );
         })}
-        <EmployeCard />
+        {employeeCard.map((items, index) => {
+          return (
+            <>
+              <div>
+                <EmployeCard key={index} {...items} />
+              </div>
+            </>
+          );
+        })}
       </div>
       {/* our mindset */}
       <div className="w-full md:flex">
