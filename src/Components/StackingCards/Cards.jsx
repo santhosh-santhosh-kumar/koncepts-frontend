@@ -13,7 +13,7 @@ import { useRef } from "react";
         <div className='w-full md:w-1/2 pt-4'>
         <div className="flex items-center flex-wrap gap-2">
         {tags.map((tags,index)=>(
-                <p key={index} className='px-3 w-fit py-2  text-lg bg-[#f6f6fa] font-ContentText rounded-lg  mx-1'>{tags}</p>
+                <p key={index} className='px-[20px] w-fit py-[4px]  text-lg bg-[#f6f6fa] font-ContentText rounded-lg  mx-1'>{tags}</p>
             ))}
         </div>
             <div className="pt-4 font-ContentText text-lg">

@@ -66,7 +66,7 @@ const PriceDetails = ()=>{
             <div className="w-full md:w-1/3 shadow-2xl shadow-black/20 p-5 hover:shadow-black/50 my-5">
                 <div className="border-b border-gray-300">
                     <h1 className="text-xl text-gray-800">LITE</h1>
-                    <h1>₹23,456</h1>
+                    <h1><span className="text-2xl">&#8377;</span>23,456</h1>
                 </div>
 
                 <div className="pt-3">
@@ -92,7 +92,7 @@ const PriceDetails = ()=>{
                 </div>
                 <div className="border-b border-gray-300">
                     <h1 className="text-xl text-gray-800">Pro package</h1>
-                    <h1>₹34,567</h1>
+                    <h1><span className="text-2xl">&#8377;</span>34,567</h1>
                 </div>
 
                 <div>
@@ -119,7 +119,7 @@ const PriceDetails = ()=>{
                 </div>
                 <div className="border-b border-gray-300">
                     <h1 className="text-xl text-gray-800">Business Package</h1>
-                    <h1>₹56,789</h1>
+                    <h1><span className="text-2xl">&#8377;</span>56,789</h1>
                 </div>
 
                 <div>
