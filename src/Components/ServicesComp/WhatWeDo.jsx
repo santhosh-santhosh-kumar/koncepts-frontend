@@ -94,8 +94,8 @@ const WhatWeDo = ({
             )}
           </div>
         </div>
-        <div className="w-full md:w-6/12 h-full">
-        <img src={img} className="object-cover w-full h-full" alt="" />
+        <div className="w-full md:w-6/12 h-full ">
+        <img src={img} className="object-cover w-full h-full shadow-2xl" alt="" />
       </div>
 
       </div>

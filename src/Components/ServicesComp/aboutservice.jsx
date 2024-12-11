@@ -22,7 +22,7 @@ const AboutService = ()=>{
                     <h1 className='font-Heading text-5xl md:text-6xl font-bold'>Responsive.</h1>
                     <h1 className='font-Heading text-5xl md:text-6xl font-bold'>Powerful.</h1>
                     <h1 className='font-Heading text-5xl md:text-6xl font-bold'>Clean.</h1>
-                    <div className="flex w-72 items-center group transition-all font-ContentText text-white rounded-lg bg-darkblue px-3 py-2 text-xl md:text-2xl font-semibold hover:rounded-tr-3xl hover:rounded-bl-3xl duration-700 justify-center gap-4 ">
+                    <div className="flex w-[255px] items-center group transition-all font-ContentText text-white rounded-lg bg-darkblue px-3 py-2 text-xl md:text-2xl font-semibold hover:rounded-tr-3xl hover:rounded-bl-3xl duration-700 justify-center gap-3">
                     <button onClick={navigatecontact}>Talk to an expert</button>
                         <GoArrowRight size={25} className="mt-1 relative group-hover:translate-x-5 transition-all duration-500"/>
                     </div>

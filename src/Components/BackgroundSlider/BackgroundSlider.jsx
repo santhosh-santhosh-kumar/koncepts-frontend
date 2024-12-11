@@ -10,7 +10,6 @@ function BackgroundSlider() {
     <Carousel>
       <Carousel.Item interval={1000}>
         <div className='slide1' text="First slide" style={{ width: '100vw'}}>
-          {/* <img src="../../assets/" alt="" /> */}
         <Carousel.Caption></Carousel.Caption>
         
         </div>

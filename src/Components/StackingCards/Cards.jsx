@@ -2,7 +2,8 @@
 import { CgProfile } from "react-icons/cg";
 import {motion,useScroll, useTransform} from "framer-motion"
 import { useRef } from "react";
-    const Cards = ({id,title,description1,description2,img,tags,progress,range,targetscale})=>{
+    const Cards = ({id,title,description1,description2,name,prof,img,tags,progress,range,targetscale})=>{
+        
       const scale = useTransform(progress,range,[1,targetscale])
     return(
         <motion.div style={{scale}} className="h-[100vh]  sticky top-0 flex  items-center justify-center">
@@ -24,8 +25,8 @@ import { useRef } from "react";
             <div className='flex gap-x-5 items-center pt-4'>
                 <CgProfile size={40}/>
                 <div className="">
-                    <p className='mb-0 text-xl font-bold text-gray-700'>Dimitri Dumont</p>
-                    <p className='mb-0'>Fondateur, Hexa Web</p>
+                    <p className='mb-0 text-xl font-bold text-gray-700'>{name}</p>
+                    <p className='mb-0'>{prof}</p>
                 </div>
             </div>
         </div>

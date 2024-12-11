@@ -24,11 +24,34 @@ import Portfolioslider from '../Components/PortFoliosSider/PortfolioSlider';
 
 const Portfolio=()=>{
    const projects=[
-    {id:1,title:"Card 1",description1:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi beatae obcaecati ex. Accusamus, reiciendis. Ducimus amet voluptatem tenetur porro? Quod et minus facere in, velit accusamus sit ratione? Consequatur, id.",description2:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi beatae obcaecati ex. Accusamus, reiciendis. Ducimus amet voluptatem tenetur porro? Quod et minus facere in, velit accusamus sit ratione? Consequatur, id.",img:Flowimg1, tags:["figma","e-commerce","landing page"]},
-    {id:1,title:"Card 1",description1:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi beatae obcaecati ex. Accusamus, reiciendis. Ducimus amet voluptatem tenetur porro? Quod et minus facere in, velit accusamus sit ratione? Consequatur, id.",description2:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi beatae obcaecati ex. Accusamus, reiciendis. Ducimus amet voluptatem tenetur porro? Quod et minus facere in, velit accusamus sit ratione? Consequatur, id.",img:Flowimg2, tags:["figma","e-commerce","landing page"]},
-    {id:1,title:"Card 1",description1:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi beatae obcaecati ex. Accusamus, reiciendis. Ducimus amet voluptatem tenetur porro? Quod et minus facere in, velit accusamus sit ratione? Consequatur, id.",description2:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi beatae obcaecati ex. Accusamus, reiciendis. Ducimus amet voluptatem tenetur porro? Quod et minus facere in, velit accusamus sit ratione? Consequatur, id.",img:Flowimg3, tags:["figma","e-commerce","landing page"]},
-    {id:1,title:"Card 1",description1:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi beatae obcaecati ex. Accusamus, reiciendis. Ducimus amet voluptatem tenetur porro? Quod et minus facere in, velit accusamus sit ratione? Consequatur, id.",description2:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi beatae obcaecati ex. Accusamus, reiciendis. Ducimus amet voluptatem tenetur porro? Quod et minus facere in, velit accusamus sit ratione? Consequatur, id.",img:Flowimg4, tags:["figma","e-commerce","landing page"]},
-    {id:1,title:"Card 1",description1:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi beatae obcaecati ex. Accusamus, reiciendis. Ducimus amet voluptatem tenetur porro? Quod et minus facere in, velit accusamus sit ratione? Consequatur, id.",description2:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi beatae obcaecati ex. Accusamus, reiciendis. Ducimus amet voluptatem tenetur porro? Quod et minus facere in, velit accusamus sit ratione? Consequatur, id.",img:Flowimg5, tags:["figma","e-commerce","landing page"]},
+    {
+      id:1,
+      title:"Card 1",
+      description1:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi beatae obcaecati ex. Accusamus, reiciendis. Ducimus amet voluptatem tenetur porro? Quod et minus facere in, velit accusamus sit ratione? Consequatur, id. Ducimus amet voluptatem tenetur porro? Quod et minus facere in, velit accusamus sit ratione? Consequatur, id.",description2:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi beatae obcaecati ex. Accusamus, reiciendis. Ducimus amet voluptatem tenetur porro? Quod et minus facere in, velit accusamus sit ratione? Consequatur, id.",
+      img:Flowimg1, 
+      tags:["figma","e-commerce","landing page"],
+      name:"Dr.Ashok Kumar PS",
+      prof:"Senior Consultant Orthopedic",
+    },
+    {id:1,title:"Card 1",description1:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi beatae obcaecati ex. Accusamus, reiciendis. Ducimus amet voluptatem tenetur porro? Quod et minus facere in, velit accusamus sit ratione? Consequatur, id. Ducimus amet voluptatem tenetur porro? Quod et minus facere in, velit accusamus sit ratione? Consequatur, id.",description2:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi beatae obcaecati ex. Accusamus, reiciendis. Ducimus amet voluptatem tenetur porro? Quod et minus facere in, velit accusamus sit ratione? Consequatur, id.",img:Flowimg2, tags:["figma","e-commerce","landing page"]
+      ,
+      name:"Rajesh Daswani",
+      prof:"IaaS Academy"
+    },
+    {id:1,title:"Card 1",description1:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi beatae obcaecati ex. Accusamus, reiciendis. Ducimus amet voluptatem tenetur porro? Quod et minus facere in, velit accusamus sit ratione? Consequatur, id. Ducimus amet voluptatem tenetur porro? Quod et minus facere in, velit accusamus sit ratione? Consequatur, id.",description2:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi beatae obcaecati ex. Accusamus, reiciendis. Ducimus amet voluptatem tenetur porro? Quod et minus facere in, velit accusamus sit ratione? Consequatur, id.",img:Flowimg3, tags:["figma","e-commerce","landing page"],
+      prof:"Jerad Jegaraj and Jyoti Patel",
+      name:"J&J trading (UK) Ltd",
+  
+    },
+    {id:1,title:"Card 1",description1:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi beatae obcaecati ex. Accusamus, reiciendis. Ducimus amet voluptatem tenetur porro? Quod et minus facere in, velit accusamus sit ratione? Consequatur, id. Ducimus amet voluptatem tenetur porro? Quod et minus facere in, velit accusamus sit ratione? Consequatur, id.",description2:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi beatae obcaecati ex. Accusamus, reiciendis. Ducimus amet voluptatem tenetur porro? Quod et minus facere in, velit accusamus sit ratione? Consequatur, id.",img:Flowimg4, tags:["figma","e-commerce","landing page"],
+      prof:"Panchasaram",
+      name:"Palayakat Sangumark"
+    },
+    {id:1,title:"Card 1",description1:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi beatae obcaecati ex. Accusamus, reiciendis. Ducimus amet voluptatem tenetur porro? Quod et minus facere in, velit accusamus sit ratione? Consequatur, id. Ducimus amet voluptatem tenetur porro? Quod et minus facere in, velit accusamus sit ratione? Consequatur, id.",description2:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi beatae obcaecati ex. Accusamus, reiciendis. Ducimus amet voluptatem tenetur porro? Quod et minus facere in, velit accusamus sit ratione? Consequatur, id.",img:Flowimg5, tags:["figma","e-commerce","landing page"],
+      prof:"Mohammed Aleemullah",
+      name:"Shazab"
+
+    },
    ]
 
     useEffect(() => {
@@ -81,13 +104,13 @@ const Portfolio=()=>{
             <div className='h-[400vh] flex flex-col'>
                 <div className='grid grid-cols-3 absolute gap-2 md:gap-40'>
                     <img src={RunningImg1} className='h-[100px] md:h-[250px] w-[400px] mr-[200px] -z-[9] rellax' data-rellax-speed="1"/>
-                    <img src={RunningImg2} className='h-[100px] md:h-[250px] w-[400px] rellax -z-[9]' data-rellax-speed="2"/>
+                    <img src={RunningImg5} className='h-[100px] md:h-[250px] w-[400px] rellax -z-[9]' data-rellax-speed="2"/>
                     <img src={RunningImg3} className='h-[100px] md:h-[250px] w-[400px] rellax' data-rellax-speed="4"/>
                     <img src={RunningImg4} className='h-[100px] md:h-[250px] w-[400px] rellax' data-rellax-speed="-1"/>
-                    <img src={RunningImg5} className='h-[100px] md:h-[250px] w-[400px] rellax' data-rellax-speed="-2"/>
-                    <img src={RunningImg6} className='h-[100px] md:h-[250px] w-[400px] rellax' data-rellax-speed="-1"/>
+                    <img src={RunningImg2} className='h-[100px] md:h-[250px] w-[400px] rellax' data-rellax-speed="-2"/>
+                    <img src={RunningImg8} className='h-[100px] md:h-[250px] w-[400px] rellax' data-rellax-speed="-1"/>
                     <img src={RunningImg7} className='h-[100px] md:h-[250px] w-[400px] rellax' data-rellax-speed="-2"/>
-                    <img src={RunningImg8} className='h-[100px] md:h-[250px] w-[400px] rellax' data-rellax-speed="-4"/>
+                    <img src={RunningImg6} className='h-[100px] md:h-[250px] w-[400px] rellax' data-rellax-speed="-4"/>
                     <img src={RunningImg9} className='h-[100px] md:h-[250px] w-[400px] rellax' data-rellax-speed="-3"/>
                     <img src={RunningImg10} className='h-[100px] md:h-[250px] w-[400px] rellax' data-rellax-speed="-5"/>
                   
@@ -99,7 +122,6 @@ const Portfolio=()=>{
                 <div ref={container}>
                 {
                    projects.map((items,index)=>{
-                   
                     const targetscale = 1 - ((projects.length - index) * 0.1);
                     return <Cards key={index} {...items} progress={scrollYProgress} range={[index * 0.25,1]} targetscale={targetscale}/>
                    })

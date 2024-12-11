@@ -49,13 +49,13 @@ const ReviewSlider = () => {
             <div className='w-full'>
               <h1 className='text-sm md:text-2xl lg:text-2xl  md:px-10 md:mt-0 mt-4'>{item.review}</h1>
             </div>
-            <div className='flex md:gap-3 px-10 flex-wrap'>
+            <div className='flex md:gap-3 px-10 flex-wrap items-center pb-4'>
               <div className='md:w-14 md:h-14'>
                 <img src={item.pic} className='md:w-full  md:h-full  object-cover' alt={item.author} />
               </div>
-              <div className='mt-4 md:md-0'>
+              <div className='mt-4 md:mt-0'>
                 <p className='mb-0 font-bold'>{item.author}</p>
-                <p>{item.des}</p>
+                <p className=''>{item.des}</p>
               </div>
             </div>
           </div>

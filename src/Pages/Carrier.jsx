@@ -100,12 +100,12 @@ const Carrier = () => {
             <div className="pt-36 pb-20">
                 <div className="container">
                     <div className="flex flex-col md:flex-row gap-5">
-                        <div className="text-center w-full md:w-1/2 px-5 py-4 shadow-xl border-2 border-gray-300 rounded-3xl hover:scale-105 transition-transform duration-500">
+                        <div className="text-center w-full md:w-1/2 px-5 py-8 shadow-xl border-2 border-gray-300 rounded-3xl hover:scale-105 transition-transform duration-500">
                             <h2 className="pb-4 font-Heading">Get In <span className="text-darkblue capitalize">Touch</span></h2>
                             <a href="tel:+919791177077" className="no-underline">
                                 <h3 className="text-gray-600 font-medium text-lg font-ContentText capitalize">Call us for quick support!</h3>
                             </a>
-                            <div className="flex items-center justify-center gap-3 pt-5">
+                            <div className="flex items-center justify-center gap-3 pt-3">
                                 <IoCall size={35} />
                                 <a href="tel:+917845420505" className="no-underline text-black text-xl">+91 97911 77077</a>
                             </div>

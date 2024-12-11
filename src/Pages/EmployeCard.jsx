@@ -9,45 +9,107 @@ import { FaLinkedinIn } from "react-icons/fa";
 import { SiInstagram } from "react-icons/si";
 import { ImWhatsapp } from "react-icons/im";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai"; // Import arrow icons
-import EmptyPic1 from "../assets/Images/Pillars/saravanan.jpg";
-import EmptyPic2 from "../assets/Images/Pillars/naresh.jpg";
-import EmptyPic3 from "../assets/Images/Pillars/santhosh.jpg";
+import SaravanaPrabuImg from "../assets/Images/Pillars/saravanan.jpg";
+import NareshImg from "../assets/Images/Pillars/naresh.jpg";
+import SanthoshImg from "../assets/Images/Pillars/santhosh.jpg";
 import Aboutcardicon from "../assets/Images/about/aboutcardicon.png";
 import React from "react";
 
-    const EmployeeCard = ({
-      id,
-      ProfilePic,
-      Name,
-      title,
-      exp,
-      profession,
-      icon,
-      about1,
-      about2,
-      proficient,
-      socialmedia,
-      link,
-    })=>{
+    const EmployeeCard = ()=>{
+      const employeeCard = [
+        {
+          id: 1,
+          ProfilePic: SaravanaPrabuImg,
+          Name: "Saravana Prabu",
+          title: "Designer",
+          exp: 6,
+          profession: "design",
+          icon: Aboutcardicon,
+          about1: "As the CEO of a dynamic design and development company, I thrive on turning ideas into impactful realities. At the heart of my leadership is a commitment to blending creativity with precision, ensuring every project not only meets but exceeds expectations. Whether you are building a brand from the ground up or elevating your existing identity, my team and I are here to deliver excellence.",
+          about2:"Let’s design the future, together" ,
+          proficient: ["finance", "banking", "telecommunication", "healthcare", "accessibility", "travel and leisure", "AI chats", "other"],
+          socialmedia: [
+            {icon:<FaLinkedinIn />,link:""},
+            {icon:<SiInstagram />,link:""},
+            {icon:<ImWhatsapp />,linl:""},
+        ],
+        },
+        {
+          id: 2,
+          ProfilePic: NareshImg,
+          Name: "Naresh",
+          title: "Full Stack Developer",
+          exp: 1,
+          profession: "design",
+          icon: Aboutcardicon,
+          about1: "A creative full-stack developer who thrives on pushing the boundaries of web development.",
+          about2: 'I’m not just a developer; I’m a problem solver, innovator, and dream builder.',
+          proficient: ['finance', 'banking', 'telecommunication', 'healthcare', 'accessibility', 'travel and leisure', 'AI chats', 'other'],
+          socialmedia: [
+          {icon:<FaLinkedinIn />,link:""},
+          {icon:<SiInstagram />,link:""},
+          {icon:<ImWhatsapp />,link:""}
+          ]
+        },
+        {
+          id: 3,
+          ProfilePic: SanthoshImg,
+          Name: "Santhosh",
+          title: "Full Stack Developer",
+          exp: 1,
+          profession: "design",
+          icon: Aboutcardicon,
+          about1: "A creative full-stack developer who thrives on pushing the boundaries of web development. Whether it’s building dynamic front-end experiences or optimizing back-end systems, I love blending innovation with functionality to create applications that stand out.",
+          about2: 'I’m not just a developer; I’m a problem solver, innovator, and dream builder.',
+          proficient: ['finance', 'banking', 'telecommunication', 'healthcare', 'accessibility', 'travel and leisure', 'AI chats', 'other'],
+          socialmedia: [
+            {icon:<FaLinkedinIn />,link:""},
+            {icon:<SiInstagram />,link:""},
+            {icon:<ImWhatsapp />,linl:""},
+        ]
+        }
+      ];
+      const swiperRef = useRef(null);
+      const handleClick = () => {
+        if (swiperRef.current && swiperRef.current.swiper) {
+          swiperRef.current.swiper.slideNext();
+        }
+      };
       return(
-        <div className='w-full h-full'>
-            <Swiper>
-                <SwiperSlide className='aboutExpCardContainer border-1 border-collapse border-gray-200'>
-                <div className="md:flex items-start ">
-            <div className="border-3 w-full h-full">
-                <img src={ProfilePic} className="w-full h-full object-cover" alt="" />
+        <div className='w-full h-full relative'>
+          <Swiper
+          ref={swiperRef}
+          onClick={handleClick}
+          className='border-1 border-collapse border-gray-200 w-full h-full slidercontainer'
+          modules={[FreeMode, Pagination, Autoplay, Navigation]}
+          pagination={{ clickable: true }}
+          slidesPerView={1}
+          loop={true}
+          navigation
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: true,
+            pauseOnMouseEnter:true
+          }}
+           >
+            {
+              employeeCard.map(({id,ProfilePic,Name,title,exp,profession,icon,about1,about2,proficient,socialmedia})=>{
+                return(
+                  <SwiperSlide className='w-full h-full py-3 px-3'>
+                    <div className="flex flex-col md:flex-row justify-between items-start w-full text-gray-600">
+            <div className="w-full md:w-5/12 border-3">
+              <img className="w-full h-full" src={ProfilePic} alt="" />
             </div>
-            <div>
-                <div className="flex pl-40">
-                    <p className="text-3xl md:text-5xl font-semibold text-slate-950 mr-2">
-                {exp}+
-                    </p>
-                    <p className="w-20 text-sm font-medium">
-                years of experience in {profession}
-                    </p>
-                    <img src={icon} className="w-20 h-16 inline" alt="" />
-                </div>
-                <div className="pl-10">
+            <div className="w-full md:w-7/12">
+              <div className="pl-0 md:pl-10 flex items-center justify-start">
+                <p className="text-3xl md:text-5xl font-semibold text-slate-700 mr-2">
+                  {exp}+
+                      </p>
+                      <p className="w-20 text-sm font-medium">
+                  years of experience in {profession}
+                      </p>
+              </div>
+              <div className="pl-0 md:pl-10">
                   <h1 className="text-3xl font-semibold ">{Name}</h1>
                   <h2 className="text-[18px] font-semibold ">{title}</h2>
                   <p className="font-medium text-[15px] w-full  pt-2">
@@ -55,34 +117,41 @@ import React from "react";
                   </p>
                   <p className="font-medium text-[15px] w-full ">{about2}</p>
                   <p className="font-medium text-[15px]">Porficient in:</p>
-                </div>    
+                </div>
             </div>
         </div>
-        <div className="w-10/12 mt-10">
+        <div className="w-10/12 mt-5">
               {proficient.map((items, index) => (
                 <span
-                  className="border-1 mr-2 mb-2 border-black px-3 py-1 rounded-full font-bold text-[11px] inline-block uppercase"
+                  className="border-1 mr-2 mb-2 border-gray-600 px-3 py-1 rounded-full font-bold text-[11px] inline-block uppercase text-gray-600"
                   key={index}
                 >
                   {items}
                 </span>
               ))}
-            </div>
-            <div className="mt-5">
+        </div>
+        <div className="mt-4">
               {socialmedia.map((items, index) => (
                 <a
-                  href={link}
-                  className="inline-block text-2xl text-slate-950 mr-5 hover:scale-75 transition-transform duration-200"
+                  href={items.link}
+                  className="inline-block text-2xl text-slate-600 mr-5 hover:scale-75 transition-transform duration-200 "
                   key={index}
                 >
-                  {items}
+                  {items.icon}
                 </a>
               ))}
             </div>
-                </SwiperSlide>
-            </Swiper>
+                  </SwiperSlide>
+                )
+              })
+            }
+          </Swiper>
         </div>
       )
     }
 
 export default EmployeeCard;
+
+// aboutExpCardContainer
+
+

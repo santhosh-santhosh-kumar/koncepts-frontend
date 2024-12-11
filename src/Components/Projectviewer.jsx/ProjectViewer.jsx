@@ -13,12 +13,15 @@ import Project08 from "../../assets/Images/projects/08IT-Industry01.svg";
 import Project09 from "../../assets/Images/projects/09Logistics01.svg";
 import Logo from "../../assets/Images/home/banner02.jpg";
 import Brochure from "../../assets/Images/projects/01Brochure01.svg";
+import { FaAngleUp } from "react-icons/fa6";
+import { FaAngleDown } from "react-icons/fa6";
 
 const MapComponent = () => {
   const [map, setMap] = useState(null);
   const [currentOverlay, setCurrentOverlay] = useState(null);
   const [websiteIndex, setWebsiteIndex] = useState(0);
   const [imageType, setImageType] = useState("website");
+  const [arrow, setArrow] = useState(false);
 
   const websiteOverlays = [
     { src: Project01, label: "Website" },
@@ -85,8 +88,9 @@ const MapComponent = () => {
     setWebsiteIndex(selectedIndex);
     setImageType("website");
     updateOverlay(map, selectedIndex, "website");
+    setArrow(!arrow)
   };
-
+// alert(arrow)
   const handleLogoClick = () => {
     setImageType("logo");
     updateOverlay(map, 0, "logo");
@@ -96,6 +100,11 @@ const MapComponent = () => {
     setImageType("brochure");
     updateOverlay(map, 0, "brochure");
   };
+
+  const handlePresentationClick=()=>{
+    setImageType("presentation");
+    updateOverlay(map, 0, "presentation");
+  }
 
   return (
     <div className="container flex flex-col mt-20">
@@ -121,11 +130,12 @@ const MapComponent = () => {
             
           ))}
         </select>
-        {/* <div class="pointer-events-none absolute inset-y-0 right-[900px] top-[730px]  items-center px-2 text-white text-2xl">
-        <GoArrowDown />
-  </div> */}
-
-        {/* Button for Logo */}
+        <FaAngleDown className={`${
+            imageType === "website"
+              ? " text-white"
+              : "text-darkblue"
+          } absolute left-[590px]`}/>
+          {/* <FaAngleUp className={`${arrow ?"block":"hidden"} absolute left-[590px] text-white`}/> */}
         <button
           className={`px-4 py-2 rounded shadow ${
             imageType === "logo"
@@ -148,12 +158,22 @@ const MapComponent = () => {
         >
           View Brochure
         </button>
+        <button
+          className={`px-4 py-2 rounded shadow ${
+            imageType === "presentation"
+              ? "bg-darkblue text-white"
+              : "bg-myyellow text-darkblue"
+          }`}
+          onClick={handlePresentationClick}
+        >
+          Presentation
+        </button>
       </div>
 
       <div className="relative w-full">
         <div
           id="map"
-          className="h-screen w-full rounded-md overflow-hidden shadow-lg"
+          className="h-screen w-full rounded-md overflow-hidden shadow-lg border-b-[1px] border-gray-400"
         ></div>
       </div>
     </div>

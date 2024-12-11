@@ -174,9 +174,9 @@ const handleChangeColor=(id)=>{
         "other",
       ],
       socialmedia: [
-        <FaLinkedinIn />,
-        <SiInstagram />,
-        <ImWhatsapp />,
+        {icon:<FaLinkedinIn />,link:""},
+        {icon:<SiInstagram />,link:""},
+        {icon:<ImWhatsapp />,link:""},
       ],
     },
   ];
@@ -190,8 +190,8 @@ const handleChangeColor=(id)=>{
       exp: 6,
       profession: "design",
       icon: Aboutcardicon,
-      about1: "Founder and lead designer at UXIS, specializes in deep UX/UI design for complex product interfaces.",
-      about2: 'The author of the course "UX Thinking and Structuring Before Creating UI" and the winner of the Telegram ',
+      about1: "As the CEO of a dynamic design and development company, I thrive on turning ideas into impactful realities. My mission is to craft visually stunning and functional solutions, from innovative logos to cutting-edge websites, captivating brochures, and more.",
+      about2: 'At the heart of my leadership is a commitment to blending creativity with precision, ensuring every project not only meets but exceeds expectations.Whether you are building a brand from the ground up or elevating your existing identity, my team and I are here to deliver excellence. Let’s design the future, together',
       proficient: ["finance", "banking", "telecommunication", "healthcare", "accessibility", "travel and leisure", "AI chats", "other"],
       socialmedia: [<FaLinkedinIn />, <SiInstagram />, <ImWhatsapp />],
     },
@@ -354,15 +354,8 @@ const handleChangeColor=(id)=>{
             </>
           );
         })}
-        {employeeCard.map((items, index) => {
-          return (
-            <>
-              <div>
-                <EmployeCard key={index} {...items} />
-              </div>
-            </>
-          );
-        })}
+
+          <EmployeCard/>
       </div>
       {/* our mindset */}
       <div className="w-full md:flex">
@@ -423,7 +416,7 @@ const handleChangeColor=(id)=>{
           <div className="flex flex-col md:flex-row gap-3 mt-10 items-center">
             <Link
               to={"/services"}
-              className="border-2 border-darkblue w-fit text-white bg-darkblue no-underline rounded-lg p-3 flex items-center gap-3 transition-all duration-300 hover:scale-95"
+              className="w-fit text-white bg-darkblue no-underline rounded-lg p-3 flex items-center gap-3 hover:rounded-tr-3xl hover:rounded-bl-3xl transition-all duration-700"
             >
               <span className="font-ContentText font-semibold capitalize">
                 Explore our services
@@ -432,7 +425,7 @@ const handleChangeColor=(id)=>{
             </Link>
             <Link
               to={"/portfolio"}
-              className="border-2 bg-darkblue text-white w-fit no-underline rounded-lg p-3 flex items-center gap-3 transition-all duration-300 hover:scale-95"
+              className=" bg-darkblue text-white w-fit no-underline rounded-lg p-3 flex items-center gap-3 hover:rounded-tr-3xl hover:rounded-bl-3xl transition-all duration-700"
             >
               <span className="font-ContentText font-semibold capitalize">
                 Explore our portfolio

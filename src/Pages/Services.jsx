@@ -18,7 +18,7 @@ const Services = ()=>{
                 "Keeping all this in mind, Koncepts creates professional logos providing high-quality, creative and unique designs. Our creations help you show off your brand’s personality and function by being precise and accurate after thoroughly studying the business and its consumers."
 
             ],
-            img:image1
+            img:image3
         },
         {
             id:2,
@@ -29,7 +29,7 @@ const Services = ()=>{
                 "With Meticulous research, we learn the requirements and desires of a company’s current and prospective clients and plan ."
 
             ],
-            img:image2
+            img:image1
         },
         {
             id:3,
@@ -38,7 +38,7 @@ const Services = ()=>{
                 "Brochures are essentially your product catalog in a digital form. Unlike physical brochures (print form), digital brochures are completely optimizable to various digital media, including the web.",
                 "Our UI designers are well-versed in the user interaction arena, where digital brochures have a wide reach. Our team excels in carefully creating brochures with optimum readability and minimalistic design, focusing on the subject which helps in maximizing conversions.  Hence our clients have the choice of having their brochures in pdf or real-time animations to showcase their products in the right light.",
             ],
-            img:image3
+            img:image2
         },
         {
             id:4,

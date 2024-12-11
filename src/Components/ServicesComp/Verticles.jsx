@@ -4,6 +4,7 @@ import ecommerce from "../../assets/animated-icons/services/ecommerce.gif"
 import retail from "../../assets/animated-icons/services/retail.gif"
 import hospitality from "../../assets/animated-icons/services/hospitality.gif"
 import realestate from "../../assets/animated-icons/services/realestate.gif"
+import education from "../../assets/animated-icons/services/meeting.gif"
 // import bfsi from "../../assets/animated-icons/services/bfsi.gif"
 import healthcare from "../../assets/animated-icons/services/healthcare.gif"
 export const verticals = [
@@ -14,6 +15,7 @@ export const verticals = [
     {id:5,icon:retail,title:"Retail"},
     {id:6,icon:automotive,title:"Automotive"},
     {id:7,icon:healthcare,title:"Health Care"},
+    {id:8,icon:education,title:"Education"},
 ]
 
 export const verticals2 = [
@@ -35,7 +37,7 @@ const Verticles = ()=>{
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
                     {
                         verticals.map((items,index)=>{
-                            return   <div key={index} className={`md:${index==4||index==5||index==6?"hidden":""} lg:${index==4||index==5||index==6?"hidden":""} flex flex-col justify-center items-center`}>
+                            return   <div key={index} className={`flex flex-col justify-center items-center`}>
                             <div className="border-dashed border-2 border-darkblue rounded-full p-4 w-fit relative">
                                 <div className="absolute -top-3 left-24 px-[7px] py-[5px] rounded-full flex shadow-md shadow-darkblue bg-white">
                                     <p className="mx-auto my-auto text-darkblue font-bold text-xl">{`0${items.id}`}</p>
@@ -49,7 +51,7 @@ const Verticles = ()=>{
                         })
                     }
                 </div>
-
+{/* 
                 <div className="hidden md:grid md:grid-cols-7 lg:grid lg:grid-cols-7">
                     {
                         verticals2.map((items,index)=>{
@@ -66,7 +68,7 @@ const Verticles = ()=>{
                             </div>
                         })
                     }
-                </div>
+                </div> */}
 
             </div>
         </div>

@@ -65,7 +65,7 @@ const PriceDetails = ()=>{
         <div className="container flex flex-wrap mx-auto">
             <div className="w-full md:w-1/3 shadow-2xl shadow-black/20 p-5 hover:shadow-black/50 my-5">
                 <div className="border-b border-gray-300">
-                    <h1 className="text-xl text-gray-800">LITE</h1>
+                    <h1 className="text-xl text-gray-800">Lite</h1>
                     <h1><span className="text-2xl">&#8377;</span>23,456</h1>
                 </div>
 
@@ -87,11 +87,11 @@ const PriceDetails = ()=>{
                 </div>
             </div>
             <div className="w-full md:w-1/3 shadow-2xl shadow-black/20 p-5 relative hover:shadow-black/50 my-5">
-                <div className="absolute top-0 md:-top-3 right-10">
-                    <h1 className="text-lg bg-darkblue text-white px-3 py-1 rounded-xl w-fit ml-auto text-right">Most Populor</h1>
+                <div className="absolute top-0 md:-top-3 left-12">
+                    <h1 className="text-lg bg-darkblue text-white px-3 py-1 rounded-md w-fit ml-auto text-right">Most Populor</h1>
                 </div>
                 <div className="border-b border-gray-300">
-                    <h1 className="text-xl text-gray-800">Pro package</h1>
+                    <h1 className="text-xl text-gray-800">Pro Package</h1>
                     <h1><span className="text-2xl">&#8377;</span>34,567</h1>
                 </div>
 
