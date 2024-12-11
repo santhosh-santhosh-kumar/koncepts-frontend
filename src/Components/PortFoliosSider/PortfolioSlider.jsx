@@ -83,8 +83,8 @@ const Portfolioslider = () => {
                 <h2 className="text-2xl font-semibold text-[#fffdff] w-full">
                     {id == Portfoliodata.length ? "Next Yours" : title}
                   </h2>
-                  <div className="absolute bottom-20 right-[50px] text-[#fffdff] text-left">
-                  <span className="block text-sm hover:text-darkblue" onClick={() => {
+                 
+                  <span className="block text-sm hover:text-blue-600 text-white" onClick={() => {
                   navigate(`/portfolio/${title}`, {
                     state: { id, title, img, details,portal },
                   });
@@ -92,9 +92,9 @@ const Portfolioslider = () => {
                 }}
                 key={id}
                 ref={ref}>{portal}</span>
-                  <a rel='noopener noreferrer' href={site} target="_blank" className="no-underline text-white "><span className="text-lg hover:text-darkblue">{vision}</span></a>
-                  <FaArrowRight className="mt-2"/>
-                </div>
+                  <a rel='noopener noreferrer' href={site} target="_blank" className="no-underline text-white "><button className="mt-2 border-1 border-white px-3 py-1 text-md md:text-lg font-bold text-white rounded-lg  hover:text-darkblue transition-all duration-500 hover:rounded-tr-2xl hover:rounded-bl-2xl font-ContentText">{vision}</button></a>
+                  {/* <FaArrowRight className="mt-2 text-2xl"/> */}
+            
 </div>
 
               </div>
