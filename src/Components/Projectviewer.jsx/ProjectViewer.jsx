@@ -173,7 +173,7 @@ const MapComponent = () => {
       <div className="relative w-full">
         <div
           id="map"
-          className="h-screen w-full rounded-md overflow-hidden shadow-lg border-b-[1px] border-gray-400"
+          className="bg-neutral-100 h-screen w-full rounded-md overflow-hidden shadow-lg border-b-[1px] border-gray-400"
         ></div>
       </div>
     </div>

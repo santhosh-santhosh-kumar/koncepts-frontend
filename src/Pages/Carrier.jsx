@@ -76,6 +76,7 @@ const Carrier = () => {
     };
 
     const handleSubmit = async (e) => {
+
         e.preventDefault();
         const validationErrors = validate();
         if (Object.keys(validationErrors).length > 0) {
@@ -84,11 +85,14 @@ const Carrier = () => {
         }
 
         const formData = new FormData();
+        
         Object.entries(carrierData).forEach(([key, value]) => formData.append(key, value));
         try {
-            const response = await axios.post('https://localhost:5000/api/carrier', formData, {
+            const response = await axios.post('https://augustinesamuelapi.konceptsdandd.com/mail', formData, {
                 headers: { 'Content-Type': 'multipart/form-data' },
+                
             });
+            formData.forEach((value, key) => console.log(`${key}: ${value}`));
             alert("Successfully submitted");
         } catch (error) {
             console.error('Error:', error);

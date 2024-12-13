@@ -14,13 +14,16 @@ import { useRef } from "react";
         <div className='w-full md:w-1/2 pt-4'>
         <div className="flex items-center flex-wrap gap-2">
         {tags.map((tags,index)=>(
-                <p key={index} className='px-[20px] w-fit py-[4px]  text-lg bg-[#f6f6fa] font-ContentText rounded-lg  mx-1'>{tags}</p>
+                <p key={index} className='px-[20px] w-fit py-[2px]  text-lg bg-[#f6f6fa] font-ContentText rounded-lg  mx-1'>{tags}</p>
             ))}
         </div>
-            <div className="pt-4 font-ContentText text-lg">
+            <div className="pt-2 font-ContentText text-lg">
             <p>{description1}</p>
             <p>{description2}</p>
  
+            </div>
+            <div className="pt-2">
+                <button className="border px-3 py-2 rounded-md bg-darkblue text-white transition-all hover:rounded-tr-2xl hover:rounded-bl-2xl duration-700">Visit Site</button>
             </div>
             <div className='flex gap-x-5 items-center pt-4'>
                 <CgProfile size={40}/>
