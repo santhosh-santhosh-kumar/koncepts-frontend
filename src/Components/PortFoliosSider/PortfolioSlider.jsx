@@ -93,7 +93,6 @@ const Portfolioslider = () => {
                 key={id}
                 ref={ref}>{portal}</span>
                   <a rel='noopener noreferrer' href={site} target="_blank" className="no-underline text-white "><button className="mt-2 border-1 border-white px-3 py-1 text-md md:text-lg font-bold text-white rounded-lg  hover:text-darkblue transition-all duration-500 hover:rounded-tr-2xl hover:rounded-bl-2xl font-ContentText">{vision}</button></a>
-                  {/* <FaArrowRight className="mt-2 text-2xl"/> */}
             
 </div>
 
