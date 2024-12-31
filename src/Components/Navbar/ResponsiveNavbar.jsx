@@ -57,6 +57,7 @@ export const SocialMedia = [
 ]
 
 const ResponsiveNavbar = ()=>{
+    const date = new Date().getFullYear()
     const {MenuState,SetMenuState,HandleMenuState} = useContext(MenuStateContext);
 
     const claculator = window.innerWidth > 760
@@ -157,14 +158,11 @@ const ResponsiveNavbar = ()=>{
                         </div>
 
                 </div>
-                <div className="w-full md:w-auto flex flex-col">
-                    <div>
+                <div className="w-full md:w-auto flex flex-col gap-3">
                         <div className="border-4 border-darkblue w-fit py-2 rounded-full">
-                        <Logo/>
+                            <Logo/>
                         </div>
-                        <span className="block text-sm pt-1">&copy; 2024 Koncepts Design And Development.</span>
-                        <span className="text-sm">All rights recieved</span>
-                    </div>
+                        <span className="text-sm">&copy; {date} TejusDigi All rights reserved</span>
                 </div>
             </div>
         </div>

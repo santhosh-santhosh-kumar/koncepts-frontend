@@ -9,10 +9,10 @@ import { FaLinkedinIn } from "react-icons/fa";
 import { SiInstagram } from "react-icons/si";
 import { ImWhatsapp } from "react-icons/im";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai"; // Import arrow icons
-import SaravanaPrabuImg from "../assets/Images/Pillars/saravanan.jpg";
-import NareshImg from "../assets/Images/Pillars/naresh.jpg";
-import SanthoshImg from "../assets/Images/Pillars/santhosh.jpg";
-import Aboutcardicon from "../assets/Images/about/aboutcardicon.png";
+import SaravanaPrabuImg from "../../assets/Images/Pillars/saravanan.jpg";
+import NareshImg from "../../assets/Images/Pillars/naresh.jpg";
+import SanthoshImg from "../../assets/Images/Pillars/santhosh.jpg";
+import Aboutcardicon from "../../assets/Images/about/aboutcardicon.png";
 import React from "react";
 
     const EmployeeCard = ()=>{
@@ -27,7 +27,7 @@ import React from "react";
           icon: Aboutcardicon,
           about1: "As the CEO of a dynamic design and development company, I thrive on turning ideas into impactful realities. At the heart of my leadership is a commitment to blending creativity with precision, ensuring every project not only meets but exceeds expectations. Whether you are building a brand from the ground up or elevating your existing identity, my team and I are here to deliver excellence.",
           about2:"Let’s design the future, together" ,
-          proficient: ["finance", "banking", "telecommunication", "healthcare", "accessibility", "travel and leisure", "AI chats", "other"],
+          proficient: ["Digital Marketing","finance", "telecommunication", "Brand Identity", "Business Strategy", "Designing", "SEO"],
           socialmedia: [
             {icon:<FaLinkedinIn />,link:""},
             {icon:<SiInstagram />,link:""},
@@ -44,7 +44,7 @@ import React from "react";
           icon: Aboutcardicon,
           about1: "A creative full-stack developer who thrives on pushing the boundaries of web development.",
           about2: 'I’m not just a developer; I’m a problem solver, innovator, and dream builder.',
-          proficient: ['finance', 'banking', 'telecommunication', 'healthcare', 'accessibility', 'travel and leisure', 'AI chats', 'other'],
+          proficient: ['HTML', 'CSS', 'JavaScript', 'Tailwind CSS', 'React JS', 'Node JS', 'Express JS', 'MySql', 'MongoDB', 'Git and Github'],
           socialmedia: [
           {icon:<FaLinkedinIn />,link:""},
           {icon:<SiInstagram />,link:""},
@@ -61,7 +61,7 @@ import React from "react";
           icon: Aboutcardicon,
           about1: "A creative full-stack developer who thrives on pushing the boundaries of web development. Whether it’s building dynamic front-end experiences or optimizing back-end systems, I love blending innovation with functionality to create applications that stand out.",
           about2: 'I’m not just a developer; I’m a problem solver, innovator, and dream builder.',
-          proficient: ['finance', 'banking', 'telecommunication', 'healthcare', 'accessibility', 'travel and leisure', 'AI chats', 'other'],
+          proficient: ['HTML', 'CSS', 'JavaScript', 'Tailwind CSS', 'React JS', 'Node JS', 'Express JS', 'MySql', 'MongoDB', 'Git and Github'],
           socialmedia: [
             {icon:<FaLinkedinIn />,link:""},
             {icon:<SiInstagram />,link:""},
@@ -97,28 +97,28 @@ import React from "react";
                 return(
                   <SwiperSlide className='w-full h-full py-3 px-3'>
                     <div className="flex flex-col md:flex-row justify-between items-start w-full text-gray-600">
-            <div className="w-full md:w-5/12 border-3">
-              <img className="w-full h-full" src={ProfilePic} alt="" />
-            </div>
-            <div className="w-full md:w-7/12">
-              <div className="pl-0 md:pl-10 flex items-center justify-start">
-                <p className="text-3xl md:text-5xl font-semibold text-slate-700 mr-2">
-                  {exp}+
-                      </p>
-                      <p className="w-20 text-sm font-medium">
-                  years of experience in {profession}
-                      </p>
-              </div>
-              <div className="pl-0 md:pl-10">
-                  <h1 className="text-3xl font-semibold ">{Name}</h1>
-                  <h2 className="text-[18px] font-semibold ">{title}</h2>
-                  <p className="font-medium text-[15px] w-full  pt-2">
-                    {about1}
-                  </p>
-                  <p className="font-medium text-[15px] w-full ">{about2}</p>
-                  <p className="font-medium text-[15px]">Porficient in:</p>
-                </div>
-            </div>
+                  <div className="w-full md:w-5/12 border-3">
+                    <img className="w-full h-full" src={ProfilePic} alt="" />
+                  </div>
+                  <div className="w-full md:w-7/12">
+                    <div className="pl-0 md:pl-10 flex items-center justify-start md:justify-end">
+                      <p className="text-3xl md:text-5xl font-semibold text-slate-700 mr-2">
+                        {exp}+
+                            </p>
+                            <p className="w-20 text-sm font-medium">
+                        years of experience in {profession}
+                            </p>
+                    </div>
+                    <div className="pl-0 md:pl-10">
+                        <h1 className="text-3xl font-semibold ">{Name}</h1>
+                        <h2 className="text-[18px] font-semibold ">{title}</h2>
+                        <p className="font-medium text-[15px] w-full  pt-2">
+                          {about1}
+                        </p>
+                        <p className="font-medium text-[15px] w-full ">{about2}</p>
+                        <p className="font-medium text-[15px]">Porficient in:</p>
+                      </div>
+                  </div>
         </div>
         <div className="w-10/12 mt-5">
               {proficient.map((items, index) => (

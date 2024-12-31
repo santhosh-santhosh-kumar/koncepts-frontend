@@ -68,10 +68,10 @@ const Counter = () => {
 
   useEffect(() => {
     let timer;
-    if (isCounting && ProjectComplete < 190) {
+    if (isCounting && ProjectComplete < 272) {
       timer = setInterval(() => {
         setProjectComplete((prevCount) => {
-          if (prevCount < 190) return prevCount + 1;
+          if (prevCount < 272) return prevCount + 1;
           clearInterval(timer); // Clear interval outside of state update
           return prevCount;
         });
@@ -98,19 +98,19 @@ const Counter = () => {
     <div ref={sectionRef}>
       <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4'>
         <div className='w-full border border-gray-200 aboutExpCardContainer'>
-          <h1 className="text-5xl font-semibold text-gray-800">{ProjectComplete}+</h1>
+          <h1 className="text-5xl font-semibold text-darkblue">{ProjectComplete}+</h1>
           <p className="text-gray-600 mt-3 w-40">Successfully Completed Projects in UX and UI</p>
         </div>
         <div className='w-full border border-gray-200 aboutExpCardContainer'>
-          <h1 className="text-5xl font-semibold text-gray-800">{Experience}+</h1>
+          <h1 className="text-5xl font-semibold text-darkblue">{Experience}+</h1>
           <p className="text-gray-600 mt-3 w-40">Years Of Experience in Digital Design</p>
         </div>
         <div className='w-full border border-gray-200 aboutExpCardContainer'>
-          <h1 className="text-5xl font-semibold text-gray-800">{AverageCustomer}.0 <span className='text-2xl'>of 5.0</span></h1>
+          <h1 className="text-5xl font-semibold text-darkblue">{AverageCustomer}.0 <span className='text-2xl'>of 5.0</span></h1>
           <p className="text-gray-600 mt-3 w-40">Average Rate From Our Customers</p>
         </div>
         <div className='w-full border border-gray-200 aboutExpCardContainer'>
-          <h1 className="text-5xl font-semibold text-gray-800">{WorkResult}%</h1>
+          <h1 className="text-5xl font-semibold text-darkblue">{WorkResult} <span className='text-2xl'>%</span></h1>
           <p className="text-gray-600 mt-3 w-40">Work Results Delivery In The Past</p>
         </div>
       </div>

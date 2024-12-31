@@ -114,30 +114,32 @@ const MapComponent = () => {
         </p>
 
         {/* Dropdown for Websites */}
-        <select
-          className={`relative appearance-none px-4 py-2 rounded shadow ${
-            imageType === "website"
-              ? "bg-darkblue text-white"
-              : "bg-myyellow text-darkblue"
-          }`}
-          onChange={handleWebsiteChange}
-          value={websiteOverlays[websiteIndex]?.label}
-        >
-          {websiteOverlays.map((overlay, index) => (
-            <option key={index} value={overlay.label}>
-              {overlay.label}
-            </option>
-            
-          ))}
-        </select>
-        <FaAngleDown className={`${
-            imageType === "website"
-              ? " text-white"
-              : "text-darkblue"
-          } absolute left-[590px]`}/>
+        <div className="relative inline-block">
+            <select
+              className={`appearance-none font-[500] px-4 py-2 rounded shadow w-full ${
+                imageType === "website"
+                  ? "bg-darkblue text-white"
+                  : "bg-myyellow text-darkblue"
+              }`}
+              onChange={handleWebsiteChange}
+              value={websiteOverlays[websiteIndex]?.label}
+            >
+              {websiteOverlays.map((overlay, index) => (
+                <option key={index} value={overlay.label}>
+                  {overlay.label}
+                </option>
+              ))}
+            </select>
+            <FaAngleDown
+              className={`absolute right-4 top-1/2 transform -translate-y-1/2 ${
+                imageType === "website" ? "text-white -rotate-180" : "text-darkblue"
+              } transition-all duration-500`}
+            />
+        </div>
+
           {/* <FaAngleUp className={`${arrow ?"block":"hidden"} absolute left-[590px] text-white`}/> */}
         <button
-          className={`px-4 py-2 rounded shadow ${
+          className={`px-4 font-[500] py-2 rounded shadow ${
             imageType === "logo"
               ? "bg-darkblue text-white"
               : "bg-myyellow text-darkblue"
@@ -149,7 +151,7 @@ const MapComponent = () => {
 
         {/* Button for Brochure */}
         <button
-          className={`px-4 py-2 rounded shadow ${
+          className={`px-4 font-[500] py-2 rounded shadow ${
             imageType === "brochure"
               ? "bg-darkblue text-white"
               : "bg-myyellow text-darkblue"
@@ -159,7 +161,7 @@ const MapComponent = () => {
           View Brochure
         </button>
         <button
-          className={`px-4 py-2 rounded shadow ${
+          className={`px-4 font-[500] py-2 rounded shadow ${
             imageType === "presentation"
               ? "bg-darkblue text-white"
               : "bg-myyellow text-darkblue"

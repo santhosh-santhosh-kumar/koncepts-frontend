@@ -2,7 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-
+*{
+    scroll-behavior: smooth;
+}
 @layer utilities {
     .links{
         @apply relative
@@ -116,6 +118,8 @@
     @apply gap-2 md:gap-10
 }
 
+
+
 .bullet-hero{
     @apply bg-gray-500 w-3 md:w-5 h-[1px] md:h-1
 }
@@ -126,4 +130,18 @@
 
 .bullet-hero-active{
     @apply bg-gray-800
+}
+
+
+
+.bullet-review{
+    @apply bg-gray-400 w-3 md:w-5 h-[1px] md:h-1
+}
+
+.bullet-review:hover{
+    @apply bg-gray-400
+}
+
+.bullet-hero-review{
+    @apply bg-darkblue
 }

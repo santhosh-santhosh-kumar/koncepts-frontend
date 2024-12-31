@@ -2,7 +2,7 @@ const MindsetCard = ({id,title,icon,details})=>{
     return(
         <div className={` border-1 border-gray-200 aboutExpCardContainer`}>
             <div className="flex items-start justify-between gap-x-2 pb-3">
-                <h3 className="text-[24px] font-semibold">{title}</h3>
+                <h3 className="text-[24px] font-semibold text-darkblue">{title}</h3>
                 <img src={icon} className="w-10" alt="" />
             </div>
             <div>

@@ -44,19 +44,19 @@ const Footer = ()=>{
                         </div>
                         
                         <ul className="w-1/2 md:w-1/4 pl-0">
-                            <p className="font-bold text-xl">Services</p>
+                            <p className="text-darkblue font-bold text-xl">Services</p>
                             {Services.map((items,index)=>(
                                 <li onClick={()=>{moveServicesPages(items.to);window.scrollTo(0,0)}} key={index} className={`${items.id === 2 ? "list-disc text-sm py-1 ml-7":"list-none py-2"} cursor-pointer`}>{items.service}</li>
                             ))}
                         </ul>
                         <ul className="w-1/2 md:w-1/4 pl-0">
-                            <p className="font-bold text-xl">Openning</p>
+                        <p className="text-white">.</p>
                             {hiringing.map((items,index)=>(
-                                <li key={index} onClick={()=>{navigate("/career"); window.scrollTo(0,0)}} className={`${items.id === 2 ? "list-disc text-sm py-1 ml-7":"list-none py-2"} cursor-pointer`}>{items.openning}</li>
+                                <li key={index} onClick={()=>{window.scrollTo(0,0)}} className={`${items.id === 2 ? "list-disc text-sm py-1 ml-7":"list-none py-2"} cursor-pointer`}>{items.openning}</li>
                             ))}
                         </ul>
                         <ul className="w-1/2 md:w-1/4 pl-0">
-                            <p className="font-bold text-xl">Technologies</p>
+                            <p className="text-darkblue font-bold text-xl">Technologies</p>
                             {technologies.map((items,index)=>(
                                 <li key={index} className={`${items.id === 2 ? "list-disc text-sm py-1":"list-none py-2"}`}>{items.tech}</li>
                             ))}
@@ -68,24 +68,24 @@ const Footer = ()=>{
             </div>
         </div>
         <div className="border-t-2">
-        <div className="container w-full flex flex-wrap twmt  ">
+        <div className="container w-full flex flex-wrap py-10">
                 <div className="w-full md:w-3/12">
-                    <h1 className="text-xl font-bold">INDIA</h1>
-                    <p className="w-56">#20 First Street, Sriram Nagar, Achariyapuram, Urivaiyar, (Near Achariya school)
+                    <h1 className="text-xl font-bold text-darkblue">INDIA</h1>
+                    <p className="w-56 py-2">#20 First Street, Sriram Nagar, Achariyapuram, Urivaiyar,<br />(Near Achariya school) <br />
                     Puducherry - 605110</p>
                 </div>
                 <div className="w-full md:w-6/12">
-                    <h1 className="text-xl font-bold">FOLLOW US</h1>
-                    <div className="flex gap-2 mx-auto">
+                    <h1 className="text-xl font-bold text-darkblue">FOLLOW US</h1>
+                    <div className="flex py-2 gap-2 mx-auto">
                             {SocialMedia.map((items,index)=>(
-                                <p key={index} title={items.title} className="sbg rounded-full p-1 transition-all duration-500">{items.platform}</p>
+                                <p key={index} title={items.title} className="bg-darkblue hover:bg-yellow-400 text-white hover:text-gray-900 hover:scale-125 rounded-full p-1 transition-all duration-700 cursor-pointer">{items.platform}</p>
                             ))}
                         </div>
 
                 </div>
                 <div className="w-full md:w-auto flex flex-col">
                     <div>
-                        <div className=" py-2 rounded-full">
+                        <div className="rounded-full">
                         <img src={Logo} alt="" width={200} />
                         </div>
                         <span className="block text-sm pt-1">&copy; {date} TejusDigi Design And Development.</span>

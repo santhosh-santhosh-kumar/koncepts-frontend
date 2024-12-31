@@ -49,11 +49,6 @@ const Services = ()=>{
             ],
             img:image4
         },
-        {
-            id:5,
-            title:"",
-            details:["",""]
-        }
     ]
     const [activeId, setActiveId] = useState(null);
     const [previousId, setPreviousId] = useState(null);
@@ -89,7 +84,6 @@ const Services = ()=>{
                     return <WhatWeDo key={items.id} {...items} activeId={activeId} setActiveId={setActiveId} previousId={previousId}/>
                 })
             }
-            {/* <FaqAccordian2/> */}
         </div>
         </>
     )

@@ -90,7 +90,7 @@
 //             </div> */}
 
 
-import EmployeCard from "../../Pages/EmployeCard";
+import EmployeCard from "./EmployeCard";
 
 const AboutExpCard = ({
   id,
@@ -112,7 +112,7 @@ const AboutExpCard = ({
               <img className="w-full h-full" src={ProfilePic} alt="" />
             </div>
             <div className="w-full md:w-7/12">
-              <div className="pl-0 md:pl-10 flex items-center justify-start">
+              <div className="pl-0 md:pl-10 flex items-center justify-end">
                 <p className="text-3xl md:text-5xl font-semibold text-slate-800 mr-2">
                   {exp}+
                       </p>

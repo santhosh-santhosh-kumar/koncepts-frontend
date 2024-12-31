@@ -43,8 +43,8 @@ function BackgroundSlider() {
       >
          {
               bgimages.map(({id,img})=>(
-                <SwiperSlide className="w-full h-full">
-                  <img className="w-full h-full object-contain" key={id} src={img} alt="" />
+                <SwiperSlide key={id}  className="w-full h-full">
+                  <img className="w-full h-full object-contain" src={img} alt="" />
                 </SwiperSlide>
               ))
             }

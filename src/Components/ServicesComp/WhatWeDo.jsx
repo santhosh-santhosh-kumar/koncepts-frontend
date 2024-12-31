@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 
 const WhatWeDo = ({
   id,
@@ -7,10 +7,10 @@ const WhatWeDo = ({
   img,
   serviceOffered,
   activeId,
-  previousId,
   setActiveId,
 }) => {
   const cardRef = useRef(null);
+  const [visibility, setVisibility] = useState(0);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -18,12 +18,10 @@ const WhatWeDo = ({
         if (entry.isIntersecting) {
           setActiveId(id); // Set this card as active when it appears in view
         }
-        if (id == 4) {
-          setActiveId(id);
-        }
+        setVisibility(entry.intersectionRatio); // Track the visibility ratio (0 to 1)
       },
       {
-        // threshold: 0.8, // Adjust threshold to trigger at 60% visibility
+        threshold: Array.from({ length: 11 }, (_, i) => i * 0.1), // Create thresholds from 0.0 to 1.0
       }
     );
 
@@ -34,25 +32,21 @@ const WhatWeDo = ({
     };
   }, [id, setActiveId]);
 
-  const heightAdj = (id) => {
-    if (id === 5) {
-      return "h-100 pb-10";
-    }
+  const getBlurClass = () => {
+    if (visibility >= 0.8) return "blur-none"; // Fully visible
+    if (visibility >= 0.5) return "blur-sm"; // Partially visible
+    if (visibility >= 0.2) return "blur-md"; // Less visible
+    return "blur-lg"; // Mostly hidden
   };
 
   return (
-    <>
     <div
       ref={cardRef}
-      className={`sticky ${heightAdj(
-        id
-      )} top-10 headj bg-white transition-all duration-500 ${
-        previousId === id ? "blur-sm" : "blur-none"
-      } ${id == 4 ? "blur-none" : " te"}`}
+      className={`sticky top-10 headj bg-white transition-all duration-500 ${getBlurClass()}`}
     >
-      <div className="flex flex-col-reverse md:flex-row  items-start gap-x-6  px-20  container mt-36 p-5">
+      <div className="flex flex-col-reverse md:flex-row items-start gap-x-6 px-20 container mt-36 p-5">
         <div className="w-full md:w-6/12">
-          {id != 5 ? (
+          {id !== 5 ? (
             <div className="flex items-center gap-3 font-ContentText">
               <h3 className="text-sm font-bold borderdarkblue rounded-full px-2 py-2 -rotate-12">
                 0{id}
@@ -63,8 +57,8 @@ const WhatWeDo = ({
           ) : (
             ""
           )}
-          <div className="">
-            <h1 className="font-Heading text-3xl md:text-[40px]">{title}</h1>
+          <div>
+            <h1 className="font-Heading text-3xl md:text-[40px] pt-3">{title}</h1>
             {details.map((item, index) => (
               <p
                 key={index}
@@ -94,13 +88,11 @@ const WhatWeDo = ({
             )}
           </div>
         </div>
-        <div className="w-full md:w-6/12 h-full ">
-        <img src={img} className="object-cover w-full h-full shadow-2xl" alt="" />
-      </div>
-
+        <div className="w-full md:w-6/12 h-full">
+          <img src={img} className="object-cover w-full h-full shadow-2xl" alt="" />
+        </div>
       </div>
     </div>
-    </>
   );
 };
 

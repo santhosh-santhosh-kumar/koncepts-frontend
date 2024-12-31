@@ -1,11 +1,12 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination, FreeMode, Navigation } from 'swiper/modules';
+import { Autoplay, Pagination, FreeMode, Navigation, EffectCoverflow} from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/free-mode';
 import 'swiper/css/navigation';
+import 'swiper/css/effect-coverflow';
 import { useRef } from 'react';
-
+import { GrNext,GrPrevious } from 'react-icons/gr';
 import stivejobs from "../../assets/Images/about/stive_jobs.jpg";
 import billgates from "../../assets/Images/about/bill_gates.jpg";
 import joel from "../../assets/Images/about/joel_spolsky.jpeg";
@@ -30,38 +31,72 @@ const ReviewSlider = () => {
 
   return (
     <Swiper
-      ref={swiperRef}
-      onClick={handleClick}
-      className='w-full h-full cursor-pointer slidercontainer'
-      modules={[FreeMode, Pagination, Autoplay, Navigation]}
-      pagination={{ clickable: true }}
-      slidesPerView={1}
-      loop={true}
-      navigation
-      autoplay={{
-        delay: 3000,
-        disableOnInteraction: false,
-      }}
-    >
-      {SliderReview.map((item, index) => (
-        <SwiperSlide className="w-full h-full flex justify-center items-center px-20" key={index}>
-          <div className='flex gap-y-6 flex-col justify-between '>
-            <div className='w-full'>
-              <h1 className='text-sm md:text-2xl lg:text-2xl  md:px-10 md:mt-0 mt-4'>{item.review}</h1>
+    ref={swiperRef}
+    onClick={handleClick}
+    className="w-full h-full cursor-pointer slidercontainer relative bg-white"
+    modules={[FreeMode, Pagination, Autoplay, Navigation,EffectCoverflow]}
+    pagination={{
+      el: ".pagination-review",
+      clickable: true,
+      bulletClass: "bullet-review",
+      bulletActiveClass: "bullet-hero-review",
+    }}
+    slidesPerView={1}
+    effect="coverflow" // Change effect to "coverflow"
+    coverflowEffect={{
+      rotate: 100, // Rotate angle for adjacent slides
+      stretch: 0, // Space between slides
+      depth: 200, // Perspective depth
+      modifier: 1, // Effect intensity
+      slideShadows: false, // Disable shadows
+    }}
+    loop={true}
+    navigation={{
+      nextEl: ".reviewsliderNext",
+      prevEl: ".reviewsliderPrev",
+    }}
+    autoplay={{
+      delay: 3000,
+      disableOnInteraction: false,
+    }}
+    speed={1000}
+  >
+    {SliderReview.map((item, index) => (
+      <SwiperSlide
+        className="w-full h-full flex justify-center items-center bg-white shadow-lg shadow-gray-400"
+        key={index}
+      >
+        <div className="w-full flex gap-y-6 flex-col px-4 md:px-10">
+          <div className="w-full">
+            <h1 className="text-xs md:text-lg lg:text-2xl md:px-10 md:mt-0 mt-4 font-bold">
+              {item.review}
+            </h1>
+          </div>
+          <div className="flex gap-3 items-center pb-4">
+            <div className="w-14 h-14">
+              <img
+                src={item.pic}
+                className="w-full h-full rounded-full object-cover"
+                alt={item.author}
+              />
             </div>
-            <div className='flex md:gap-3 px-10 flex-wrap items-center pb-4'>
-              <div className='md:w-14 md:h-14'>
-                <img src={item.pic} className='md:w-full  md:h-full  object-cover' alt={item.author} />
-              </div>
-              <div className='mt-4 md:mt-0'>
-                <p className='mb-0 font-bold'>{item.author}</p>
-                <p className=''>{item.des}</p>
-              </div>
+            <div className="mt-4 md:mt-0 md:text-left">
+              <p className="mb-0 font-bold text-sm md:text-base">{item.author}</p>
+              <p className="text-xs md:text-sm">{item.des}</p>
             </div>
           </div>
-        </SwiperSlide>
-      ))}
-    </Swiper>
+        </div>
+      </SwiperSlide>
+    ))}
+    <div className="pagination-review flex gap-2 md:gap-3 justify-center pb-4 md:pb-5 cursor-pointer absolute z-10"></div>
+    <button className="reviewsliderNext absolute right-2 md:right-5 top-1/2 z-10 text-lg md:text-2xl lg:text-4xl text-darkblue">
+      <GrNext />
+    </button>
+    <button className="reviewsliderPrev absolute left-2 md:left-5 top-1/2 z-10 text-lg md:text-2xl lg:text-4xl text-darkblue">
+      <GrPrevious />
+    </button>
+  </Swiper>
+
   );
 };
 

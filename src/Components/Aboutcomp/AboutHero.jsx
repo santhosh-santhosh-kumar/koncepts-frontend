@@ -11,7 +11,7 @@ export const AboutHero = () => {
   return (
     <div className='w-full h-screen md:pt-20 flex flex-col text-center'>
       <div className=' md:pt-10'>
-        <p className='font-ContentText text-lg font-bold'>Who We Are</p>
+        <p className='font-ContentText text-lg font-bold text-darkblue'>Who We Are</p>
       </div>
       <div>
         <h1 className='mx-auto font-Heading abouttext  lg:text-5xl'>We are a remote design team with strong experience <span className='block mt-6'>in creating UX/UI solutions</span></h1>

@@ -72,12 +72,12 @@ export const navlinks = [
                             isScrollingUp ? 'transform translate-y-0' : 'transform -translate-y-full'}`}>
                 <div className="container flex items-center justify-between">
                     {/* logo */}
-                    <div className="">
+                    <div>
                         <Link onClick={()=>{SetMenuState(false);window.scrollTo(0,0)}} className="" to={'/'}><Logo/></Link>
                     </div>
                     {/* navbar links */}
                     <div className="hidden md:block">
-                        <ul className="flex gap-3 mr-28 mt-2">
+                        <ul className="flex gap-10">
                             {
                                 navlinks.map((items,index)=>(
                                     <li key={index} className="text-lg font-Heading">

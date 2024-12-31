@@ -16,6 +16,7 @@ export default {
         "myyellow":"#f8d100"
       },
       container:{
+        center:true,
         padding:{
           DEFAULT:"1rem",
             sm: "2rem",

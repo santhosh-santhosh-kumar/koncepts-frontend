@@ -135,34 +135,42 @@ const Portfolio=()=>{
             <div className='container'>
             <div className='flex justify-center items-start h-screen w-full top-60 sticky'>
                 <div>
-                    <p className='text-xl font-semibold text-center'>Create, Connect, Celebrate</p>
+                    <p className='text-xl font-semibold text-center text-darkblue'>Create, Connect, Celebrate</p>
                     <h1 className='font-Heading leading-tight text-center text-2xl md:text-4xl font-bold text-gray-800'>We have thougtfully shaped innumerable websites over the years <span className='block pt-2'>and successfully launched the same for</span> <span className='text-gray-500 block pt-2'> many satisfied clients.</span></h1> 
                 </div>
             </div>
             <div className='h-[400vh] flex flex-col'>
                 <div className='grid grid-cols-3 absolute gap-2 md:gap-40'>
-                    <img src={RunningImg1} className='h-[100px] md:h-[250px] w-[400px] mr-[200px] -z-[9] rellax' data-rellax-speed="1"/>
-                    <img src={RunningImg5} className='h-[100px] md:h-[250px] w-[400px] rellax -z-[9]' data-rellax-speed="2"/>
-                    <img src={RunningImg3} className='h-[100px] md:h-[250px] w-[400px] rellax' data-rellax-speed="4"/>
-                    <img src={RunningImg4} className='h-[100px] md:h-[250px] w-[400px] rellax' data-rellax-speed="-1"/>
-                    <img src={RunningImg2} className='h-[100px] md:h-[250px] w-[400px] rellax' data-rellax-speed="-2"/>
-                    <img src={RunningImg8} className='h-[100px] md:h-[250px] w-[400px] rellax' data-rellax-speed="-1"/>
-                    <img src={RunningImg7} className='h-[100px] md:h-[250px] w-[400px] rellax' data-rellax-speed="-2"/>
-                    <img src={RunningImg6} className='h-[100px] md:h-[250px] w-[400px] rellax' data-rellax-speed="-4"/>
-                    <img src={RunningImg9} className='h-[100px] md:h-[250px] w-[400px] rellax' data-rellax-speed="-3"/>
-                    <img src={RunningImg10} className='h-[100px] md:h-[250px] w-[400px] rellax' data-rellax-speed="-3"/>
+                    <img src={RunningImg1} className='object-contain h-[100px] md:h-[250px] w-[400px] mr-[200px] -z-[9] rellax' data-rellax-speed="1"/>
+                    <img src={RunningImg5} className='object-contain h-[100px] md:h-[250px] w-[400px] rellax -z-[9]' data-rellax-speed="2"/>
+                    <img src={RunningImg3} className='object-contain h-[100px] md:h-[250px] w-[400px] rellax' data-rellax-speed="4"/>
+                    <img src={RunningImg4} className='object-contain h-[100px] md:h-[250px] w-[400px] rellax' data-rellax-speed="-1"/>
+                    <img src={RunningImg2} className='object-contain h-[100px] md:h-[250px] w-[400px] rellax' data-rellax-speed="-2"/>
+                    <img src={RunningImg8} className='object-contain h-[100px] md:h-[250px] w-[400px] rellax' data-rellax-speed="-1"/>
+                    <img src={RunningImg7} className='object-contain h-[100px] md:h-[250px] w-[400px] rellax' data-rellax-speed="-2"/>
+                    <img src={RunningImg6} className='object-contain h-[100px] md:h-[250px] w-[400px] rellax' data-rellax-speed="-4"/>
+                    <img src={RunningImg9} className='object-contain h-[100px] md:h-[250px] w-[400px] rellax' data-rellax-speed="-3"/>
+                    <img src={RunningImg10} className='object-contain h-[100px] md:h-[250px] w-[400px] rellax' data-rellax-speed="-3"/>
                 </div>
             </div>
             </div>
             <div className='container'>
-                <div ref={container}>
-                {
-                   projects.map((items,index)=>{
-                    const targetscale = 1 - ((projects.length - index) * 0.1);
-                    return <Cards key={index} {...items} progress={scrollYProgress} range={[index * 0.25,1]} targetscale={targetscale}/>
-                   })
-                }
-                </div>
+            <div ref={container}>
+          {projects.map((items, index) => {
+            const start = index * 0.25;
+            const end = start + 0.25;
+            const targetscale = 1 - (projects.length - index) * 0.1;
+            return (
+              <Cards
+                key={index}
+                {...items}
+                progress={scrollYProgress}
+                range={[start, end]}
+                targetscale={targetscale}
+              />
+            );
+          })}
+          </div>
             </div>
             <div>
                 <Portfolioslider/>

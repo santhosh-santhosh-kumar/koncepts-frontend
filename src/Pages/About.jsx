@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
 import AboutExpCard from "../Components/Aboutcomp/AboutExpCard";
-import EmployeCard from "./EmployeCard";
+import EmployeCard from "../Components/Aboutcomp/EmployeCard";
 import { AboutHero } from "../Components/Aboutcomp/AboutHero";
 import { FaLinkedinIn } from "react-icons/fa";
 import { SiInstagram } from "react-icons/si";
-import { FaFacebookF } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
 import { ImWhatsapp } from "react-icons/im";
 import SridharNatrajanImg from "../assets/Images/Pillars/sridharnatarajan.jpg";
 import NareshImg from "../assets/Images/Pillars/naresh.jpg";
@@ -22,7 +20,6 @@ import { MdStar } from "react-icons/md";
 import CustomerReview from "../Components/Aboutcomp/CustomerReview";
 import StarRating from "../Components/Aboutcomp/StarRating";
 import Counter from "../Components/Aboutcomp/RunningNumbers";
-import TeamCard from "../Components/Aboutcomp/TeamCard";
 import IAAS from "../assets/Images/about/iaas.png";
 import sangumark from "../assets/Images/about/sangumak.png";
 import maxima from "../assets/Images/about/maxima.png";
@@ -35,19 +32,12 @@ import TAAS from "../assets/Images/about/taas.png";
 import shazab from "../assets/Images/about/shazab-1.png";
 import whichcourse from "../assets/Images/about/which.png";
 import luckygame from "../assets/Images/about/lucky8games.png";
-import { GoArrowRight } from "react-icons/go";
-import { AiOutlineCamera } from "react-icons/ai";
-import { GiDeadEye } from "react-icons/gi";
-import { TbBrandAdonisJs } from "react-icons/tb";
-import { BiBarChartAlt } from "react-icons/bi";
-import { PiCodeBlockFill } from "react-icons/pi";
-import { CgWebsite } from "react-icons/cg";
+import { GoArrowRight } from "react-icons/go";;
 import Uxdesign from "../assets/animated-icons/about/ux-design.gif";
 import brand from "../assets/animated-icons/about/globe-earth.gif";
 import html from "../assets/animated-icons/about/html.gif";
 import chart from "../assets/animated-icons/about/line-chart.gif";
 import responsive from "../assets/animated-icons/about/responsive.gif";
-import travelicon from "../assets/animated-icons/services/tourist-route.gif";
 import camera from "../assets/animated-icons/about/camera.gif";
 import witness from "../assets/animated-icons/about/witness.gif";
 import travel1 from "../assets/Images/Business Domains/Travel.jpg";
@@ -102,7 +92,8 @@ const handleChangeColor=(id)=>{
     {
       id:3,
       title:"Hospitality",
-      content1:"TejusDigi specializes in creating customized website designs for the hospitality industry, enhancing guest experiences, and improving online bookings. We focus on combining functionality with aesthetics to provide seamless navigation, engaging visuals, and robust features for hotels, resorts, and more.",
+      content1:"TejusDigi specializes in creating customized website designs for the hospitality industry, enhancing guest experiences, and improving online bookings.",
+      content2:"We focus on combining functionality with aesthetics to provide seamless navigation, engaging visuals, and robust features for hotels, resorts, and more.",
       img:travel3
 
     },
@@ -181,47 +172,7 @@ const handleChangeColor=(id)=>{
     },
   ];
 
-  const employeeCard = [
-    {
-      id: 1,
-      ProfilePic: SaravanaPrabuImg,
-      Name: "Saravana Prabu",
-      title: "Designer",
-      exp: 6,
-      profession: "design",
-      icon: Aboutcardicon,
-      about1: "As the CEO of a dynamic design and development company, I thrive on turning ideas into impactful realities. My mission is to craft visually stunning and functional solutions, from innovative logos to cutting-edge websites, captivating brochures, and more.",
-      about2: 'At the heart of my leadership is a commitment to blending creativity with precision, ensuring every project not only meets but exceeds expectations.Whether you are building a brand from the ground up or elevating your existing identity, my team and I are here to deliver excellence. Let’s design the future, together',
-      proficient: ["finance", "banking", "telecommunication", "healthcare", "accessibility", "travel and leisure", "AI chats", "other"],
-      socialmedia: [<FaLinkedinIn />, <SiInstagram />, <ImWhatsapp />],
-    },
-    {
-      id: 2,
-      ProfilePic: NareshImg,
-      Name: "Naresh",
-      title: "Full Stack Developer",
-      exp: 1,
-      profession: "design",
-      icon: Aboutcardicon,
-      about1: "Founder and lead designer at UXIS, specializes in deep UX/UI design for complex product interfaces.",
-      about2: 'The author of the course "UX Thinking and Structuring Before Creating UI" and the winner of the Telegram',
-      proficient: ['finance', 'banking', 'telecommunication', 'healthcare', 'accessibility', 'travel and leisure', 'AI chats', 'other'],
-      socialmedia: [<FaLinkedinIn />, <SiInstagram />, <ImWhatsapp />]
-    },
-    {
-      id: 3,
-      ProfilePic: SanthoshImg,
-      Name: "Santhosh",
-      title: "Full Stack Developer",
-      exp: 1,
-      profession: "design",
-      icon: Aboutcardicon,
-      about1: "A creative full-stack developer who thrives on pushing the boundaries of web development.",
-      about2: 'I’m not just a developer; I’m a problem solver, innovator, and dream builder.',
-      proficient: ['finance', 'banking', 'telecommunication', 'healthcare', 'accessibility', 'travel and leisure', 'AI chats', 'other'],
-      socialmedia: [<FaLinkedinIn />, <SiInstagram />, <ImWhatsapp />]
-    }
-  ];
+
 
   const MindSet = {
     Part1: [
@@ -348,7 +299,7 @@ const handleChangeColor=(id)=>{
         {ExperienceCard.map((items, index) => {
           return (
             <>
-              <div>
+              <div key={index}>
                 <AboutExpCard key={index} {...items} />
               </div>
             </>
@@ -360,13 +311,13 @@ const handleChangeColor=(id)=>{
       {/* our mindset */}
       <div className="w-full md:flex">
         <div className="aboutExpCardContainer w-full md:w-1/2 my-auto">
-          <h1 className="font-Heading text-6xl font-bold">
+          <h1 className="font-Heading text-6xl font-bold text-darkblue">
             Building the future
           </h1>
           <p className="font-medium font-ContentText text-[15px] pt-4">
           Creativity and critical thinking are vital for business success, and we apply them strategically to 
-capture our target audience’s attention, keeping them engaged from start to finish. Creativity takes 
-many forms, and the more we harness it, the further our reach.
+          capture our target audience’s attention, keeping them engaged from start to finish. Creativity takes 
+          many forms, and the more we harness it, the further our reach.
           </p>
           <p className="font-medium font-ContentText text-[15px] pt-4">
           We set clear goals at the outset and ensure they are achieved by the end. Thinking outside the box is 
@@ -398,7 +349,7 @@ many forms, and the more we harness it, the further our reach.
       </div>
       <div className="w-full md:flex">
         <div className="w-full md:w-1/2 aboutExpCardContainer my-auto border border-gray-200 border-separate">
-          <h3 className="font-ContentText text-lg font-bold pb-4">
+          <h3 className="font-ContentText text-lg font-bold pb-4 text-darkblue">
             Our Superpowers
           </h3>
           <h1 className="font-Heading text-6xl font-bold leading-tight capitalize">
@@ -412,7 +363,7 @@ many forms, and the more we harness it, the further our reach.
           <div className="flex flex-col md:flex-row gap-3 mt-10 items-center">
             <Link
               to={"/services"}
-              className="w-fit text-white bg-darkblue no-underline rounded-lg p-3 flex items-center gap-3 hover:rounded-tr-3xl hover:rounded-bl-3xl transition-all duration-700"
+              className="w-fit text-darkblue border-4 border-dashed bg-white no-underline rounded-lg p-3 flex items-center gap-3 hover:rounded-tr-3xl hover:rounded-bl-3xl transition-all duration-700"
             >
               <span className="font-ContentText font-semibold capitalize">
                 Explore our services
@@ -436,7 +387,7 @@ many forms, and the more we harness it, the further our reach.
       {/* our clients some of them */}
       <div className="w-full md:flex border border-gray-200">
         <div className="aboutExpCardContainer w-full md:w-1/2 mt-2">
-          <h3 className="font-ContentText text-lg font-bold pt-10">
+          <h3 className="font-ContentText text-lg font-bold pt-10 text-darkblue">
             Our Clients
           </h3>
           <h1 className="font-Heading text-6xl font-bold pt-2">Some Of Them</h1>
@@ -487,8 +438,8 @@ many forms, and the more we harness it, the further our reach.
               return (
                 <span
                 
-                onMouseEnter={() => handleMouseEnter(id)}
-               onClick={()=>handleChangeColor(id)}
+                  onMouseEnter={() => handleMouseEnter(id)}
+                  onClick={()=>handleChangeColor(id)}
                   key={index}
                   className={`${index==color?"bg-darkblue text-white":""} border-1 w-40 lg:mr-2 mb-2 border-black lg:px-4  py-2 px-4  rounded-lg font-bold text-[14px] text-center tracking-widest block uppercase hover:bg-darkblue hover:text-white`}
                 >
@@ -501,10 +452,9 @@ many forms, and the more we harness it, the further our reach.
 
               <h2>{domains["title"]}</h2>
               <div className="mt-4  w-full">
-              <p className="font-semibold">{text1}</p>
-              <p className="font-semibold">{text2}</p>
+              <p className="font-semibold pb-2">{text1}</p>
+              <p className="font-semibold pb-2">{text2}</p>
               <p className="font-semibold">{text3}</p>
-
               </div>
            
           </div>
@@ -521,7 +471,7 @@ many forms, and the more we harness it, the further our reach.
       {/* what clients says */}
       <div className="w-full md:flex border">
         <div className="aboutExpCardContainer w-full md:w-1/2 my-auto">
-          <h3 className="font-ContentText text-lg font-bold pb-2">
+          <h3 className="font-ContentText text-lg font-bold pb-2 text-darkblue">
             Clients Reviews
           </h3>
           <h1 className="font-Heading text-6xl font-bold">What they say</h1>
@@ -542,7 +492,6 @@ many forms, and the more we harness it, the further our reach.
         </div>
       </div>
       <Counter />
-      {/* <TeamCard /> */}
     </div>
   );
 };
