@@ -12,6 +12,7 @@ import Logo from "../../assets/Images/footer/01-Logo-Koncepts.png";
 
 
 const Footer = ()=>{
+    const date = new Date().getFullYear()
     const navigate = useNavigate();
     const moveServicesPages = (to)=>{
         navigate(to);
@@ -87,8 +88,8 @@ const Footer = ()=>{
                         <div className=" py-2 rounded-full">
                         <img src={Logo} alt="" width={200} />
                         </div>
-                        <span className="block text-sm pt-1">&copy; 2024 Koncepts Design And Development.</span>
-                        <span className="text-sm">All rights recieved</span>
+                        <span className="block text-sm pt-1">&copy; {date} TejusDigi Design And Development.</span>
+                        <span className="text-sm">All rights reserved</span>
                     </div>
                 </div>
             </div>

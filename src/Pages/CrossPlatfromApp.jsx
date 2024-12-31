@@ -21,13 +21,13 @@ const CrossPlatformApp = ()=>{
             },
             {id:2,
                 title:"App In Store In 3-6 Weeks",
-                details:"We develop complete app solutions for our customers. In doing so, we focus our customers on the strategically important functions in order to publish the first version of your app quickly, efficiently and with maximum impact.",
+                details:"We develop complete app solutions for our customers. In doing so, we focus our customers on the strategically important functions in order to publish the first version of your app quickly, efficiently, and with maximum impact.",
                 icon:phonewithglobe
             },
             {
                 id:3,
                 title:"App Professionals By Your Side",
-                details:"We take care that the ideas of our customers come into the world. We’re always there when they come back with any other requirements. App marketing, Support & Maintenance, team building etc., we accompany our customers in all aspects.",
+                details:"We take care that the ideas of our customers come into the world. We’re always there when they come back with any other requirements. App marketing, Support & Maintenance, team building, etc., we accompany our customers in all aspects.",
                 icon:mobilewithapp
             }
         ],
@@ -35,7 +35,7 @@ const CrossPlatformApp = ()=>{
             {
                 id: 1,
                 title: "Security",
-                details: "Koncepts Design and Development prioritizes security at every stage. We apply robust security practices, including penetration testing, code review, and more, to safeguard your app against potential vulnerabilities."
+                details: "TejusDigi Design and Development prioritizes security at every stage. We apply robust security practices, including penetration testing, code review, and more, to safeguard your app against potential vulnerabilities."
             },
             {
                 id: 2,
@@ -56,7 +56,7 @@ const CrossPlatformApp = ()=>{
         services: [
             { id: 1, details: "Our open-source solutions support all major mobile platforms, including iPhone, BlackBerry, Android, Windows Mobile, and Symbian." },
             { id: 2, details: "Create applications using HTML, CSS, and JavaScript." },
-            { id: 3, details: "Cross-platform technologies reduce technical barriers for development." },
+            { id: 3, details: "Cross-platform technologies reduce technical barriers to development." },
             { id: 4, details: "They decrease the skill set requirements for the development team." },
             { id: 5, details: "This approach minimizes both development costs and long-term maintenance expenses." },
             { id: 6, details: "The same codebase can be used to build mobile apps for both iPhone and Android platforms." }
@@ -93,8 +93,8 @@ const areaExpertise = {
                     </div>
                     <div className="w-full md:w-9/12 border-l-2 border-darkblue pl-2 md:pl-6">
                         <h1 className="font-Heading text-xl md:text-[28px] leading-8">Crafting vibrant, cross-platform applications that captivate users.</h1>
-                        <p className="font-ContentText text-[15px] md:text-[19px] text-slate-600 text-justify mb-0 py-2">Offering a diverse array of ready-to-launch solutions, Koncepts Design and Development excels in delivering resilient and agile mobile apps across all platforms. We specialize in crafting custom solutions tailored to meet your unique needs.</p>
-                        <p className="font-ContentText text-[15px] md:text-[19px] text-slate-600 text-justify mb-0 py-2">With a comprehensive suite of ready-to-implement solutions, Koncepts Design and Development takes pride in delivering robust and flexible mobile apps across all platforms. We focus on creating bespoke solutions designed specifically to meet your individual requirements.</p>
+                        <p className="font-ContentText text-[15px] md:text-[19px] text-slate-600 text-justify mb-0 py-2">Offering a diverse array of ready-to-launch solutions, TejusDigi Design and Development excels in delivering resilient and agile mobile apps across all platforms. We specialize in crafting custom solutions tailored to meet your unique needs.</p>
+                        <p className="font-ContentText text-[15px] md:text-[19px] text-slate-600 text-justify mb-0 py-2">With a comprehensive suite of ready-to-implement solutions, TejusDigi Design and Development takes pride in delivering robust and flexible mobile apps across all platforms. We make unique solutions for your individual needs. Our experience insists that each mobile app is powerful as well as reliable and that it provides a smooth user experience on any device.</p>
                         <p className="font-ContentText text-[15px] md:text-[19px] text-slate-600 text-justify mb-0 py-2">Our expertise ensures that each mobile app is not only powerful and reliable but also optimized to deliver a seamless user experience on any device.</p>
                     </div>
                 </div>
@@ -138,7 +138,7 @@ const areaExpertise = {
                         </div>
                     </div>
                     <div className="py-10">
-                        <h1 className="font-Heading text-xl md:text-[28px] leading-8 py-3">Key Mobile Development Traits at Koncepts Design and Development</h1>
+                        <h1 className="font-Heading text-xl md:text-[28px] leading-8 py-3">Key Mobile Development Traits at TejusDigi Design and Development</h1>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                        {
                         crossplatformdata.key.map(({id,title,details}) =>(
@@ -155,12 +155,21 @@ const areaExpertise = {
                         </div>
                     </div>
                     <div className="py-10">
-                        <h1 className="font-Heading text-xl md:text-[28px] leading-8 py-3">Empower your business with Koncepts Design and Development’s cross-platform application development and tailored solutions.</h1>
-                        <p className="font-ContentText text-[15px] md:text-[19px] text-justify text-slate-600 mb-0 py-2">We employ an agile development methodology to effectively manage our cross-platform mobile development projects. Our skilled cross-platform developers are capable of creating multi-platform experiences tailored to meet your users', business, or industry-specific needs. We specialize in building unique and robust cross-platform mobile applications utilizing technologies such as PhoneGap, Titanium, Sencha, Xamarin, Cordova, and Ionic.</p>
-                        <p className="font-ContentText text-[15px] md:text-[19px] text-justify text-slate-600 mb-0 py-2">PhoneGap serves as a bridge to connect the coding languages and scripts used for iOS, Android, and Windows applications. Our development services also encompass creating tablet-friendly websites, mobile sites, and mobile applications using technologies such as PhoneGap, Sencha Touch, Cordova, Xamarin, Qt, Titanium, and Appcelerator. As a free, open-source software, PhoneGap facilitates the development of apps across various platforms, including iPhone, iTouch, iPad, Symbian, Android and Blackberry.</p>
+                        <h1 className="font-Heading text-xl md:text-[28px] leading-8 py-3">Empower your business with TejusDigi Design and Development’s cross-platform application development and tailored solutions.</h1>
+                        <p className="font-ContentText text-[15px] md:text-[19px] text-justify text-slate-600 mb-0 py-2">We employ an agile development methodology to effectively manage our cross-platform mobile 
+                            development projects. Our talented cross-platform app developers can deliver multi-platform 
+                            experiences that suit your users', business and industry-specific requirements. We specialize in 
+                            creating unique yet robust cross-platform mobile applications that utilize technologies like
+                            PhoneGap, Unity Hybrid Development Platform, and Appcelerator's Titanium SDK</p>
+                        <p className="font-ContentText text-[15px] md:text-[19px] text-justify text-slate-600 mb-0 py-2">PhoneGap stands as a bridge for the coding languages and scripting of various platforms on phone 
+                            systems like iOS, Android, or Windows phones. Our development services also include building 
+                            tablet-ready websites, mobile websites, and phone apps with PhoneGap, Sencha Touch, Cordova, 
+                            Xamarin, Qt, and Appcelerator. As a free and open-source software, PhoneGap enables it to work for 
+                            the iPhone, iTouch, iPad, Symbian, Android, and Blackberry.</p>
                     </div>
                     <div>
-                        <h1 className="font-Heading text-xl md:text-[28px] w-4/5 leading-8">Here are the cross-platform application services offered by Koncepts Design and Development:</h1>
+                        <h1 className="font-Heading text-xl md:text-[28px] w-4/5 leading-8">Here are the cross-platform application services offered by TejusDigi Design and Development:
+                        </h1>
                         {
                             crossplatformdata.services.map(({id,details})=>(
                                 <div key={id} className="flex items-start gap-3 w-4/5 py-2">

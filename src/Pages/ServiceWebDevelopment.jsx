@@ -9,17 +9,17 @@ const ServiceWebDevelopment = ()=>{
     }
     const webdesigndata = [
         {id:1,title:"Single Page Website Design",details:"A single-page website displays all content on one HTML page, with users directed to specific sections via navigation links. This design is mobile-friendly but may have limited SEO benefits."},
-        {id:2,title:"Static Website Design",details:"Static websites display the same content for every visitor. Built in HTML, they are straightforward to create and don’t require programming or databases like dynamic sites."},
+        {id:2,title:"Static Website Design",details:"Static websites display the same content for every visitor. Built-in HTML is straightforward to create and doesn’t require programming or databases like dynamic sites."},
         {id:3,title:"HTML Website Design",details:"HTML, or Hypertext Markup Language, structures web content with headings, links, and sections. While it adds organization, it lacks dynamic capabilities on its own."},
         {id:4,title:"CSS Website Design",details:"CSS, or Cascading Style Sheets, complements HTML by styling web pages. Together with JavaScript, CSS is essential for creating visually appealing and responsive interfaces."},
         {id:5,title:"Javascript Website Design",details:"JavaScript enables interactive features on web pages, adding dynamic behavior that enhances user engagement and provides customizable functionalities."},
-        {id:6,title:"Front End Website Design",details:"Front-end design focuses on the visible part of the website, including layout, visuals, and usability, to create a pleasing user experience."},
+        {id:6,title:"Front End Website Design",details:"To provide a better user experience, front-end design concentrates on the visible portion of the website, such as layout, graphics, and usability."},
         {id:7,title:"UI/UX Website Design",details:"UX design addresses user needs and functionality, while UI design creates appealing interfaces. UX lays the foundation, and UI brings it to life visually."},
         {id:8,title:"Dynamic Website Design",details:"Dynamic websites offer content that varies based on user preferences, time, or location, making each visit unique and engaging for users."},
         {id:9,title:"Back-end Website Design",details:"Back-end design involves setting up the database, server, and application to ensure seamless functionality and data management for website users."},
-        {id:10,title:"PHP Website Design",details:"PHP is a widely-used, open-source scripting language ideal for creating dynamic web pages, with compatibility across various database platforms."},
-        {id:11,title:"Responsive Web Design",details:"Responsive design adjusts a website’s layout based on screen size and device type, ensuring optimal viewing and usability across all devices."},
-        {id:12,title:"User-Friendly Website Design",details:"A user-friendly site combines intuitive navigation, fast load times, and a clear layout to help users easily access the information they need."},
+        {id:10,title:"PHP Website Design",details:"PHP may greatly save development time because it is user-friendly and performs well across all platforms."},
+        {id:11,title:"Responsive Web Design",details:"A website's layout is optimized for viewing and usability on all devices with a responsive design, which adapts to screen size and device type."},
+        {id:12,title:"User-Friendly Website Design",details:"Usability, also known as user interface design, is the key to creating a navigable and comfortable environment."},
         {id:13,title:"SEO-Friendly Website Design",details:"SEO-friendly design enhances search engine accessibility and visibility, making it easier for users to find the site while prioritizing their experience."},
     ];
     
@@ -37,18 +37,20 @@ const ServiceWebDevelopment = ()=>{
                     </div>
                     <div className="w-full md:w-9/12 border-l-2 border-darkblue pl-2 md:pl-6">
                         <h1 className="font-Heading text-xl md:text-[28px]">Leading digital design and development agency in India</h1>
-                        <p className="font-ContentText text-[15px] md:text-[20px] text-slate-600 text-justify mt-4">Koncepts Design and Development is recognized as one of the leading web design and development companies in India. We offer a comprehensive array of website design services tailored for both small and large enterprises.</p>
-                        <p className="font-ContentText text-[15px] md:text-[20px] text-slate-600 text-justify">Our skilled team of web developers and digital marketing experts leverage cutting-edge technologies and innovative strategies to craft user-friendly business websites and applications, aiming to expand customer outreach and drive success.</p>
+                        <p className="font-ContentText text-[15px] md:text-[20px] text-slate-600 text-justify mt-4">One of the best web design and development firms is TejusDigi Design and Development. We provide a wide range of custom web design services to satisfy the demands of both small and large businesses.</p>
+                        <p className="font-ContentText text-[15px] md:text-[20px] text-slate-600 text-justify py-2">To increase client interaction and foster success, our skilled team of web developers and digital marketing specialists uses cutting-edge technologies and creative approaches to produce user-friendly websites and applications.</p>
                     </div>
                 </div>
 
                 <div className="pt-20">
                     <div className="">
                         <h1 className="font-Heading text-xl md:text-[28px]">Web Design Services</h1>
-                        <p className="font-ContentText text-[15px] md:text-[19px] text-slate-600 text-justify">As a prominent website design company in India, <span className="text-slate-700 font-semibold">Koncepts Design and Development</span> provides a comprehensive range of website development services to meet all your requirements. <span className="text-slate-700 font-semibold">Our team of web design specialists possesses extensive experience in creating visually appealing and functional websites.</span></p>
-                        <p className="font-ContentText text-[15px] md:text-[19px] text-slate-600 text-justify">Looking to elevate your business? At Koncepts Design and Development, our exceptional web designs not only captivate but also transform prospects into loyal customers. <span className="text-slate-700 font-semibold">Our solutions are both affordable and user-friendly, ensuring a seamless experience. As one of the top web design firms in India,</span> we do more than just create stunning websites; we build a powerful online presence. With our expertise in web development, we guarantee that your brand will shine. Utilizing straightforward yet effective content management systems, we make it effortless for you to update and manage your website.</p>
-                        <p className="font-ContentText text-[15px] md:text-[19px] text-slate-600 text-justify">To help in the growth of your business is our motto.</p>
-                        <p className="font-ContentText text-[15px] md:text-[19px] text-slate-600 text-justify">Our dedicated team of web designers and developers is committed to improving customer experience and addressing your business challenges through creative, innovative, and cost-effective web design solutions. <span className="text-slate-700 font-semibold">This passion and expertise are what truly define us as Web Design Specialists.</span></p>
+                        <p className="font-ContentText text-[15px] md:text-[19px] text-slate-600 text-justify py-2">As a prominent website design company in India, TejusDigi Design and Development provides a comprehensive range of website development services to meet all your requirements. Our team of web design specialists possesses extensive experience in creating visually appealing and functional websites.</p>
+                        <p className="font-ContentText text-[15px] md:text-[19px] text-slate-600 text-justify py-2">Are you willing to take your business to the next level? At TejusDigi Design and Development, our exciting web designs not only retain the interest of the masses but also convert many of them into faithful clients. We provide affordable and user-friendly solutions that ensure a seamless experience. We are not only a Web Design Company but an online presence-building firm.
+                        </p>
+                        <p className="font-ContentText text-[15px] md:text-[19px] text-slate-600 text-justify py-2">As one of the top web design firms in India, we do more than merely create gorgeous websites; we aim to create a powerful presence online for you and the brand. With our expertise in web development, we make sure that your brand shines. This simple but effective content management platform suited our needs perfectly.</p>
+                        <p className="font-Heading text-[15px] md:text-[24px] text-slate-900 text-justify py-2">We aim to help you grow your business.</p>
+                        <p className="font-ContentText text-[15px] md:text-[19px] text-slate-600 text-justify py-2">Our team of flexible web creatives is focused on improving every aspect of the customer experience, and in order to solve your business problems. Our web designers and developers have design capabilities that are at the very leading edge of current technology. This passion and expertise are what truly define us as Web Design Specialists.</p>
                     </div>
                 </div>
 

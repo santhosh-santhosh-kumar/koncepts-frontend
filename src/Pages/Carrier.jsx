@@ -34,7 +34,7 @@ const Carrier = () => {
         resume: null,
     });
 
-    const [errors, setErrors] = useState({});  // Define the errors state
+    const [errors, setErrors] = useState({});
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -62,7 +62,7 @@ const Carrier = () => {
     const validate = () => {
         const newErrors = {};
         Object.entries(carrierData).forEach(([key, value]) => {
-            if (key !== 'resume' && !value) {
+            if (key !== 'resume' && key !== 'PortfolioLink' && !value) {
                 newErrors[key] = `${key} is required.`;
             }
         });
@@ -76,7 +76,6 @@ const Carrier = () => {
     };
 
     const handleSubmit = async (e) => {
-
         e.preventDefault();
         const validationErrors = validate();
         if (Object.keys(validationErrors).length > 0) {
@@ -85,12 +84,11 @@ const Carrier = () => {
         }
 
         const formData = new FormData();
-        
         Object.entries(carrierData).forEach(([key, value]) => formData.append(key, value));
+
         try {
-            const response = await axios.post('https://augustinesamuelapi.konceptsdandd.com/mail', formData, {
+            const response = await axios.post('https://asgapi.konceptsdandd.com/carreer', formData, {
                 headers: { 'Content-Type': 'multipart/form-data' },
-                
             });
             formData.forEach((value, key) => console.log(`${key}: ${value}`));
             alert("Successfully submitted");
@@ -173,15 +171,12 @@ const Carrier = () => {
                                             onChange={handleFileChange}
                                             className="mt-2"
                                         />
-                                       
-
                                         {errors.resume && <p className="text-red-500 text-[15px] font-light">{errors.resume}</p>}
                                     </div>
 
-                                    {/* <h2 className="text-center text-lg md:text-xl mt-4 capitalize">Share your Resume via E-mail</h2> */}
                                     <div className="pt-2 text-center">
-                                    <button className=" bg-darkblue hover:bg-darkblue/80 font-bold text-white text-lg px-8 py-2 rounded-lg mt-3 transition-all hover:rounded-tr-3xl hover:rounded-bl-3xl duration-500">Submit</button>
-                                    </div>  
+                                        <button className=" bg-darkblue hover:bg-darkblue/80 font-bold text-white text-lg px-8 py-2 rounded-lg mt-3 transition-all hover:rounded-tr-3xl hover:rounded-bl-3xl duration-500">Submit</button>
+                                    </div>
                                 </div>
                             </form>
                         </div>

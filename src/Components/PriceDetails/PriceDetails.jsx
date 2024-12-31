@@ -62,8 +62,8 @@ const PriceDetails = ()=>{
     return(
         <>
         <div className="py-10">
-        <div className="container flex flex-wrap mx-auto">
-            <div className="w-full md:w-1/3 shadow-2xl shadow-black/20 p-5 hover:shadow-black/50 my-5">
+        <div className="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+            <div className="w-full shadow-2xl shadow-black/20 p-5 hover:shadow-black/50 my-5">
                 <div className="border-b border-gray-300">
                     <h1 className="text-xl text-gray-800">Lite</h1>
                     <h1><span className="text-2xl">&#8377;</span>23,456</h1>
@@ -86,7 +86,7 @@ const PriceDetails = ()=>{
                 }
                 </div>
             </div>
-            <div className="w-full md:w-1/3 shadow-2xl shadow-black/20 p-5 relative hover:shadow-black/50 my-5">
+            <div className="w-full shadow-2xl shadow-black/20 p-5 relative hover:shadow-black/50 my-5">
                 <div className="absolute top-0 md:-top-3 left-12">
                     <h1 className="text-lg bg-darkblue text-white px-3 py-1 rounded-md w-fit ml-auto text-right">Most Populor</h1>
                 </div>
@@ -112,7 +112,7 @@ const PriceDetails = ()=>{
                 }
                 </div>
             </div>
-            <div className="w-full md:w-1/3 shadow-2xl shadow-black/20 p-5 relative hover:shadow-black/50 my-5">
+            <div className="w-full shadow-2xl shadow-black/20 p-5 relative hover:shadow-black/50 my-5">
                 <div className="absolute top-0 md:-top-3 right-10 rounded-xl bg-white px-3 flex items-center">
                     {/* <BsFillRecord2Fill color="red"/> */}
                     {/* <h1 className="text-lg p-1 w-fit ml-auto text-right">Live Updates</h1> */}

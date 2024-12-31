@@ -115,3 +115,15 @@
 .crossgap{
     @apply gap-2 md:gap-10
 }
+
+.bullet-hero{
+    @apply bg-gray-500 w-3 md:w-5 h-[1px] md:h-1
+}
+
+.bullet-hero:hover{
+    @apply bg-gray-800
+}
+
+.bullet-hero-active{
+    @apply bg-gray-800
+}

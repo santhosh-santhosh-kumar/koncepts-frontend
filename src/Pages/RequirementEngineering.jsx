@@ -44,7 +44,7 @@ const RequirementEngineering = ()=>{
             points: [
                 {
                     title: "Project Kickoff",
-                    details: "The Kickoff meeting is a foundational part of our project process, setting the stage for successful collaboration. During this meeting, we gather the project team and the client to discuss the objectives, timelines, and essential requirements. This session helps establish mutual understanding and ensures everyone is aligned on project goals and expectations. We clarify roles, communicate initial ideas, and set the tone for a productive partnership. The kickoff is also an opportunity for stakeholders to ask questions and share insights, fostering a collaborative environment and clear communication from the very start."
+                    details: "The Kickoff meeting is a foundational part of our project process, setting the stage for successful collaboration. During this meeting, we gather the project team and the client to discuss the objectives, timelines, and essential requirements. This session helps establish mutual understanding and ensures everyone is aligned on project goals and expectations. We clarify roles, communicate initial ideas, and set the tone for a productive partnership. Stakeholders have the chance to exchange ideas and ask questions during the kickoff, which promotes cooperation and open communication right away."
                 }
             ],
             img: kickoff
@@ -55,7 +55,7 @@ const RequirementEngineering = ()=>{
             points: [
                 {
                     title: "Discover",
-                    details: "In the Discovery phase, we work closely with the client to gain a comprehensive understanding of the project’s scope. Our team thoroughly assesses what needs to be accomplished, identifying core objectives and potential challenges. We also establish effective ways to collaborate throughout the project to ensure we’re aligned and working efficiently. This foundation-building step ensures that both our team and the client have a clear vision of the project direction and requirements."
+                    details: "We collaborate closely with the customer throughout the Discovery phase to fully grasp the project's scope. Our team identifies key goals and significant obstacles after carefully considering what needs to be performed. We also establish effective ways to collaborate throughout the project to ensure we’re aligned and working efficiently. This foundation-building step ensures that both our team and the client have a clear vision of the project direction and requirements."
                 },
                 {
                     title: "Analysis",
@@ -63,7 +63,7 @@ const RequirementEngineering = ()=>{
                 },
                 {
                     title: "Documentation",
-                    details: "The Business Requirements Document (BRD) is a critical deliverable created by our analysts to outline the project’s business solution. This document captures customer needs, expectations, and project requirements in detail, serving as a primary reference point throughout development. The BRD promotes transparency, ensuring that the team and stakeholders are aligned on what the project will achieve. It forms a solid basis for design and implementation."
+                    details: "The Business Requirements Document (BRD) is a critical deliverable created by our analysts in order to outline the project’s business solution. This document captures customer needs and expectations, as well as project requirements. It serves as a primary reference point throughout development. The BRD promotes transparency, ensuring that the team and stakeholders are aligned on what the project will achieve. It forms a solid basis for design and implementation."
                 }
             ],
             img: plan
@@ -122,14 +122,23 @@ const RequirementEngineering = ()=>{
                     </ul>
                 </div>
                 <div className="w-full md:w-9/12 border-l-2 border-darkblue pl-2 md:pl-6">
-                        <h1 className="font-Heading text-xl md:text-[28px] leading-8 w-11/12">Our work empowers customers to choose you with confidence.</h1>
-                        <p className="font-ContentText text-[15px] md:text-[19px] text-slate-600 text-justify mb-0 py-2">We operate under specific standards and recognize the necessity of grasping our clients' expectations before we design their websites. Our team is committed to identifying unique elements that will set your site apart, ensuring our methodologies empower you to capitalize on the latest internet technologies.</p>
-                        <p className="font-ContentText text-[15px] md:text-[19px] text-slate-600 text-justify mb-0 py-2">Following strict standards, we emphasize the importance of understanding our clients' needs before embarking on website design projects. Our skilled professionals are dedicated to finding distinctive solutions that help your website shine, enabling you to fully harness the power of online technologies.</p>
+                        <h1 className="font-Heading text-xl md:text-[28px] leading-8 w-11/12">Our work inspires confidence, empowering customers to choose you with trust.</h1>
+                        <p className="font-ContentText text-[15px] md:text-[19px] text-slate-600 text-justify mb-0 py-2">We operate under specific standards and recognize the necessity of grasping our clients' 
+expectations before we design their websites. Our team is committed to identifying unique elements 
+that will set your site apart, ensuring our methodologies empower you to capitalize on the latest 
+internet technologies.</p>
+                        <p className="font-ContentText text-[15px] md:text-[19px] text-slate-600 text-justify mb-0 py-2">Following strict standards, we emphasize the importance of understanding our client's needs before 
+embarking on website design projects. Our skilled professionals are dedicated to finding distinctive 
+solutions that help your website shine, enabling you to fully harness the power of online 
+technologies.
+</p>
                 </div>
             </div>
             <div className="py-10">
-                <h1 className="font-Heading text-xl md:text-[28px] leading-8">We are committed to requirement gathering as an essential process for ensuring a strong foundation in our web development efforts.</h1>
-                <p className="font-ContentText text-[15px] md:text-[19px] text-slate-600 text-justify mb-0 py-2">We kick off this process with an in-person meeting, during which our prospective clients communicate their project expectations, which include:</p>
+                <h1 className="font-Heading text-xl md:text-[28px] leading-8">We are committed to requirement gathering as an essential process for ensuring a strong 
+                foundation in our web development efforts.</h1>
+                <p className="font-ContentText text-[15px] md:text-[19px] text-slate-600 text-justify mb-0 py-2">We kick off this process with an in-person meeting, during which our prospective clients 
+                communicate their project expectations, which include:</p>
                 <div>
                     {
                         kickoffprocess.map(({id,qus})=>(
@@ -143,7 +152,9 @@ const RequirementEngineering = ()=>{
             </div>
             <div className="py-10">
                 <h1 className="font-Heading text-xl md:text-[28px] leading-8">Our Methodologies</h1>
-                <p className="font-ContentText text-[15px] md:text-[19px] text-slate-600 text-justify mb-0 py-2">In our requirement engineering process, we primarily utilize the spiral model, which incorporates agile development methodologies. However, for smaller and less complex projects, we occasionally adopt the Waterfall model and its variations.</p>
+                <p className="font-ContentText text-[15px] md:text-[19px] text-slate-600 text-justify mb-0 py-2">In our requirement engineering process, we primarily utilize the spiral model, which incorporates 
+agile development methodologies. However, for smaller and less complex projects, we occasionally 
+adopt the Waterfall model and its variations.</p>
                     <div>
                         {
                             methodology.map(({id,title,details1,details2,img})=>(

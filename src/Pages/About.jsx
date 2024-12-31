@@ -85,67 +85,67 @@ const handleChangeColor=(id)=>{
   const domains=[
     {
       id:1,
-      title:"TravelTech",
-      content1:"We bring your travel vision to life with cutting-edge web development solutions designed to engage, inspire, and convert visitors into loyal customers.",
-      content2:"From user-friendly booking systems to stunning designs, we build travel websites that deliver.",
-      content3:"From user-friendly booking systems to stunning designs, we build travel websites that deliver.",
+      title:"Travel",
+      content1:"TejusDigi specializes in creating innovative website designs for the travel industry, enhancing digital presence and user experience with customized solutions that drive business growth and operational efficiency.",
+      content2:"We created a dynamic website design that strengthens J&J Trading's global logistics operations and client connections.",
       img:travel1
 
     },
     {
       id:2,
       title:"E-commerce",
-      content1:"We bring your travel vision to life with cutting-edge web development solutions designed to engage, inspire, and convert visitors into loyal customers.",
-      content2:"From user-friendly booking systems to stunning designs, we build travel websites that deliver.",
-      content3:"From user-friendly booking systems to stunning designs, we build travel websites that deliver.",
+      content1:"We, TejusDigi, specialize in e-commerce website design, creating visually appealing and functional platforms for businesses, enhancing online presence and user engagement.",
+      content2:"We designed a custom website for Sangumark, showcasing products and improving global consumer interaction.",
       img:travel2
 
     },
     {
       id:3,
       title:"Hospitality",
-      content1:"We bring your travel vision to life with cutting-edge web development solutions designed to engage, inspire, and convert visitors into loyal customers.",
-      content2:"From user-friendly booking systems to stunning designs, we build travel websites that deliver.",
-      content3:"From user-friendly booking systems to stunning designs, we build travel websites that deliver.",
+      content1:"TejusDigi specializes in creating customized website designs for the hospitality industry, enhancing guest experiences, and improving online bookings. We focus on combining functionality with aesthetics to provide seamless navigation, engaging visuals, and robust features for hotels, resorts, and more.",
       img:travel3
 
     },
     {
       id:4,
       title:"Real Estate",
-      content1:"We bring your travel vision to life with cutting-edge web development solutions designed to engage, inspire, and convert visitors into loyal customers.",
-      content2:"From user-friendly booking systems to stunning designs, we build travel websites that deliver.",
-      content3:"From user-friendly booking systems to stunning designs, we build travel websites that deliver.",
+      content1:"We excel in creating innovative website designs for the real estate industry, delivering functional, visually appealing real estate platforms that enhance user experience and drive business growth.",
+      content2:"We have created a user-friendly, visually stunning website for Archivite. to showcase real estate listings and improve client engagement.",
       img:travel4
 
     },
     {
       id:5,
       title:"Retail",
-      content1:"We bring your travel vision to life with cutting-edge web development solutions designed to engage, inspire, and convert visitors into loyal customers.",
-      content2:"From user-friendly booking systems to stunning designs, we build travel websites that deliver.",
-      content3:"From user-friendly booking systems to stunning designs, we build travel websites that deliver.",
+      content1:"We specialize in website design, branding, and digital marketing for the retail industry, creating seamless, visually engaging platforms that boost brand identity, user experience, and customer engagement.",
+      content2:"We designed a user-friendly website, managed branding, and optimized Zha Supermarket's Instagram presence.",
       img:travel5
 
     },
     {
       id:6,
       title:"Automotive",
-      content1:"We bring your travel vision to life with cutting-edge web development solutions designed to engage, inspire, and convert visitors into loyal customers.",
-      content2:"From user-friendly booking systems to stunning designs, we build travel websites that deliver.",
-      content3:"From user-friendly booking systems to stunning designs, we build travel websites that deliver.",
+      content1:"We created a creative dynamic website design for the automotive industry, which created innovative, user-friendly, and creative dynamic website design for the automotive industry platforms that will enhance online presence drive customer engagement, and facilitate business in the automotive industry seamless navigation.",
+      content2:"We designed a modern website for Proteck.co. with enhanced user experience and integrated features to promote automotive services.",
       img:travel6
 
     },
     {
       id:7,
       title:"Health Care",
-      content1:"We bring your travel vision to life with cutting-edge web development solutions designed to engage, inspire, and convert visitors into loyal customers.",
-      content2:"From user-friendly booking systems to stunning designs, we build travel websites that deliver.",
-      content3:"From user-friendly booking systems to stunning designs, we build travel websites that deliver.",
+      content1:"We specialize in Custom website development for healthcare-oriented platforms ensuring the best accessibility, functionality, and communication across all devices.",
+      content2:"We designed a user-friendly, informative website for Dr. Ashok Kumar that would help his patients stay engaged and connected with their healthcare service providers.",
       img:travel7
 
     },
+    {
+      id:7,
+      title:"Education",
+      content1:"For the education industry, we designed visually appealing, engaging websites that serve as functional platforms that enhance the learning experience and facilitate communication between students, parents, and staff.",
+      content2:"A User-friendly website is created for Oasis Public School to showcase school information, promote engagement, and facilitate communication",
+      img:travel7
+
+    }
   ]
 
  
@@ -230,28 +230,28 @@ const handleChangeColor=(id)=>{
         icon: Uxdesign ,
         title: "UX Research",
         details:
-          "Our UX designer’s job is to create a product that provides the best possible user experience. The UX Researcher reveals what the consumers need from the business’s products by conducting primary research, Design, Product Management, and Product Development.",
+          "Our UX designers focus on crafting products that deliver the optimal user experience. Through thorough research, including primary studies, design, and collaboration with product management and development, our UX researchers uncover what consumers truly need from a business’s products.",
       },
       {
         id: 2,
         icon: brand,
         title: "Brand Identity",
         details:
-          "Our team usually focus on Brand vision, brand culture, positioning, personality, relationships, and presentations. Out team includes the thinking, feelings and expectations of the target market/consumers",
+          "We concentrate on defining the brand’s vision, culture, positioning, personality, relationships, and presentations. Our team dives deep into understanding the emotions, expectations, and perceptions of the target market to shape a strong and consistent brand identity.",
       },
       {
         id: 3,
         icon: html,
         title: "Web Development",
         details:
-          "We develop web application using latest technologies.Our team  make a website look great, work fast and perform well with a seamless user experience.Web development typically refers to web mark up and coding",
+          "We create web applications using the latest technologies, ensuring websites are visually appealing, fast, and perform seamlessly. Our focus on web development includes coding and markup, designed for smooth user experiences.",
       },
       {
         id: 4,
         icon: chart,
         title: "Business Strategy",
         details:
-          "Our Business strategy is a set of competitive moves and actions that a business uses to attract customers, compete successfully, strengthening performance, and achieve organizational goals.",
+          "Our business strategy consists of competitive actions and decisions that attract customers, foster competition, enhance performance, and achieve organizational goals, paving the way for long-term success.",
       },
     ],
     part2: [
@@ -260,7 +260,7 @@ const handleChangeColor=(id)=>{
         icon: responsive,
         title: "Web Design",
         details:
-          "Our web designer is responsible for creating the design, layout and coding of a website.They are involved with the technical and graphical aspects of a website",
+          "Our web designers are responsible for the creation, layout, and coding of websites, blending technical expertise with graphic design to deliver stunning and functional sites.",
       },
 
       {
@@ -268,7 +268,7 @@ const handleChangeColor=(id)=>{
         icon: camera,
         title: "Photography",
         details:
-          "Our professional Photographer’s main priority is taking quality photographs. . Our photographer’s travel to locations for photoshoots and set up shots in natural or studio environments",
+          "Our professional photographers prioritize capturing high-quality images. They travel to various locations for photoshoots, setting up shots in natural and studio environments to produce captivating visuals.",
       },
     ],
   };
@@ -297,24 +297,24 @@ const handleChangeColor=(id)=>{
     part1reviews: [
       {
         id: 1,
-        review1: 'We hereby share our appreciation to Koncepts D & D IT Solutions for an outstanding job in creating an excellent Logo.Similarly, they designed a world-class business card and Book cover.....',
+        review1: 'We hereby share our appreciation to TejusDigi IT Solutions for an outstanding job in creating an excellent Logo.Similarly, they designed a world-class business card and Book cover.....',
         reviewer: "Senthil Raj",
         des: "Infinite Potentials",
         img:witness
       },
       {
         id: 2,
-        review1: 'I am really happy with your service, it is exceptional, Koncepts Design and Developments is just great.',
-        // review2:"Sridhar is an outstanding customer focused individual. Koncepts is very professional and their knowledge is incredible, they also solve problems very fast. Sridhar has been managing our website post the design and development…",
+        review1: 'I am really happy with your service, it is exceptional, TejusDigi Design and Developments is just great.',
+        // review2:"Sridhar is an outstanding customer focused individual. TejusDigi is very professional and their knowledge is incredible, they also solve problems very fast. Sridhar has been managing our website post the design and development…",
         review3:"We are looking forward to getting into new venues of Digital Marketing.....",
-        //  along with them… Great work Koncepts and Sridhar…",
+        //  along with them… Great work TejusDigi and Sridhar…",
         reviewer: "Mohammed Kalimullah",
         des: "Shazab Futuretech Solutions ",
         img:witness
       },
       {
         id: 3,
-        review1: 'Koncepts IT solution’s topmost priority is customer satisfaction. They never tire of designing options till they satisfy us – that too with a smile. All the best Koncepts......',
+        review1: 'TejusDigi IT solution’s topmost priority is customer satisfaction. They never tire of designing options till they satisfy us – that too with a smile. All the best TejusDigi......',
         reviewer: "Rajesh Daswani",
         des: "IAAS Academy",
         img:witness
@@ -364,17 +364,13 @@ const handleChangeColor=(id)=>{
             Building the future
           </h1>
           <p className="font-medium font-ContentText text-[15px] pt-4">
-            Creativity and critical thinking are both critical for business and
-            we use them as appropriately as possible so that we get noticed by
-            our target audience and are able to keep them intrigued from start
-            to finish. Creativity can take many forms the more we will be able
-            to spread our creative wings and fly.
+          Creativity and critical thinking are vital for business success, and we apply them strategically to 
+capture our target audience’s attention, keeping them engaged from start to finish. Creativity takes 
+many forms, and the more we harness it, the further our reach.
           </p>
           <p className="font-medium font-ContentText text-[15px] pt-4">
-            We usually set goals from the beginning of our process and then make
-            sure that we achieve those goals by the end of the process. It is
-            important to think outside of the box as well as bring your point
-            effectively.
+          We set clear goals at the outset and ensure they are achieved by the end. Thinking outside the box is 
+          essential, along with effectively communicating our ideas to make a lasting impact.
           </p>
         </div>
         <div className="w-full md:w-1/2">
