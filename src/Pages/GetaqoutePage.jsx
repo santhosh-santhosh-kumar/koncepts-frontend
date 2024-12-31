@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import toast, { Toaster } from "react-hot-toast";
 
 const GetaquotePage = ()=>{
 
@@ -44,6 +45,9 @@ const Budget = [
     const [HandleDeadlineBg,setHandleDeadlineBg] = useState({});
     const [HandleMeetupBg,setHandleMeetupBg] = useState({});
     const [HandleBudgetBg,setHandleBudgetBg] = useState({});
+    const [submitColor,setSubmitColor]=useState(false)
+    const [submitColors,setSubmitColors]=useState(false)
+
     const handleservice=(id,value)=>{
 
         setHandleServiceBg((prev)=>({...prev,[id]:!prev[id]}))
@@ -82,6 +86,8 @@ const Budget = [
     const getButtonBgClass = (clicked, defaultColor, activeColor) => {
         return `${clicked ? activeColor : defaultColor}`;
     };
+
+
     const [QouteForm,setQouteForm] = useState({
         goal:'',
         company:'',
@@ -109,15 +115,33 @@ const Budget = [
         budget:BudgetValue,
     }
 
-    console.log(QuoteData)
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
             const response = await axios.post('https://asgapi.konceptsdandd.com/getQuote', QuoteData);
-            console.log('Success:', response.data);
-            console.log(response)
-            alert("successfully submitted")
+            setSubmitColor(!submitColor)
+            setSubmitColors(!submitColors)
+   setQouteForm({
+    goal:'',
+        company:'',
+        firstname:'',
+        lastname:'',
+        doclink:'',
+        email:'',
+        phonenumber:''
+   })
+            
+            toast.success("successfully submitted", {
+                style: {
+                  background: "#4caf50",
+                  color: "#fff",
+                  padding: "20px 40px 20px 40px",
+                  fontSize: "18px",
+                  borderRadius: "10px",
+                 
+                },
+              });
         } catch (error) {
             console.error('Error:', error);
           
@@ -143,7 +167,7 @@ const Budget = [
                                 return <button
                                 onClick={()=>{handleservice(id,value);window.scrollTo({ top: 250, behavior: 'smooth' })}} 
                                 key={index} 
-                                className={`${getButtonBgClass(HandleServiceBg[id],'bg-darkblue', activebg)} hover:scale-110 transition-all duration-300 text-white rounded-md p-3 flex flex-col justify-between gap-y-12`}
+                                className={`${submitColor ? "bg-darkblue":getButtonBgClass(HandleServiceBg[id],'bg-darkblue', activebg)} hover:scale-110 transition-all duration-300 text-white rounded-md p-3 flex flex-col justify-between gap-y-12`}
                                 >
                                     <p className="text-center mb-0 rounded-full border border-white w-8 text-[14px] py-1">{id}</p>
                                     <p className="text-left text-xl mb-0">{value}</p>
@@ -160,7 +184,7 @@ const Budget = [
                                     return <button 
                                     onClick={()=>{handledeadline(id,value);window.scrollTo({ top: 500, behavior: 'smooth' })}}
                                     key={index} 
-                                    className={`${getButtonBgClass(HandleDeadlineBg[id], 'bg-darkblue', activebg)} ${FieldDeadlineDis ? "" :"hover:scale-110 transition-all duration-300"} text-white rounded-md p-3 flex flex-col justify-between gap-y-12`}
+                                    className={`${submitColors ? "bg-darkblue":getButtonBgClass(HandleServiceBg[id],'bg-darkblue', activebg)} ${FieldDeadlineDis ? "" :"hover:scale-110 transition-all duration-300"} text-white rounded-md p-3 flex flex-col justify-between gap-y-12`}
                                     >
                                     <p className="text-center mb-0 rounded-full border border-white w-8 text-[14px] py-1">{id}</p>
                                     <p className="text-left text-xl mb-0">{value}</p>
@@ -211,20 +235,20 @@ const Budget = [
                             <div>
                                 <div className="w-full h-full text-white bg-darkblue px-3 py-10 flex flex-col justify-end rounded-md">
                                     <p className="mb-0">What are your goals with this project?:</p>
-                                    <input onChange={handleFormchange} name="goal" type="text" placeholder="Enter your goals" className="bg-transparent focus:outline-none"/>
+                                    <input onChange={handleFormchange} name="goal" type="text" placeholder="Enter your goals" value={QouteForm.goal} className="bg-transparent focus:outline-none"/>
                                 </div>
                             </div>
                             <div>
                                 <div className="mb-3">
                                     <div className="w-full h-full text-white bg-darkblue px-3 py-10 flex flex-col justify-end rounded-md">
                                         <p className="mb-0">Company:</p>
-                                        <input onChange={handleFormchange} name="company" type="text" placeholder="HOB" className="bg-transparent focus:outline-none"/>
+                                        <input onChange={handleFormchange} name="company" type="text" placeholder="HOB" value={QouteForm.company} className="bg-transparent focus:outline-none"/>
                                     </div>
                                 </div>
                                 <div>
                                     <div className="w-full h-full text-white bg-darkblue px-3 py-10 flex flex-col justify-end rounded-md">
                                         <p className="mb-0">Link to brief, or other useful documents:</p>
-                                        <input onChange={handleFormchange} name="doclink" type="text" placeholder="Enter a URL (One Drive,Google Drive,etc)" className="bg-transparent focus:outline-none"/>
+                                        <input onChange={handleFormchange} name="doclink" type="text" placeholder="Enter a URL (One Drive,Google Drive,etc)" value={QouteForm.doclink} className="bg-transparent focus:outline-none"/>
                                     </div>
                                 </div>
                             </div>
@@ -233,19 +257,19 @@ const Budget = [
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mt-3">
                                 <div className="w-full h-full text-white bg-darkblue px-3 py-10 flex flex-col justify-end rounded-md">
                                     <p className="mb-0">First name:</p>
-                                    <input required onChange={handleFormchange} name="firstname" type="text" placeholder="Thomas" className="bg-transparent focus:outline-none"/>
+                                    <input required onChange={handleFormchange} name="firstname" type="text" placeholder="Thomas"  value={QouteForm.firstname} className="bg-transparent focus:outline-none"/>
                                 </div>
                                 <div className="w-full h-full text-white bg-darkblue px-3 py-10 flex flex-col justify-end rounded-md">
                                     <p className="mb-0">Last name:</p>
-                                    <input required onChange={handleFormchange} name="lastname" type="text" placeholder="Shelby" className="bg-transparent focus:outline-none"/>
+                                    <input required onChange={handleFormchange} name="lastname" type="text" placeholder="Shelby"  value={QouteForm.lastname} className="bg-transparent focus:outline-none"/>
                                 </div>
                                 <div className="w-full h-full text-white bg-darkblue px-3 py-10 flex flex-col justify-end rounded-md">
                                     <p className="mb-0">Email:</p>
-                                    <input required onChange={handleFormchange} name="email" type="email" placeholder="thomasshelby@gmail.com" className="bg-transparent focus:outline-none"/>
+                                    <input required onChange={handleFormchange} name="email" type="email" placeholder="thomasshelby@gmail.com"  value={QouteForm.email} className="bg-transparent focus:outline-none"/>
                                 </div>
                                 <div className="w-full h-full text-white bg-darkblue px-3 py-10 flex flex-col justify-end rounded-md">
                                     <p className="mb-0">Telephone</p>
-                                    <input required onChange={handleFormchange} name="phonenumber" type="text" placeholder="91+1234567890" className="bg-transparent focus:outline-none"/>
+                                    <input required onChange={handleFormchange} name="phonenumber" type="text" placeholder="91+1234567890"  value={QouteForm.phonenumber} className="bg-transparent focus:outline-none"/>
                                 </div>
                             </div>
                             <div className="mt-3">

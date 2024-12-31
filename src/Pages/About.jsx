@@ -130,11 +130,19 @@ const handleChangeColor=(id)=>{
 
     },
     {
-      id:7,
+      id:8,
       title:"Education",
       content1:"For the education industry, we designed visually appealing, engaging websites that serve as functional platforms that enhance the learning experience and facilitate communication between students, parents, and staff.",
       content2:"A User-friendly website is created for Oasis Public School to showcase school information, promote engagement, and facilitate communication",
-      img:travel7
+      img:travel1
+
+    }
+    ,{
+      id:9,
+      title:"Event",
+      content1:"TejusDigi specializes in creating dynamic website designs for the event industry, offering visually captivating, user-friendly platforms that help event organizers showcase their services, engage with clients, and streamline event management processes.",
+      content2:"We designed an interactive website for Team 6teen that effectively highlights Team 6teen's events and enhances user engagement.",
+      img:travel2
 
     }
   ]

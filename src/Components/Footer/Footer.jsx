@@ -88,8 +88,8 @@ const Footer = ()=>{
                         <div className="rounded-full">
                         <img src={Logo} alt="" width={200} />
                         </div>
-                        <span className="block text-sm pt-1">&copy; {date} TejusDigi Design And Development.</span>
-                        <span className="text-sm">All rights reserved</span>
+                        <span className="block text-sm pt-1">&copy; {date} TejusDigi All rights reserved.</span>
+                        {/* <span className="text-sm"></span> */}
                     </div>
                 </div>
             </div>
