@@ -5,7 +5,7 @@ import retail from "../../assets/animated-icons/services/retail.gif"
 import hospitality from "../../assets/animated-icons/services/hospitality.gif"
 import realestate from "../../assets/animated-icons/services/realestate.gif"
 import education from "../../assets/animated-icons/services/meeting.gif"
-// import bfsi from "../../assets/animated-icons/services/bfsi.gif"
+import event from "../../assets/animated-icons/services/event.gif"
 import healthcare from "../../assets/animated-icons/services/healthcare.gif"
 export const verticals = [
     {id:1,icon:Travel,title:"Travel"},
@@ -16,28 +16,21 @@ export const verticals = [
     {id:6,icon:automotive,title:"Automotive"},
     {id:7,icon:healthcare,title:"Health Care"},
     {id:8,icon:education,title:"Education"},
+    {id:9,icon:event,title:"Event"},
 ]
 
-export const verticals2 = [
-    {index:1,id:1,icon:"",title:" "},  
-    {index:2,id:5,icon:retail,title:"Retail"},
-    {index:3,id:3,icon:"",title:" "},  
-    {index:4,id:6,icon:automotive,title:"Automotive"},
-    {index:5,id:5,icon:"",title:" "},  
-    {index:6,id:7,icon:healthcare,title:"Health Care"},  
-    {index:7,id:7,icon:"",title:" "},  
- 
-]
+
 const Verticles = ()=>{
 
     return(
         <div className="">
             <div className="container">
                 <h1 className="text-center font-Heading pb-3 text-2xl font-bold text-darkblue ">Our Verticals</h1>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-5 ">
+
                     {
                         verticals.map((items,index)=>{
-                            return   <div key={index} className={`flex flex-col justify-center items-center`}>
+                            return   <div key={index} className={` flex flex-col justify-center items-center `}>
                             <div className="border-dashed border-2 border-darkblue rounded-full p-4 w-fit relative">
                                 <div className="absolute -top-3 left-24 px-[7px] py-[5px] rounded-full flex shadow-md shadow-darkblue bg-white">
                                     <p className="mx-auto my-auto text-darkblue font-bold text-xl">{`0${items.id}`}</p>

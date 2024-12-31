@@ -9,14 +9,14 @@ const EcommerceDev = ()=>{
         {
             id: 1,
             title: "B2C e-Commerce (Business to Consumer)",
-            details1: "B2C e-Commerce enables businesses to sell directly to consumers, providing easy access to a wide variety of goods and services. Companies like Starbucks and Walmart flourished during the pandemic as online shopping surged.",
-            details2: "At Koncepts Design and Development, we specialize in creating engaging B2C e-Commerce platforms that offer seamless user experiences, helping you reach your target customers effectively."
+            details1: "B2C eCommerce allows businesses to sell directly to consumers, offering them easy access to a wide range of products and services. Brands like Starbucks and Walmart saw significant growth during the pandemic as online shopping soared.",
+            details2: "At TejusDigi Design and Development, we specialize in building dynamic B2C eCommerce platforms that deliver smooth and engaging user experiences, helping you connect with your target customers more effectively."
         },
         {
             id: 2,
             title: "B2B e-Commerce (Business to Business)",
-            details1: "B2B e-Commerce simplifies transactions between businesses, such as manufacturers and wholesalers. This model boosts operational efficiency, expands market reach, and enhances productivity across industries.",
-            details2: "Koncepts Design and Development delivers comprehensive B2B e-Commerce solutions tailored to optimize your online presence and performance, empowering you to build a scalable platform."
+            details1: "B2B eCommerce streamlines transactions between businesses, such as manufacturers and wholesalers, enhancing operational efficiency, expanding market reach, and boosting productivity across industries.",
+            details2: "At TejusDigi Design and Development, we offer comprehensive B2B eCommerce solutions designed to optimize your online presence and performance, enabling you to create a scalable platform that drives growth."
         },
         {
             id: 3,
@@ -27,26 +27,26 @@ const EcommerceDev = ()=>{
         {
             id: 4,
             title: "C2C e-Commerce (Consumer to Consumer)",
-            details1: "C2C e-Commerce allows consumers to buy and sell goods among themselves, often through third-party platforms. Popular examples include OLX and eBay, where transactions are facilitated easily.",
-            details2: "With Koncepts Design and Development, you can develop a reliable C2C platform that streamlines consumer transactions, ensuring convenience and a broader customer base for all users."
+            details1: "C2C e-commerce allows consumers to buy and sell goods among themselves, often through third-party platforms. Popular examples include OLX and eBay, where transactions are facilitated easily.",
+            details2: "With TejusDigi Design and Development, you can develop a reliable C2C platform that streamlines consumer transactions, ensuring convenience and a broader customer base for all users."
         },
         {
             id: 5,
             title: "e-Commerce Frontend Design and Development",
             details1: "Frontend design includes the visual elements and interface users engage with, such as layout, typography, and navigation. It is crucial in creating an enjoyable shopping experience for all users.",
-            details2: "The skilled frontend team at Koncepts Design and Development designs visually appealing and responsive interfaces that deliver a seamless experience across all devices for your customers."
+            details2: "The skilled frontend team at TejusDigi Design and Development designs visually appealing and responsive interfaces that deliver a seamless experience across all devices for your customers."
         },
         {
             id: 6,
             title: "e-Commerce Backend Design and Development",
-            details1: "Backend development focuses on the systems and databases that power the frontend, including server management and application logic. This ensures efficient and secure data handling for your platform.",
-            details2: "At Koncepts Design and Development, our dedicated backend team establishes a secure and efficient infrastructure, providing a robust foundation for your e-Commerce operations and growth."
+            details1: "Backend development focuses on the systems and databases that power the front end, including server management and application logic. This ensures efficient and secure data handling for your platform.",
+            details2: "At TejusDigi Design and Development, our dedicated backend team establishes a secure and efficient infrastructure, providing a robust foundation for your e-commerce operations and growth."
         },
         {
             id: 7,
             title: "e-Commerce Web Development Frameworks",
-            details1: "An e-Commerce framework is essential for building online stores, offering modular components that streamline and enhance development processes. This flexibility caters to various business needs and requirements.",
-            details2: "The experts at Koncepts Design and Development will guide you in selecting the right framework, such as Laravel or React.js, tailored to your operational needs and future growth goals."
+            details1: "An e-commerce framework is essential for building online stores, offering modular components that streamline and enhance development processes. This flexibility caters to various business needs and requirements.",
+            details2: "The experts at TejusDigi Design and Development will guide you in selecting the right framework, such as Laravel or React.js, tailored to your operational needs and future growth goals."
         }
     ];
     
@@ -63,10 +63,19 @@ const EcommerceDev = ()=>{
                         </ul>
                     </div>
                     <div className="w-full md:w-9/12 border-l-2 border-darkblue pl-2 md:pl-6">
-                        <h1 className="font-Heading text-xl md:text-[28px] leading-8 w-11/12">Leading e-Commerce web design and development company in India, delivering innovative and user-friendly solutions.</h1>
-                        <p className="font-ContentText text-[15px] md:text-[19px] text-slate-600 text-justify mb-0 py-2">Koncepts Design and Development is a top-tier eCommerce web design and development company in India, specializing in crafting user-centric eCommerce websites and applications. Our expert team of eCommerce developers and designers is dedicated to transforming clients' visions into reality, delivering seamless user experiences and secure transaction capabilities. As pioneers in the industry, we build custom eCommerce websites and applications from the ground up, providing scalable, secure, and engaging solutions to enhance your business growth.</p>
-                        <p className="font-ContentText text-[15px] md:text-[19px] text-slate-600 text-justify mb-0 py-2">At Koncepts Design and Development, we create scalable software solutions for any operating system, browser, or device. Combining extensive industry knowledge with the latest IT innovations, we deliver custom solutions and products tailored precisely to meet end-user needs. Our approach is deeply client-centric, ensuring each project aligns with our clients’ unique goals and expectations.</p>
-                        <p className="font-ContentText text-[15px] md:text-[19px] text-slate-600 text-justify mb-0 py-2">At Koncepts Design and Development, we excel in handling diverse eCommerce models, including B2C, B2B, C2B, and C2C eCommerce websites. As one of India's premier eCommerce web design and development service providers, we deliver tailored, high-quality solutions that drive engagement and growth across all eCommerce channels.</p>
+                        <h1 className="font-Heading text-xl md:text-[28px] leading-8 w-11/12">Leading eCommerce Web Design and Development Company in India</h1>
+                        <p className="font-ContentText text-[15px] md:text-[19px] text-slate-600 text-justify mb-0 py-2">TejusDigi Design and Development stands as a premier eCommerce web design and development 
+                            company in India, specializing in crafting intuitive eCommerce websites and applications. Our skilled 
+                            team of developers and designers turns client visions into reality by delivering seamless user 
+                            experiences and secure transaction capabilities. As industry leaders, we build custom eCommerce 
+                            platforms from the ground up, ensuring scalability, security, and engagement to drive business 
+                            growth.</p>
+                        <p className="font-ContentText text-[15px] md:text-[19px] text-slate-600 text-justify mb-0 py-2">At TejusDigi Design and Development, we deliver scalable software solutions compatible with any 
+operating system, browser, or device. By blending extensive industry expertise with cutting-edge IT 
+innovations, we create custom solutions tailored to meet the precise needs of end-users. Our client-centric approach ensures each project aligns with unique goals and expectations.</p>
+                        <p className="font-ContentText text-[15px] md:text-[19px] text-slate-600 text-justify mb-0 py-2">We excel in managing diverse eCommerce models, including B2C, B2B, C2B, and C2C platforms. As 
+one of India’s top e-commerce service providers, we deliver customized, high-quality solutions that 
+boost engagement and drive growth across all e-commerce channels.</p>
                     </div>
                 </div>
                 <div>

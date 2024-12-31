@@ -5,11 +5,14 @@ import ResponsiveNavbar from "../Components/Navbar/ResponsiveNavbar";
 import GetAQuote from "../Components/GetAQuote/GetAQuote";
 import WhatsAppicon from "../Components/Whatsapp/whatsapp";
 
+import { Toaster } from "react-hot-toast";
+
 
 const Layout = ()=>{
     return(
         <>
            <Navbar/>
+           <Toaster position="top-center"/>
             <Outlet/>
             <Footer/>
             <GetAQuote/>
