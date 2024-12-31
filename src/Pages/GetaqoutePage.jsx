@@ -114,7 +114,7 @@ const Budget = [
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('https://localhost:5000/api/getaqoute', QuoteData);
+            const response = await axios.post('https://asgapi.konceptsdandd.com/getQuote', QuoteData);
             console.log('Success:', response.data);
             console.log(response)
             alert("successfully submitted")

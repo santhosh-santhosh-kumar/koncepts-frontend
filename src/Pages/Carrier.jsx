@@ -88,7 +88,7 @@ const Carrier = () => {
         
         Object.entries(carrierData).forEach(([key, value]) => formData.append(key, value));
         try {
-            const response = await axios.post('https://augustinesamuelapi.konceptsdandd.com/mail', formData, {
+            const response = await axios.post('https://asgapi.konceptsdandd.com/carreer', formData, {
                 headers: { 'Content-Type': 'multipart/form-data' },
                 
             });

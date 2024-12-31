@@ -48,7 +48,6 @@ const Contact = () => {
         const { name, value } = e.target;
         setContactData({ ...contactData, [name]: value });
     };
-console.log(contactData.budget)
     const handleCheckboxChange = (e) => {
         const { value } = e.target;
         setContactData(prevState => {
@@ -74,6 +73,8 @@ console.log(contactData.budget)
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        console.log(contactData)
+       
         const validationErrors = validate();
         if (Object.keys(validationErrors).length > 0) {
             setErrors(validationErrors);
@@ -81,9 +82,9 @@ console.log(contactData.budget)
         }
 
         try {
-            const response = await axios.post('https://localhost:5000/api/contact', contactData);
-            console.log(response.data)
-            alert("successfully submitted")
+            alert("form submit")
+            const response = await axios.post('https://asgapi.konceptsdandd.com/contact', contactData);
+           
         } catch (error) {
             console.error('Error:', error);
           
