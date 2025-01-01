@@ -1,9 +1,8 @@
 import { useContext, useEffect, useState } from "react";
-import Logo from "../../assets/Images/Logo";
+import TejusDigiLogo from "../../assets/Images/Logo-TejusDigi.svg";
 import {Link, NavLink} from "react-router-dom";
 import { CgMenuRight } from "react-icons/cg";
 import { MenuStateContext } from "../Usecontext/UseContext";
-import logo from "../../assets/Images/home/Koncepts-logo.svg"
 export const navlinks = [
     {
         lable:"Home",
@@ -70,10 +69,10 @@ export const navlinks = [
             <>
             <div className={`fixed top-0 w-full ${window.scrollY > 150 ? "bg-white bordershadow":"bg-transparent"} text-darkblue z-40 transition-all duration-500 ${
                             isScrollingUp ? 'transform translate-y-0' : 'transform -translate-y-full'}`}>
-                <div className="container flex items-center justify-between">
+                <div className="container flex items-center justify-between py-2">
                     {/* logo */}
-                    <div>
-                        <Link onClick={()=>{SetMenuState(false);window.scrollTo(0,0)}} className="" to={'/'}><Logo/></Link>
+                    <div className="w-32 shadow-sm shadow-gray-300 rounded-xl">
+                        <img src={TejusDigiLogo} alt="" />
                     </div>
                     {/* navbar links */}
                     <div className="hidden md:block">

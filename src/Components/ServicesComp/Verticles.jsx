@@ -5,7 +5,7 @@ import retail from "../../assets/animated-icons/services/retail.gif"
 import hospitality from "../../assets/animated-icons/services/hospitality.gif"
 import realestate from "../../assets/animated-icons/services/realestate.gif"
 import education from "../../assets/animated-icons/services/meeting.gif"
-import event from "../../assets/animated-icons/services/event.gif"
+import event from "../../assets/animated-icons/services/event1.gif";
 import healthcare from "../../assets/animated-icons/services/healthcare.gif"
 export const verticals = [
     {id:1,icon:Travel,title:"Travel"},
@@ -30,7 +30,8 @@ const Verticles = ()=>{
 
                     {
                         verticals.map((items,index)=>{
-                            return   <div key={index} className={` flex flex-col justify-center items-center `}>
+                            
+                            return index < 4 ?  ( <div key={index} className={` flex flex-col justify-center items-center mt-10`}>
                             <div className="border-dashed border-2 border-darkblue rounded-full p-4 w-fit relative">
                                 <div className="absolute -top-3 left-24 px-[7px] py-[5px] rounded-full flex shadow-md shadow-darkblue bg-white">
                                     <p className="mx-auto my-auto text-darkblue font-bold text-xl">{`0${items.id}`}</p>
@@ -40,28 +41,62 @@ const Verticles = ()=>{
                                 </div>
                             </div>
                             <h3 className="text-xl mt-2 text-darkblue font-bold">{items.title}</h3>
-                            </div>
+                            </div>) : (
+                                <div key={index} className={`flex md:hidden flex-col justify-center items-center mt-10`}>
+                                <div className="border-dashed border-2 border-darkblue rounded-full p-4 w-fit relative">
+                                    <div className="absolute -top-3 left-24 px-[7px] py-[5px] rounded-full flex shadow-md shadow-darkblue bg-white">
+                                        <p className="mx-auto my-auto text-darkblue font-bold text-xl">{`0${items.id}`}</p>
+                                    </div>
+                                    <div className="w-24 h-24 rounded-full"><img src={items.icon} alt="" /></div>
+                                    <div className="absolute right-24 p-3 rounded-full bg-darkblue">
+                                    </div>
+                                </div>
+                                <h3 className="text-xl mt-2 text-darkblue font-bold">{items.title}</h3>
+                                </div>
+                            )
                         })
                     }
                 </div>
-{/* 
-                <div className="hidden md:grid md:grid-cols-7 lg:grid lg:grid-cols-7">
-                    {
-                        verticals2.map((items,index)=>{
-                            return   <div key={index} className={`${index==2||index==4||index==6||index==0?"invisible":""} flex flex-col justify-center items-center mt-10`}>
-                            <div className="border-dashed border-2 border-darkblue rounded-full p-4 w-fit relative">
-                                <div className="absolute -top-3 left-24 px-[7px] py-[5px] rounded-full flex shadow-md shadow-darkblue bg-white">
-                                    <p className="mx-auto my-auto text-darkblue font-bold text-xl">{`0${items.id}`}</p>
+                <div className="hidden md:grid grid-cols-2 md:grid-cols-3 gap-5 mt-10 px-20">
+
+                        {
+                            verticals.map((items,index)=>{
+                                
+                                return index >= 4 && index < 7 ?  ( <div key={index} className={` flex flex-col justify-center items-center`}>
+                                <div className="border-dashed border-2 border-darkblue rounded-full p-4 w-fit relative">
+                                    <div className="absolute -top-3 left-24 px-[7px] py-[5px] rounded-full flex shadow-md shadow-darkblue bg-white">
+                                        <p className="mx-auto my-auto text-darkblue font-bold text-xl">{`0${items.id}`}</p>
+                                    </div>
+                                    <div className="w-24 h-24 rounded-full"><img src={items.icon} alt="" /></div>
+                                    <div className="absolute right-24 p-3 rounded-full bg-darkblue">
+                                    </div>
                                 </div>
-                                <div className="w-24 h-24 rounded-full"><img src={items.icon} alt="" /></div>
-                                <div className="absolute right-24 p-3 rounded-full bg-darkblue">
-                                </div>
-                            </div>
-                            <h3 className="text-xl mt-2 text-darkblue font-bold">{items.title}</h3>
-                            </div>
-                        })
-                    }
-                </div> */}
+                                <h3 className="text-xl mt-2 text-darkblue font-bold">{items.title}</h3>
+                                </div>) : ""
+                            })
+                        }
+                </div>
+
+                <div className="hidden md:grid grid-cols-2 md:grid-cols-2 gap-5 mt-10 px-72">
+
+{
+    verticals.map((items,index)=>{
+        
+        return index > 6 ?  ( <div key={index} className={` flex flex-col justify-center items-center `}>
+        <div className="border-dashed border-2 border-darkblue rounded-full p-4 w-fit relative">
+            <div className="absolute -top-3 left-24 px-[7px] py-[5px] rounded-full flex shadow-md shadow-darkblue bg-white">
+                <p className="mx-auto my-auto text-darkblue font-bold text-xl">{`0${items.id}`}</p>
+            </div>
+            <div className="w-24 h-24 rounded-full"><img src={items.icon} alt="" /></div>
+            <div className="absolute right-24 p-3 rounded-full bg-darkblue">
+            </div>
+        </div>
+        <h3 className="text-xl mt-2 text-darkblue font-bold">{items.title}</h3>
+        </div>) : ""
+    })
+}
+</div>
+                
 
             </div>
         </div>

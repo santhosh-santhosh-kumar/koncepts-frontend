@@ -9,23 +9,23 @@ function Meta() {
     const getTitle = () => {
         switch (location.pathname) {
             case '/':
-                return 'Home - Koncepts Design and Development';
+                return 'Home - TejusDigi';
             case '/about':
-                return 'About - Koncepts Design and Development';
+                return 'About - TejusDigi';
             case '/services':
-                return 'Services - Koncepts Design and Development';
+                return 'Services - TejusDigi';
             case '/projects':
-                return 'Projects - Koncepts Design and Development';
+                return 'Projects - TejusDigi';
             case '/portfolio':
-                return 'Portfolio - Koncepts Design and Development';
+                return 'Portfolio - TejusDigi';
             case '/carrier':
-                return 'Carrier - Koncepts Design and Development';
+                return 'Carrier - TejusDigi';
             case '/contact':
-                return 'Contact - Koncepts Design and Development';
+                return 'Contact - TejusDigi';
             case '/getaquote':
-                return 'Get A Quote - Koncepts Design and Development';
+                return 'Get A Quote - TejusDigi';
             default:
-                return 'Koncepts Design and Development';
+                return 'TejusDigi';
         }
     };
 

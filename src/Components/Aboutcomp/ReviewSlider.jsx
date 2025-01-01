@@ -63,7 +63,7 @@ const ReviewSlider = () => {
   >
     {SliderReview.map((item, index) => (
       <SwiperSlide
-        className="w-full h-full flex justify-center items-center bg-white shadow-lg shadow-gray-400"
+        className="w-full h-full flex justify-center items-center bg-gray-50 shadow-lg shadow-gray-400"
         key={index}
       >
         <div className="w-full flex gap-y-6 flex-col px-4 md:px-10">
@@ -72,7 +72,7 @@ const ReviewSlider = () => {
               {item.review}
             </h1>
           </div>
-          <div className="flex gap-3 items-center pb-4">
+          <div className="flex gap-3 items-center px-10 pb-4">
             <div className="w-14 h-14">
               <img
                 src={item.pic}

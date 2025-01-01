@@ -34,7 +34,7 @@ const AboutService = ()=>{
                         aboutservicedata.map(({id,title,details,icon})=>(
                             <div className={`border-b  border-l aboutExpCardContainer`}>
                             <div className="flex items-start justify-between gap-x-2 pb-3">
-                                <h3 className="text-[24px] font-semibold">{title}</h3>
+                                <h3 className="text-[24px] font-semibold text-darkblue">{title}</h3>
                                 <img className="w-10" src={icon} alt="" />
                             </div>
                             <div>

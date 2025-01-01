@@ -12,7 +12,7 @@ const Layout = ()=>{
     return(
         <>
            <Navbar/>
-           <Toaster position="top-center"/>
+            <Toaster position="top-center"/>
             <Outlet/>
             <Footer/>
             <GetAQuote/>

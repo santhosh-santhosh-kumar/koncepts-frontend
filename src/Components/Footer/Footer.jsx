@@ -8,7 +8,7 @@ import { TiSocialInstagramCircular } from "react-icons/ti";
 import { FaLinkedin } from "react-icons/fa";
 import { FaPinterest } from "react-icons/fa6";
 import { FaYoutube } from "react-icons/fa";
-import Logo from "../../assets/Images/footer/01-Logo-Koncepts.png";
+import Logo from "../../assets/Images/footer/Logo-TejusDigi.svg";
 
 
 const Footer = ()=>{
@@ -78,15 +78,15 @@ const Footer = ()=>{
                     <h1 className="text-xl font-bold text-darkblue">FOLLOW US</h1>
                     <div className="flex py-2 gap-2 mx-auto">
                             {SocialMedia.map((items,index)=>(
-                                <p key={index} title={items.title} className="bg-darkblue hover:bg-yellow-400 text-white hover:text-gray-900 hover:scale-125 rounded-full p-1 transition-all duration-700 cursor-pointer">{items.platform}</p>
+                                <p key={index} title={items.title} className="bg-darkblue hover:bg-yellow-400 text-white hover:scale-125 rounded-full p-1 transition-all duration-700 cursor-pointer">{items.platform}</p>
                             ))}
                         </div>
 
                 </div>
                 <div className="w-full md:w-auto flex flex-col">
                     <div>
-                        <div className="rounded-full">
-                        <img src={Logo} alt="" width={200} />
+                        <div className="w-36 rounded-full">
+                            <img src={Logo} alt="" />
                         </div>
                         <span className="block text-sm pt-1">&copy; {date} TejusDigi All rights reserved.</span>
                         {/* <span className="text-sm"></span> */}

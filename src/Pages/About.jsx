@@ -47,6 +47,9 @@ import travel4 from "../assets/Images/Business Domains/Real-Estate.jpg";
 import travel5 from "../assets/Images/Business Domains/Retail.jpg";
 import travel6 from "../assets/Images/Business Domains/Automotive.jpg";
 import travel7 from "../assets/Images/Business Domains/Health-Care.jpg";
+import travel8 from "../assets/Images/Business Domains/Education.jpg";
+import travel9 from "../assets/Images/Business Domains/events.jpg";
+
 
 const About = () => {
   let content1="We bring your travel vision to life with cutting-edge web development solutions designed to engage, inspire, and convert visitors into loyal customers.";
@@ -134,7 +137,7 @@ const handleChangeColor=(id)=>{
       title:"Education",
       content1:"For the education industry, we designed visually appealing, engaging websites that serve as functional platforms that enhance the learning experience and facilitate communication between students, parents, and staff.",
       content2:"A User-friendly website is created for Oasis Public School to showcase school information, promote engagement, and facilitate communication",
-      img:travel1
+      img:travel8
 
     }
     ,{
@@ -142,7 +145,7 @@ const handleChangeColor=(id)=>{
       title:"Event",
       content1:"TejusDigi specializes in creating dynamic website designs for the event industry, offering visually captivating, user-friendly platforms that help event organizers showcase their services, engage with clients, and streamline event management processes.",
       content2:"We designed an interactive website for Team 6teen that effectively highlights Team 6teen's events and enhances user engagement.",
-      img:travel2
+      img:travel9
 
     }
   ]
@@ -360,10 +363,10 @@ const handleChangeColor=(id)=>{
           <h3 className="font-ContentText text-lg font-bold pb-4 text-darkblue">
             Our Superpowers
           </h3>
-          <h1 className="font-Heading text-6xl font-bold leading-tight capitalize">
+          <h1 className="font-Heading text-6xl font-bold leading-tight">
             We just doing what others don't
           </h1>
-          <p className="font-medium text-[15px] pt-4 capitalize">
+          <p className="font-medium text-[15px] pt-4">
             We prioritize robust UX structuring before wireframing and validate
             our hypotheses with real user testing to continually enhance our
             designs.
@@ -373,17 +376,17 @@ const handleChangeColor=(id)=>{
               to={"/services"}
               className="w-fit text-darkblue border-4 border-dashed bg-white no-underline rounded-lg p-3 flex items-center gap-3 hover:rounded-tr-3xl hover:rounded-bl-3xl transition-all duration-700"
             >
-              <span className="font-ContentText font-semibold capitalize">
-                Explore our services
+              <span className="font-ContentText font-semibold">
+                Explore Our Services
               </span>
-              <GoArrowRight size={25} className="" />
+              <GoArrowRight size={25} className=""/>
             </Link>
             <Link
               to={"/portfolio"}
               className=" bg-darkblue text-white w-fit no-underline rounded-lg p-3 flex items-center gap-3 hover:rounded-tr-3xl hover:rounded-bl-3xl transition-all duration-700"
             >
-              <span className="font-ContentText font-semibold capitalize">
-                Explore our portfolio
+              <span className="font-ContentText font-semibold">
+                Explore Our Portfolio
               </span>
               <GoArrowRight size={25} className="text-white" />
             </Link>
@@ -399,7 +402,7 @@ const handleChangeColor=(id)=>{
             Our Clients
           </h3>
           <h1 className="font-Heading text-6xl font-bold pt-2">Some Of Them</h1>
-          <p className="font-medium text-[15px] pt-2 capitalize">
+          <p className="font-medium text-[15px] pt-2">
             We are working with a diverse range of clients, spanning from
             globally renowned entities with <span className='block mt-1'>millions of users to innovative
             startups seeking for MVP design solutions.</span>
@@ -439,7 +442,7 @@ const handleChangeColor=(id)=>{
             various business niches, including
           </p>
           </div>
-          <div className="lg:flex md:flex w-full lg:py-20 md:py-20 lg:px-10 md:px-10 border ">
+          <div className="lg:flex md:flex w-full lg:py-20 md:py-20 lg:px-10 md:px-10">
           <div className="grid grid-cols-2 lg:block md:block w-full lg:w-2/12 lg:p-0 p-2">
             {" "}
             {verticals.map(({ title,id }, index) => {
@@ -456,15 +459,13 @@ const handleChangeColor=(id)=>{
               );
             })}
           </div>
-          <div className=" md:w-3/12 lg:w-3/12">
-
+          <div className=" md:w-3/12 lg:w-3/12 pl-5">
               <h2>{domains["title"]}</h2>
               <div className="mt-4  w-full">
               <p className="font-semibold pb-2">{text1}</p>
               <p className="font-semibold pb-2">{text2}</p>
               <p className="font-semibold">{text3}</p>
               </div>
-           
           </div>
           <div className=" lg:pl-10 md:pl-10 flex items-center w-full justify-center object-cover  md:w-7/12 lg:w-7/12">
             <div className="w-full border" >

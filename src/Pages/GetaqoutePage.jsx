@@ -45,8 +45,6 @@ const Budget = [
     const [HandleDeadlineBg,setHandleDeadlineBg] = useState({});
     const [HandleMeetupBg,setHandleMeetupBg] = useState({});
     const [HandleBudgetBg,setHandleBudgetBg] = useState({});
-    const [submitColor,setSubmitColor]=useState(false)
-    const [submitColors,setSubmitColors]=useState(false)
 
     const handleservice=(id,value)=>{
 
@@ -120,8 +118,6 @@ const Budget = [
         e.preventDefault();
         try {
             const response = await axios.post('https://asgapi.konceptsdandd.com/getQuote', QuoteData);
-            setSubmitColor(!submitColor)
-            setSubmitColors(!submitColors)
    setQouteForm({
     goal:'',
         company:'',
@@ -167,7 +163,7 @@ const Budget = [
                                 return <button
                                 onClick={()=>{handleservice(id,value);window.scrollTo({ top: 250, behavior: 'smooth' })}} 
                                 key={index} 
-                                className={`${submitColor ? "bg-darkblue":getButtonBgClass(HandleServiceBg[id],'bg-darkblue', activebg)} hover:scale-110 transition-all duration-300 text-white rounded-md p-3 flex flex-col justify-between gap-y-12`}
+                                className={`${getButtonBgClass(HandleServiceBg[id],'bg-darkblue', activebg)} hover:scale-110 transition-all duration-300 text-white rounded-md p-3 flex flex-col justify-between gap-y-12`}
                                 >
                                     <p className="text-center mb-0 rounded-full border border-white w-8 text-[14px] py-1">{id}</p>
                                     <p className="text-left text-xl mb-0">{value}</p>
@@ -184,7 +180,7 @@ const Budget = [
                                     return <button 
                                     onClick={()=>{handledeadline(id,value);window.scrollTo({ top: 500, behavior: 'smooth' })}}
                                     key={index} 
-                                    className={`${submitColors ? "bg-darkblue":getButtonBgClass(HandleServiceBg[id],'bg-darkblue', activebg)} ${FieldDeadlineDis ? "" :"hover:scale-110 transition-all duration-300"} text-white rounded-md p-3 flex flex-col justify-between gap-y-12`}
+                                    className={`${getButtonBgClass(HandleDeadlineBg[id],'bg-darkblue', activebg)} ${FieldDeadlineDis ? "" :"hover:scale-110 transition-all duration-300"} text-white rounded-md p-3 flex flex-col justify-between gap-y-12`}
                                     >
                                     <p className="text-center mb-0 rounded-full border border-white w-8 text-[14px] py-1">{id}</p>
                                     <p className="text-left text-xl mb-0">{value}</p>

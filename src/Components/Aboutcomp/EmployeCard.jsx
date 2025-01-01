@@ -12,6 +12,7 @@ import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai"; // Import arrow 
 import SaravanaPrabuImg from "../../assets/Images/Pillars/saravanan.jpg";
 import NareshImg from "../../assets/Images/Pillars/naresh.jpg";
 import SanthoshImg from "../../assets/Images/Pillars/santhosh.jpg";
+import Muthuvel from "../../assets/Images/Pillars/muthuvel.jpg";
 import Aboutcardicon from "../../assets/Images/about/aboutcardicon.png";
 import React from "react";
 
@@ -59,7 +60,7 @@ import React from "react";
           exp: 1,
           profession: "design",
           icon: Aboutcardicon,
-          about1: "A creative full-stack developer who thrives on pushing the boundaries of web development. Whether it’s building dynamic front-end experiences or optimizing back-end systems, I love blending innovation with functionality to create applications that stand out.",
+          about1: "A passionate and skilled professional excelling in creative design, video production, data analysis, and user experience design. With a diverse set of abilities, I craft engaging visuals, insightful data solutions, and intuitive interfaces to help businesses thrive.",
           about2: 'I’m not just a developer; I’m a problem solver, innovator, and dream builder.',
           proficient: ['HTML', 'CSS', 'JavaScript', 'Tailwind CSS', 'React JS', 'Node JS', 'Express JS', 'MySql', 'MongoDB', 'Git and Github'],
           socialmedia: [
@@ -67,7 +68,25 @@ import React from "react";
             {icon:<SiInstagram />,link:""},
             {icon:<ImWhatsapp />,linl:""},
         ]
+        },
+        {
+          id: 4,
+          ProfilePic: Muthuvel,
+          Name: "Muthuvel",
+          title: "Designer",
+          exp: 1,
+          profession: "design",
+          icon: Aboutcardicon,
+          about1: "A creative full-stack developer who thrives on pushing the boundaries of web development. Whether it’s building dynamic front-end experiences or optimizing back-end systems, I love blending innovation with functionality to create applications that stand out.",
+          about2: 'With a keen eye for detail and a user-first approach, I excel in creating intuitive interfaces that enhance experiences and drive results.',
+          proficient: ['photoshop', 'illustrator', 'video editing', 'data analyist', 'UI/UX design'],
+          socialmedia: [
+            {icon:<FaLinkedinIn />,link:""},
+            {icon:<SiInstagram />,link:""},
+            {icon:<ImWhatsapp />,linl:""},
+        ]
         }
+        
       ];
       const swiperRef = useRef(null);
       const handleClick = () => {

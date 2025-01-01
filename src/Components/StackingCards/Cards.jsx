@@ -7,7 +7,7 @@ import { useRef } from "react";
       const scale = useTransform(progress,range,[1,targetscale])
     return(
         <motion.div style={{scale}} className="h-auto py-10 sticky top-0 flex items-center justify-center">
-            <div className='bg-white flex flex-col md:flex-row md:items-start items-center border-[3px] border-dashed rounded-3xl'>
+            <div className='bg-white flex flex-col md:flex-row md:items-start items-center border-[3px] border-dashed rounded-tl-lg rounded-br-lg rounded-tr-[30px] rounded-bl-[30px]'>
                 <div className='w-full md:w-1/2'>  
                     <img src={img} alt="" className='w-full h-full'/>
                     <div className="pt-2 px-5 md:px-0 block md:hidden py-2">
@@ -32,7 +32,7 @@ import { useRef } from "react";
                         </div>
                     </div>
                     <div className="pt-2 hidden md:block py-2">
-                        <a href={site} target="_blank"><button className="border-4 border-dashed px-3 py-2 rounded-md text-darkblue transition-all hover:rounded-tr-2xl hover:rounded-bl-2xl duration-700">Visit Site</button></a>
+                        <a href={site} target="_blank"><button className="border border-dashed border-gray-400 px-3 py-2 rounded-md text-darkblue transition-all hover:rounded-tr-2xl hover:rounded-bl-2xl duration-700">Visit Site</button></a>
                     </div>
                 </div>
             </div>

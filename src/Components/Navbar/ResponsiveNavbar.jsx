@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { MenuStateContext } from "../Usecontext/UseContext";
 import { TfiClose } from "react-icons/tfi";
-import Logo from "../../assets/Images/Logo";
+import Logo from "../../assets/Images/Logo-TejusDigi.svg";
 import { navlinks } from "./Navbar";
 import { Link } from "react-router-dom";
 import { FaFacebook } from "react-icons/fa";
@@ -87,8 +87,10 @@ const ResponsiveNavbar = ()=>{
             <div className="bg-darkblue py-2 fixed right-0 left-0 text-darkblue overflow-hidden">
                 <div className="container">
                 <div className="flex items-center justify-between w-full">
-                    <div className="bg-white rounded-full py-2">
-                        <Link to={'/'} onClick={()=>{SetMenuState(false);window.scrollTo(0,0)}}><Logo/></Link>
+                    <div className="bg-white rounded-full py-7 px-4 w-24">
+                        <Link to={'/'} onClick={()=>{SetMenuState(false);window.scrollTo(0,0)}}>
+                            <img src={Logo} alt="" />
+                        </Link>
                     </div>
                     <div onClick={HandleMenuState} className="cursor-pointer text-white">
                         <TfiClose size={30}/>
@@ -159,8 +161,8 @@ const ResponsiveNavbar = ()=>{
 
                 </div>
                 <div className="w-full md:w-auto flex flex-col gap-3">
-                        <div className="border-4 border-darkblue w-fit py-2 rounded-full">
-                            <Logo/>
+                        <div className="border-4 border-darkblue w-32 px-3 py-7 rounded-full">
+                            <img src={Logo} alt="" />
                         </div>
                         <span className="text-sm">&copy; {date} TejusDigi All rights reserved</span>
                 </div>
