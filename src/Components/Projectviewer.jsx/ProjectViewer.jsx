@@ -1,19 +1,17 @@
-import { GoArrowDown } from "react-icons/go";
 import React, { useEffect, useState } from "react";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
-import Project01 from "../../assets/Images/projects/01Architecture.svg";
-import Project02 from "../../assets/Images/projects/02IAAS Academy01.svg";
-import Project03 from "../../assets/Images/projects/03Facilitator01.svg";
-import Project04 from "../../assets/Images/projects/04Real Estate01.svg";
-import Project05 from "../../assets/Images/projects/05Teaching and Coaching01.svg";
-import Project06 from "../../assets/Images/projects/06Sangumark Lungi01.svg";
-import Project07 from "../../assets/Images/projects/07Events01.svg";
-import Project08 from "../../assets/Images/projects/08IT-Industry01.svg";
-import Project09 from "../../assets/Images/projects/09Logistics01.svg";
-import Logo from "../../assets/Images/home/banner02.jpg";
-import Brochure from "../../assets/Images/projects/01Brochure01.svg";
-import { FaAngleUp } from "react-icons/fa6";
+import Project01 from "../../assets/Images/projects/01Architecture.webp";
+import Project02 from "../../assets/Images/projects/02IAAS Academy01.webp";
+import Project03 from "../../assets/Images/projects/03Facilitator01.webp";
+import Project04 from "../../assets/Images/projects/04Real Estate01.webp";
+import Project05 from "../../assets/Images/projects/05Teaching and Coaching01.webp";
+import Project06 from "../../assets/Images/projects/06Sangumark Lungi01.webp";
+import Project07 from "../../assets/Images/projects/07Events01.webp";
+import Project08 from "../../assets/Images/projects/08IT-Industry01.webp";
+import Project09 from "../../assets/Images/projects/09Logistics01.webp";
+import Logo from "../../assets/Images/home/LogoBanner.webp";
+import Brochure from "../../assets/Images/projects/01Brochure01.webp";
 import { FaAngleDown } from "react-icons/fa6";
 
 const MapComponent = () => {
@@ -116,7 +114,7 @@ const MapComponent = () => {
         {/* Dropdown for Websites */}
         <div className="relative inline-block">
             <select
-              className={`appearance-none font-[500] px-4 py-2 rounded shadow w-full ${
+              className={`appearance-none font-[500] px-4 py-2 pr-10 rounded shadow w-full ${
                 imageType === "website"
                   ? "bg-darkblue text-white"
                   : "bg-myyellow text-darkblue"

@@ -8,12 +8,10 @@ import { useRef } from 'react';
 import { FaLinkedinIn } from "react-icons/fa";
 import { SiInstagram } from "react-icons/si";
 import { ImWhatsapp } from "react-icons/im";
-import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai"; // Import arrow icons
-import SaravanaPrabuImg from "../../assets/Images/Pillars/saravanan.jpg";
-import NareshImg from "../../assets/Images/Pillars/naresh.jpg";
-import SanthoshImg from "../../assets/Images/Pillars/santhosh.jpg";
-import Muthuvel from "../../assets/Images/Pillars/muthuvel.jpg";
-import Aboutcardicon from "../../assets/Images/about/aboutcardicon.png";
+import SaravanaPrabuImg from "../../assets/Images/Pillars/saravanan.webp";
+import NareshImg from "../../assets/Images/Pillars/naresh.webp";
+import SanthoshImg from "../../assets/Images/Pillars/santhosh.webp";
+import Muthuvel from "../../assets/Images/Pillars/muthuvel.webp";
 import React from "react";
 
     const EmployeeCard = ()=>{
@@ -25,7 +23,6 @@ import React from "react";
           title: "Designer",
           exp: 6,
           profession: "design",
-          icon: Aboutcardicon,
           about1: "As the CEO of a dynamic design and development company, I thrive on turning ideas into impactful realities. At the heart of my leadership is a commitment to blending creativity with precision, ensuring every project not only meets but exceeds expectations. Whether you are building a brand from the ground up or elevating your existing identity, my team and I are here to deliver excellence.",
           about2:"Let’s design the future, together" ,
           proficient: ["Digital Marketing","finance", "telecommunication", "Brand Identity", "Business Strategy", "Designing", "SEO"],
@@ -42,7 +39,6 @@ import React from "react";
           title: "Full Stack Developer",
           exp: 1,
           profession: "design",
-          icon: Aboutcardicon,
           about1: "A creative full-stack developer who thrives on pushing the boundaries of web development.",
           about2: 'I’m not just a developer; I’m a problem solver, innovator, and dream builder.',
           proficient: ['HTML', 'CSS', 'JavaScript', 'Tailwind CSS', 'React JS', 'Node JS', 'Express JS', 'MySql', 'MongoDB', 'Git and Github'],
@@ -59,7 +55,6 @@ import React from "react";
           title: "Full Stack Developer",
           exp: 1,
           profession: "design",
-          icon: Aboutcardicon,
           about1: "A passionate and skilled professional excelling in creative design, video production, data analysis, and user experience design. With a diverse set of abilities, I craft engaging visuals, insightful data solutions, and intuitive interfaces to help businesses thrive.",
           about2: 'I’m not just a developer; I’m a problem solver, innovator, and dream builder.',
           proficient: ['HTML', 'CSS', 'JavaScript', 'Tailwind CSS', 'React JS', 'Node JS', 'Express JS', 'MySql', 'MongoDB', 'Git and Github'],
@@ -76,7 +71,6 @@ import React from "react";
           title: "Designer",
           exp: 1,
           profession: "design",
-          icon: Aboutcardicon,
           about1: "A creative full-stack developer who thrives on pushing the boundaries of web development. Whether it’s building dynamic front-end experiences or optimizing back-end systems, I love blending innovation with functionality to create applications that stand out.",
           about2: 'With a keen eye for detail and a user-first approach, I excel in creating intuitive interfaces that enhance experiences and drive results.',
           proficient: ['photoshop', 'illustrator', 'video editing', 'data analyist', 'UI/UX design'],
@@ -114,7 +108,7 @@ import React from "react";
             {
               employeeCard.map(({id,ProfilePic,Name,title,exp,profession,icon,about1,about2,proficient,socialmedia})=>{
                 return(
-                  <SwiperSlide className='w-full h-full py-3 px-3'>
+                  <SwiperSlide className='w-full h-full py-3 px-3 border-b border-gray-200'>
                     <div className="flex flex-col md:flex-row justify-between items-start w-full text-gray-600">
                   <div className="w-full md:w-5/12 border-3">
                     <img className="w-full h-full" src={ProfilePic} alt="" />

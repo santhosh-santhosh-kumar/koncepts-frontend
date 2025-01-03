@@ -7,11 +7,11 @@ import 'swiper/css/navigation';
 import 'swiper/css/effect-coverflow';
 import { useRef } from 'react';
 import { GrNext,GrPrevious } from 'react-icons/gr';
-import stivejobs from "../../assets/Images/about/stive_jobs.jpg";
-import billgates from "../../assets/Images/about/bill_gates.jpg";
-import joel from "../../assets/Images/about/joel_spolsky.jpeg";
-import neil from "../../assets/Images/about/neil_amstrong.jpg";
-import jim from "../../assets/Images/about/jim_highsmith.jpg";
+import stivejobs from "../../assets/Images/about/stive_jobs.webp";
+import billgates from "../../assets/Images/about/bill_gates.webp";
+import joel from "../../assets/Images/about/joel_spolsky.webp";
+import neil from "../../assets/Images/about/neil_amstrong.webp";
+import jim from "../../assets/Images/about/jim_highsmith.webp";
 
 const SliderReview = [
   { id: 1, review: 'The best way to get a project done faster is to start sooner.', pic: jim, author: "Jim Highsmith", des: "software engineer, agile software development advocate" },

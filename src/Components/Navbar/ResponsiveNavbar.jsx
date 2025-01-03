@@ -1,9 +1,10 @@
 import { useContext, useEffect, useState } from "react";
 import { MenuStateContext } from "../Usecontext/UseContext";
 import { TfiClose } from "react-icons/tfi";
-import Logo from "../../assets/Images/Logo-TejusDigi.svg";
+import FacIconLogo from "../../assets/Images/Fav-icon-Logo-TejusDigi.webp";
+import Logo from "../../assets/Images/Logo-TejusDigi.webp";
 import { navlinks } from "./Navbar";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FaFacebook } from "react-icons/fa";
 import { AiFillTwitterCircle } from "react-icons/ai";
 import { TiSocialInstagramCircular } from "react-icons/ti";
@@ -57,6 +58,7 @@ export const SocialMedia = [
 ]
 
 const ResponsiveNavbar = ()=>{
+    const navigate = useNavigate();
     const date = new Date().getFullYear()
     const {MenuState,SetMenuState,HandleMenuState} = useContext(MenuStateContext);
 
@@ -87,9 +89,9 @@ const ResponsiveNavbar = ()=>{
             <div className="bg-darkblue py-2 fixed right-0 left-0 text-darkblue overflow-hidden">
                 <div className="container">
                 <div className="flex items-center justify-between w-full">
-                    <div className="bg-white rounded-full py-7 px-4 w-24">
+                    <div className="bg-white rounded-full p-2 w-24">
                         <Link to={'/'} onClick={()=>{SetMenuState(false);window.scrollTo(0,0)}}>
-                            <img src={Logo} alt="" />
+                            <img src={FacIconLogo} alt="" />
                         </Link>
                     </div>
                     <div onClick={HandleMenuState} className="cursor-pointer text-white">
@@ -100,9 +102,9 @@ const ResponsiveNavbar = ()=>{
             </div>
             </div>
             {/* body */}
-            <div className="container flex flex-wrap uppercase mt-28">
+            <div className="container flex flex-wrap mt-28">
                 <div className="w-full md:w-1/4">
-                <ul className="pl-0">
+                <ul className="pl-0 uppercase">
                     {
                         navlinks.map((items,index)=>(
                             <Link onClick={()=>{SetMenuState(false);window.scrollTo(0,0)}} key={index} to={items.to} className="no-underline text-black font-semibold text-xl block py-2">{items.lable}</Link>
@@ -112,18 +114,18 @@ const ResponsiveNavbar = ()=>{
                 </div>
                 <div className="w-full md:w-1/4 overflow-hidden mt-2">
                     <div onClick={()=>setserviceopen(!serviceopen)} className="flex overflow-hidden cursor-pointer">
-                        <h3 className="text-xl">Services</h3>
+                        <h3 className="text-xl text-darkblue font-semibold font-ContentText uppercase">Services</h3>
                         <p className="block md:hidden"><MdOutlineKeyboardArrowDown size={30} color="black"/></p>
                     </div>
                     <div className={`${serviceopen ?"opacity-100 h-auto" :"opacity-0 h-0 overflow-hidden"} border-black transition-all duration-700`}>
                         {Services.map((items,index)=>(
-                            <li key={index} className={`${items.id === 2 ? "list-disc text-sm py-1" : "list-none py-2"}`}>{items.service}</li>
+                            <li onClick={()=>{navigate(items.to);window.scrollTo(0,0);SetMenuState(false)}} key={index} className={`${items.id === 2 ? "list-disc text-sm py-1" : "list-none py-2"} cursor-pointer`}>{items.service}</li>
                         ))}
                     </div>
                 </div>
                 <div className="w-full md:w-1/4 overflow-hidden mt-2">
                     <div onClick={()=>sethiringopen(!hiringopen)} className="flex overflow-hidden cursor-pointer">
-                    <h3 className="text-xl">Openning</h3>
+                    <h3 className="text-xl invisible">.</h3>
                     <p className="block md:hidden"><MdOutlineKeyboardArrowDown size={30} color="black"/></p>
                     </div>
                     <div className={`${hiringopen ?"opacity-100 h-auto":"h-0 opacity-0 overflow-hidden"} transition-all duration-700`}>
@@ -135,33 +137,33 @@ const ResponsiveNavbar = ()=>{
 
                 <div className="w-full md:w-1/4 overflow-hidden mt-2">
                     <div onClick={()=>settechopen(!techopen)} className="flex overflow-hidden cursor-pointer">
-                    <h3 className="text-xl">Technonohies</h3>
+                    <h3 className="text-xl text-darkblue font-semibold font-ContentText uppercase">Technologies</h3>
                     <p className="block md:hidden"><MdOutlineKeyboardArrowDown size={30} color="black"/></p>
                     </div>
                     <div className={`${techopen ?"opacity-100 h-auto" :"opacity-0 h-0 overflow-hidden"} border-black transition-all duration-700`}>
                         {technologies.map((items,index)=>(
-                            <li key={index} className={`${items.id === 2 ? "list-disc text-sm py-1" : "list-none py-2"}`}>{items.tech}</li>
+                            <li onClick={()=>{navigate(items.to);window.scrollTo(0,0);SetMenuState(false)}} key={index} className={`${items.id === 2 ? "list-disc text-sm py-1" : "list-none py-2"} cursor-pointer`}>{items.tech}</li>
                         ))}
                     </div>
                 </div>
             </div>
             <div className="container w-full flex flex-wrap justify-between twmt">
                 <div className="w-full md:w-1/3">
-                    <h1 className="text-xl font-bold">INDIA</h1>
-                    <p className="w-56">#20 First Street, Sriram Nagar, Achariyapuram, Urivaiyar, (Near Achariya school)
+                    <h1 className="text-xl font-bold text-darkblue pb-2">INDIA</h1>
+                    <p className="w-56">#20 First Street, Sriram Nagar, Achariyapuram, Urivaiyar, <br /> (Near Achariya school) <br />
                     Puducherry - 605110</p>
                 </div>
                 <div className="w-full md:w-1/3">
-                    <h1 className="text-xl font-bold">FOLLOW US</h1>
+                    <h1 className="text-xl font-bold pb-2 text-darkblue">FOLLOW US</h1>
                     <div className="flex gap-2 mx-auto">
                             {SocialMedia.map((items,index)=>(
-                                <p key={index} title={items.title} className="sbg rounded-full p-1 transition-all duration-500">{items.platform}</p>
+                                <p key={index} title={items.title} className="text-white hover:scale-125 rounded-full p-1 transition-all duration-500 hover:bg-yellow-400 bg-darkblue">{items.platform}</p>
                             ))}
                         </div>
 
                 </div>
                 <div className="w-full md:w-auto flex flex-col gap-3">
-                        <div className="border-4 border-darkblue w-32 px-3 py-7 rounded-full">
+                        <div className="w-32">
                             <img src={Logo} alt="" />
                         </div>
                         <span className="text-sm">&copy; {date} TejusDigi All rights reserved</span>

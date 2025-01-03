@@ -106,7 +106,7 @@ const AboutExpCard = ({
 }) => {
   return (
     <>
-    <div className="aboutExpCardContainer border-1 border-collapse border-gray-200 w-full text-gray-600">
+    <div className="aboutExpCardContainer w-full text-gray-600">
         <div className="flex flex-col md:flex-row justify-between items-start w-full">
             <div className="w-full md:w-5/12 border-3">
               <img className="w-full h-full" src={ProfilePic} alt="" />

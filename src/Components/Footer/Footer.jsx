@@ -8,7 +8,7 @@ import { TiSocialInstagramCircular } from "react-icons/ti";
 import { FaLinkedin } from "react-icons/fa";
 import { FaPinterest } from "react-icons/fa6";
 import { FaYoutube } from "react-icons/fa";
-import Logo from "../../assets/Images/footer/Logo-TejusDigi.svg";
+import Logo from "../../assets/Images/footer/Logo-TejusDigi.webp";
 
 
 const Footer = ()=>{
@@ -85,7 +85,7 @@ const Footer = ()=>{
                 </div>
                 <div className="w-full md:w-auto flex flex-col">
                     <div>
-                        <div className="w-36 rounded-full">
+                        <div onClick={()=>{navigate('/');window.scrollTo(0,0)}} className="w-36 cursor-pointer">
                             <img src={Logo} alt="" />
                         </div>
                         <span className="block text-sm pt-1">&copy; {date} TejusDigi All rights reserved.</span>

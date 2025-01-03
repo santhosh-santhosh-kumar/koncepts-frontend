@@ -67,7 +67,7 @@ function App() {
           <Route path='/e_commerce_development' element={<EcommerceDev/>}/>
           <Route path='/app.integration_webServices' element={<AppIntegration/>}/>
           <Route path='/requirement_engineering' element={<RequirementEngineering/>}/>
-          {/* <Route path='*' element={<Nopage/>}/> */}
+          <Route path='*' element={<Nopage/>}/>
         </Route>
       </Routes>
       <ScrollToTop/>

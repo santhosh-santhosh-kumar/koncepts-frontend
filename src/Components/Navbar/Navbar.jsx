@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from "react";
-import TejusDigiLogo from "../../assets/Images/Logo-TejusDigi.svg";
-import {Link, NavLink} from "react-router-dom";
+import TejusDigiLogo from "../../assets/Images/Logo-TejusDigi.webp";
+import {NavLink, useNavigate} from "react-router-dom";
 import { CgMenuRight } from "react-icons/cg";
 import { MenuStateContext } from "../Usecontext/UseContext";
 export const navlinks = [
@@ -39,6 +39,7 @@ export const navlinks = [
     },
 ]
     const Navbar = ()=>{
+        const navigate = useNavigate()
 
         const [isScrollingUp, setIsScrollingUp] = useState(true);
         const [lastScrollTop, setLastScrollTop] = useState(0);
@@ -71,8 +72,8 @@ export const navlinks = [
                             isScrollingUp ? 'transform translate-y-0' : 'transform -translate-y-full'}`}>
                 <div className="container flex items-center justify-between py-2">
                     {/* logo */}
-                    <div className="w-32 shadow-sm shadow-gray-300 rounded-xl">
-                        <img src={TejusDigiLogo} alt="" />
+                    <div onClick={()=>{navigate('/');window.scrollTo(0,0)}} className="w-28">
+                        <img className="w-full object-contain" src={TejusDigiLogo} alt="" />
                     </div>
                     {/* navbar links */}
                     <div className="hidden md:block">

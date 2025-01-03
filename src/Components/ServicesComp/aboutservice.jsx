@@ -16,8 +16,8 @@ const AboutService = ()=>{
         navigate('/contact');
     }
     return(
-        <div className="py-24 w-full flex">
-            <div className="container my-auto w-full md:flex border-1 border-gray-200">
+        <div className="container py-24 w-full flex">
+            <div className="my-auto w-full md:flex border border-gray-200">
                <div className="aboutExpCardContainer w-full md:w-1/2 my-auto">
                     <h1 className='font-Heading text-5xl md:text-6xl font-bold'>Responsive.</h1>
                     <h1 className='font-Heading text-5xl md:text-6xl font-bold'>Powerful.</h1>
@@ -32,7 +32,7 @@ const AboutService = ()=>{
                     <div className="grid grid-cols-1 md:grid-cols-2">
                     {
                         aboutservicedata.map(({id,title,details,icon})=>(
-                            <div className={`border-b  border-l aboutExpCardContainer`}>
+                            <div className={`border-b border-l aboutExpCardContainer`}>
                             <div className="flex items-start justify-between gap-x-2 pb-3">
                                 <h3 className="text-[24px] font-semibold text-darkblue">{title}</h3>
                                 <img className="w-10" src={icon} alt="" />

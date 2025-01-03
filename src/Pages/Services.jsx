@@ -1,12 +1,12 @@
-import FaqAccordian2 from "../Components/FAQ/Accordian2";
+
 import AboutService from "../Components/ServicesComp/aboutservice";
 import Verticles from "../Components/ServicesComp/Verticles"
 import WhatWeDo from "../Components/ServicesComp/WhatWeDo";
 import { useState,useEffect } from "react";
-import image1 from "../assets/Images/Services/branding.jpg";
-import image2 from "../assets/Images/Services/brochure.jpg";
-import image3 from "../assets/Images/Services/logo.jpg";
-import image4 from "../assets/Images/Services/website.jpg";
+import image1 from "../assets/Images/Services/branding.webp";
+import image2 from "../assets/Images/Services/brochure.webp";
+import image3 from "../assets/Images/Services/logo.webp";
+import image4 from "../assets/Images/Services/website.webp";
 
 const Services = ()=>{
     const whatwedodata = [

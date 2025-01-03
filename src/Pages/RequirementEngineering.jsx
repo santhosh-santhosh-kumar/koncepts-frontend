@@ -1,11 +1,11 @@
 import { Services } from "../Components/Navbar/ResponsiveNavbar";
 import { FaRegCheckCircle } from "react-icons/fa";
-import agile from "../assets/Images/footer/agile.png";
-import waterfall from "../assets/Images/footer/waterfall.png";
-import kickoff from "../assets/Images/footer/kickoff.png";
-import plan from "../assets/Images/footer/plan.png";
-import create from "../assets/Images/footer/create.png";
-import build from "../assets/Images/footer/build.png";
+import agile from "../assets/Images/footer/agile.webp";
+import waterfall from "../assets/Images/footer/waterfall.webp";
+import kickoff from "../assets/Images/footer/kickoff.webp";
+import plan from "../assets/Images/footer/plan.webp";
+import create from "../assets/Images/footer/create.webp";
+import build from "../assets/Images/footer/build.webp";
 import { useNavigate } from "react-router-dom";
 const RequirementEngineering = ()=>{
     const navigate = useNavigate()

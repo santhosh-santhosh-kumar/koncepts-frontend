@@ -1,10 +1,10 @@
 import { useInView } from "react-intersection-observer"; // Import Intersection Observer
-import Flowimg1 from "../../assets/Images/showcase/amjad.jpg";
-import Flowimg2 from "../../assets/Images/showcase/jesus.jpg";
-import Flowimg5 from "../../assets/Images/showcase/nextyours.jpg";
-import Flowimg3 from "../../assets/Images/showcase/team16.jpg";
-import Flowimg4 from "../../assets/Images/showcase/theoasispublicschool.jpg";
-import { Link, useNavigate } from "react-router-dom";
+import Flowimg1 from "../../assets/Images/showcase/amjad.webp";
+import Flowimg2 from "../../assets/Images/showcase/jesus.webp";
+import Flowimg5 from "../../assets/Images/showcase/nextyours.webp";
+import Flowimg3 from "../../assets/Images/showcase/team16.webp";
+import Flowimg4 from "../../assets/Images/showcase/theoasispublicschool.webp";
+import {useNavigate } from "react-router-dom";
 import { FaArrowRight } from "react-icons/fa6";
 
 const Portfolioslider = () => {
@@ -90,7 +90,7 @@ const Portfolioslider = () => {
                   </h2>
 
                   <span
-                      className="cursor-pointer pt-2 block text-[15px] hover:text-blue-600 text-white"
+                      className="cursor-pointer pt-5 block text-[15px] hover:text-yellow-400 text-white"
                       onClick={() => {
                         if (id === Portfoliodata.length) {
                           navigate("/getaquote");
@@ -113,9 +113,9 @@ const Portfolioslider = () => {
                       rel="noopener noreferrer"
                       href={site}
                       target="_blank"
-                      className="no-underline text-white text-left border border-white px-3 mt-3"
+                      className="group no-underline text-white text-left transition-all duration-500 border-2 border-dashed border-gray-400 hover:rounded-bl-2xl hover:rounded-tr-2xl hover:rounded-tl-md hover:rounded-br-md px-3 mt-5"
                     >
-                      <button className="border-1 border-white px-3 py-1 text-md md:text-lg font-bold text-white rounded-lg hover:text-darkblue transition-all duration-500 hover:rounded-tr-2xl hover:rounded-bl-2xl font-ContentText">
+                      <button className="border-1 border-white px-3 py-1 text-md md:text-lg font-bold text-white rounded-lg hover:text-yellow-400 transition-all duration-500 hover:rounded-tr-2xl hover:rounded-bl-2xl font-ContentText">
                         {vision} <FaArrowRight className="inline ml-2" />
                       </button>
                     </a>

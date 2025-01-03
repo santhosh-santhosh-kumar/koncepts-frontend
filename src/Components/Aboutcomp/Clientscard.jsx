@@ -1,8 +1,9 @@
-const ClientsCard = ({id,logo})=>{
+import { useNavigate } from "react-router-dom";
 
- 
+const ClientsCard = ({id,logo,link})=>{
+const navigate = useNavigate();
     return(
-        <div className="w-full border border-gray-200 flex justify-center items-center py-3 px-2">
+        <div onClick={()=>{link ? window.open(link) : ""}} className={`${link ? 'cursor-pointer' : 'cursor-default'} w-full border border-gray-200 flex justify-center items-center py-3 px-2`}>
             <div className={`px-2 py-3 
                 ${id === 1 ? 'w-40' : ''} 
                 ${id === 2 ? 'w-44' : ''} 

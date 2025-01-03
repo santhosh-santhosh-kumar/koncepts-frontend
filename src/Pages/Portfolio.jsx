@@ -2,21 +2,21 @@
 import React, { useEffect, useRef } from 'react';
 import Rellax from "rellax";
 import Lenis from 'lenis';
-import Flowimg1 from "../assets/Images/homepage-projects/01DrAshokkumar.png"
-import Flowimg2 from "../assets/Images/homepage-projects/02IaasAcademy.png"
-import Flowimg3 from "../assets/Images/homepage-projects/03JandJTrading.png"
-import Flowimg4 from "../assets/Images/homepage-projects/04sangumark.png"
-import Flowimg5 from "../assets/Images/homepage-projects/05Shazab.png"
-import RunningImg1 from "../assets/Images/portfolio/Archivite-Architecture.jpg";
-import RunningImg2 from "../assets/Images/portfolio/brochure.jpg";
-import RunningImg3 from "../assets/Images/portfolio/ecogroup.jpg";
-import RunningImg4 from "../assets/Images/portfolio/iaasacademy.jpg";
-import RunningImg5 from "../assets/Images/portfolio/infinitepotentials.jpg";
-import RunningImg6 from "../assets/Images/portfolio/jesuscomfortindia.jpg";
-import RunningImg7 from "../assets/Images/portfolio/logo.jpg";
-import RunningImg8 from "../assets/Images/portfolio/pscs.jpg";
-import RunningImg9 from "../assets/Images/portfolio/shazab.jpg";
-import RunningImg10 from "../assets/Images/portfolio/team16.jpg";
+import Flowimg1 from "../assets/Images/homepage-projects/01DrAshokkumar.webp"
+import Flowimg2 from "../assets/Images/homepage-projects/02IaasAcademy.webp"
+import Flowimg3 from "../assets/Images/homepage-projects/03JandJTrading.webp"
+import Flowimg4 from "../assets/Images/homepage-projects/04sangumark.webp"
+import Flowimg5 from "../assets/Images/homepage-projects/05Shazab.webp"
+import RunningImg1 from "../assets/Images/portfolio/Archivite-Architecture.webp";
+import RunningImg2 from "../assets/Images/portfolio/brochure.webp";
+import RunningImg3 from "../assets/Images/portfolio/ecogroup.webp";
+import RunningImg4 from "../assets/Images/portfolio/iaasacademy.webp";
+import RunningImg5 from "../assets/Images/portfolio/infinitepotentials.webp";
+import RunningImg6 from "../assets/Images/portfolio/jesuscomfortindia.webp";
+import RunningImg7 from "../assets/Images/portfolio/logo.webp";
+import RunningImg8 from "../assets/Images/portfolio/pscs.webp";
+import RunningImg9 from "../assets/Images/portfolio/shazab.webp";
+import RunningImg10 from "../assets/Images/portfolio/team16.webp";
 
 import Cards from '../Components/StackingCards/Cards';
 import { useScroll } from 'framer-motion';

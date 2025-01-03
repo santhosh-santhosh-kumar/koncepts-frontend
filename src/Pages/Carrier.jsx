@@ -142,7 +142,7 @@ const Carrier = () => {
         <div className="container">
           <div className="flex flex-col md:flex-row gap-5">
             <div className="text-center w-full md:w-1/2 px-5 py-8 shadow-xl border-2 border-gray-300 rounded-3xl hover:scale-105 transition-transform duration-500">
-              <h2 className="pb-4 font-Heading">
+              <h2 className="pb-4 font-Heading text-3xl">
                 Get In <span className="text-darkblue capitalize">Touch</span>
               </h2>
               <a href="tel:+919791177077" className="no-underline">
@@ -153,15 +153,15 @@ const Carrier = () => {
               <div className="flex items-center justify-center gap-3 pt-3">
                 <IoCall size={35} />
                 <a
-                  href="tel:+917845420505"
+                  href="tel:+919042253201"
                   className="no-underline text-black text-xl"
                 >
-                  +91 97911 77077
+                  +91 90422 53201
                 </a>
               </div>
             </div>
             <div className="text-center w-full md:w-1/2 px-5 py-8 shadow-xl border-2 border-gray-300 rounded-3xl hover:scale-105 transition-transform duration-500">
-              <h2 className="pb-4 font-Heading">
+              <h2 className="pb-4 font-Heading text-3xl">
                 Reach Out <span className="text-darkblue">Via E-mail</span>
               </h2>
               <a
@@ -184,7 +184,7 @@ const Carrier = () => {
             </div>
           </div>
           <div className="py-10">
-            <div className="text-center">
+            <div className="text-center font-Heading text-xl lg:text-3xl">
               <h1>
                 Looking <span className="text-darkblue">for Internship?</span>
               </h1>

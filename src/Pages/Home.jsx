@@ -1,15 +1,13 @@
-import FaqAccordian from "../Components/FAQ/Accordian";
+
 import BackgroundSlider from "../Components/BackgroundSlider/BackgroundSlider";
 import PriceDetails from "../Components/PriceDetails/PriceDetails";
-import EmailandQuote from "../Components/Contents/EmailandQuote";
 import DesignPreviewSlider from "../Components/Projectviewer.jsx/ProjectViewer";
-import Slide from "../Pages/Slide";
 import Verticles from "../Components/ServicesComp/Verticles";
-import Flowimg1 from "../assets/Images/homepage-projects/01DrAshokkumar.png";
-import Flowimg2 from "../assets/Images/homepage-projects/02IaasAcademy.png";
-import Flowimg3 from "../assets/Images/homepage-projects/03JandJTrading.png";
-import Flowimg4 from "../assets/Images/homepage-projects/04sangumark.png";
-import Flowimg5 from "../assets/Images/homepage-projects/05Shazab.png";
+import Flowimg1 from "../assets/Images/homepage-projects/01DrAshokkumar.webp";
+import Flowimg2 from "../assets/Images/homepage-projects/02IaasAcademy.webp";
+import Flowimg3 from "../assets/Images/homepage-projects/03JandJTrading.webp";
+import Flowimg4 from "../assets/Images/homepage-projects/04sangumark.webp";
+import Flowimg5 from "../assets/Images/homepage-projects/05Shazab.webp";
 import Cards from "../Components/StackingCards/Cards";
 import React, { useEffect, useRef } from "react";
 import { useScroll } from "framer-motion";

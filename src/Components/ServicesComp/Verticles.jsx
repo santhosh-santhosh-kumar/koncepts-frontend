@@ -20,86 +20,92 @@ export const verticals = [
 ]
 
 
-const Verticles = ()=>{
-
-    return(
-        <div className="">
-            <div className="container">
-                <h1 className="text-center font-Heading pb-3 text-2xl font-bold text-darkblue ">Our Verticals</h1>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-5 ">
-
-                    {
-                        verticals.map((items,index)=>{
-                            
-                            return index < 4 ?  ( <div key={index} className={` flex flex-col justify-center items-center mt-10`}>
-                            <div className="border-dashed border-2 border-darkblue rounded-full p-4 w-fit relative">
-                                <div className="absolute -top-3 left-24 px-[7px] py-[5px] rounded-full flex shadow-md shadow-darkblue bg-white">
-                                    <p className="mx-auto my-auto text-darkblue font-bold text-xl">{`0${items.id}`}</p>
-                                </div>
-                                <div className="w-24 h-24 rounded-full"><img src={items.icon} alt="" /></div>
-                                <div className="absolute right-24 p-3 rounded-full bg-darkblue">
-                                </div>
-                            </div>
-                            <h3 className="text-xl mt-2 text-darkblue font-bold">{items.title}</h3>
-                            </div>) : (
-                                <div key={index} className={`flex md:hidden flex-col justify-center items-center mt-10`}>
-                                <div className="border-dashed border-2 border-darkblue rounded-full p-4 w-fit relative">
-                                    <div className="absolute -top-3 left-24 px-[7px] py-[5px] rounded-full flex shadow-md shadow-darkblue bg-white">
-                                        <p className="mx-auto my-auto text-darkblue font-bold text-xl">{`0${items.id}`}</p>
-                                    </div>
-                                    <div className="w-24 h-24 rounded-full"><img src={items.icon} alt="" /></div>
-                                    <div className="absolute right-24 p-3 rounded-full bg-darkblue">
-                                    </div>
-                                </div>
-                                <h3 className="text-xl mt-2 text-darkblue font-bold">{items.title}</h3>
-                                </div>
-                            )
-                        })
-                    }
+const Verticles = () => {
+    return (
+      <div className="">
+        <div className="container">
+          <h1 className="text-center font-Heading pb-3 text-2xl font-bold text-darkblue ">
+            Our Verticals
+          </h1>
+  
+          {/* First Row: 4 items */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
+            {verticals.slice(0, 4).map((item, index) => (
+              <div
+                key={index}
+                className="flex flex-col justify-center items-center mt-10"
+              >
+                <div className="border-dashed border-2 border-darkblue rounded-full p-4 md:p-5 w-fit relative">
+                  <div className="absolute -top-3 left-24 px-[7px] py-[5px] rounded-full flex shadow-md shadow-darkblue bg-white">
+                    <p className="mx-auto my-auto text-darkblue font-bold text-xl">
+                      {`0${item.id}`}
+                    </p>
+                  </div>
+                  <div className="w-20 md:w-24 h-20 md:h-24 rounded-full">
+                    <img className="w-full h-full object-contain" src={item.icon} alt={item.title} />
+                  </div>
+                  <p className="w-6 h-6 rounded-full left-2 bottom-1 bg-darkblue absolute"></p>
                 </div>
-                <div className="hidden md:grid grid-cols-2 md:grid-cols-3 gap-5 mt-10 px-20">
-
-                        {
-                            verticals.map((items,index)=>{
-                                
-                                return index >= 4 && index < 7 ?  ( <div key={index} className={` flex flex-col justify-center items-center`}>
-                                <div className="border-dashed border-2 border-darkblue rounded-full p-4 w-fit relative">
-                                    <div className="absolute -top-3 left-24 px-[7px] py-[5px] rounded-full flex shadow-md shadow-darkblue bg-white">
-                                        <p className="mx-auto my-auto text-darkblue font-bold text-xl">{`0${items.id}`}</p>
-                                    </div>
-                                    <div className="w-24 h-24 rounded-full"><img src={items.icon} alt="" /></div>
-                                    <div className="absolute right-24 p-3 rounded-full bg-darkblue">
-                                    </div>
-                                </div>
-                                <h3 className="text-xl mt-2 text-darkblue font-bold">{items.title}</h3>
-                                </div>) : ""
-                            })
-                        }
+                <h3 className="text-xl mt-2 text-darkblue font-bold">
+                  {item.title}
+                </h3>
+              </div>
+            ))}
+          </div>
+  
+          {/* Second Row: 3 items */}
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-5 mt-5 justify-center px-0 md:px-32">
+            {verticals.slice(4, 7).map((item, index) => (
+              <div
+                key={index}
+                className="flex flex-col justify-center items-center mt-3"
+              >
+                <div className="border-dashed border-2 border-darkblue rounded-full p-4 md:p-5 w-fit relative">
+                  <div className="absolute -top-3 left-24 px-[7px] py-[5px] rounded-full flex shadow-md shadow-darkblue bg-white">
+                    <p className="mx-auto my-auto text-darkblue font-bold text-xl">
+                      {`0${item.id}`}
+                    </p>
+                  </div>
+                  <div className="w-20 md:w-24 h-20 md:h-24 rounded-full">
+                    <img className="w-full h-full object-contain" src={item.icon} alt={item.title} />
+                  </div>
+                  <p className="w-6 h-6 rounded-full left-2 bottom-1 bg-darkblue absolute"></p>
                 </div>
-
-                <div className="hidden md:grid grid-cols-2 md:grid-cols-2 gap-5 mt-10 px-72">
-
-{
-    verticals.map((items,index)=>{
-        
-        return index > 6 ?  ( <div key={index} className={` flex flex-col justify-center items-center `}>
-        <div className="border-dashed border-2 border-darkblue rounded-full p-4 w-fit relative">
-            <div className="absolute -top-3 left-24 px-[7px] py-[5px] rounded-full flex shadow-md shadow-darkblue bg-white">
-                <p className="mx-auto my-auto text-darkblue font-bold text-xl">{`0${items.id}`}</p>
-            </div>
-            <div className="w-24 h-24 rounded-full"><img src={items.icon} alt="" /></div>
-            <div className="absolute right-24 p-3 rounded-full bg-darkblue">
-            </div>
+                <h3 className="text-xl mt-2 text-darkblue font-bold">
+                  {item.title}
+                </h3>
+              </div>
+            ))}
+          </div>
+  
+          {/* Third Row: 2 items */}
+          <div className="grid grid-cols-2 gap-5 mt-5 px-0 md:px-72">
+            {verticals.slice(7).map((item, index) => (
+              <div
+                key={index}
+                className="flex flex-col justify-center items-center mt-3"
+              >
+                <div className="border-dashed border-2 border-darkblue rounded-full p-3 md:p-5 w-fit relative">
+                  <div className="absolute -top-3 left-24 px-[7px] py-[5px] rounded-full flex shadow-md shadow-darkblue bg-white">
+                    <p className="mx-auto my-auto text-darkblue font-bold text-xl">
+                      {`0${item.id}`}
+                    </p>
+                  </div>
+                  <div className="w-20 md:w-24 h-20 md:h-24 rounded-full">
+                    <img className="w-full h-full object-contain" src={item.icon} alt={item.title} />
+                  </div>
+                  <p className="w-6 h-6 rounded-full left-2 bottom-1 bg-darkblue absolute"></p>
+                </div>
+                <h3 className="text-xl mt-2 text-darkblue font-bold">
+                  {item.title}
+                </h3>
+              </div>
+            ))}
+          </div>
         </div>
-        <h3 className="text-xl mt-2 text-darkblue font-bold">{items.title}</h3>
-        </div>) : ""
-    })
-}
-</div>
-                
-
-            </div>
-        </div>
-    )
-}
-export default Verticles; 
+      </div>
+    );
+  };
+  
+  export default Verticles;
+  

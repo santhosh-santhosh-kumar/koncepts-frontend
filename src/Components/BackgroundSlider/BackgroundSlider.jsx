@@ -1,6 +1,6 @@
-import banner_01 from "../../assets/Images/home/banner01.png";
-import banner_02 from "../../assets/Images/home/banner02.jpg";
-import banner_03 from "../../assets/Images/home/banner03.jpg";
+import banner_01 from "../../assets/Images/home/WebsiteBanner.webp";
+import banner_02 from "../../assets/Images/home/PosterBanner.webp";
+import banner_03 from "../../assets/Images/home/LogoBanner.webp";
 import {Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import 'swiper/css/pagination';

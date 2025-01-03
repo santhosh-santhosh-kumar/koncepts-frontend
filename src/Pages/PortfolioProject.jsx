@@ -1,11 +1,11 @@
 import { useLocation} from "react-router-dom";
 import { useEffect, useState } from "react";
 import Lenis from "lenis";
-import Flowimg1 from "../assets/Images/showcase/amjad.jpg";
-import Flowimg2 from "../assets/Images/showcase/jesus.jpg";
-import Flowimg5 from "../assets/Images/showcase/nextyours.jpg";
-import Flowimg3 from "../assets/Images/showcase/team16.jpg";
-import Flowimg4 from "../assets/Images/showcase/theoasispublicschool.jpg";
+import Flowimg1 from "../assets/Images/showcase/amjad.webp";
+import Flowimg2 from "../assets/Images/showcase/jesus.webp";
+import Flowimg5 from "../assets/Images/showcase/nextyours.webp";
+import Flowimg3 from "../assets/Images/showcase/team16.webp";
+import Flowimg4 from "../assets/Images/showcase/theoasispublicschool.webp";
 
 const PortfolioProject = ()=>{
     const location = useLocation();

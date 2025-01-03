@@ -1,8 +1,8 @@
 import { useNavigate } from "react-router-dom";
 import { Services } from "../Components/Navbar/ResponsiveNavbar";
-import design from "../assets/Images/footer/design.png";
-import mobilewithapp from "../assets/Images/footer/mobilewithapp.png";
-import phonewithglobe from "../assets/Images/footer/smartphonewithglobe.png";
+import design from "../assets/Images/footer/design.webp";
+import mobilewithapp from "../assets/Images/footer/mobilewithapp.webp";
+import phonewithglobe from "../assets/Images/footer/smartphonewithglobe.webp";
 import { FaRegCheckCircle } from "react-icons/fa";
 
 const CrossPlatformApp = ()=>{

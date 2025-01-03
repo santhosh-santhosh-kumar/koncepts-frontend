@@ -42,9 +42,9 @@ const WhatWeDo = ({
   return (
     <div
       ref={cardRef}
-      className={`sticky top-10 headj bg-white transition-all duration-500 ${getBlurClass()}`}
+      className={`sticky top-10 headj bg-white transition-all duration-500 ${getBlurClass()} -z-10`}
     >
-      <div className="flex flex-col-reverse md:flex-row items-start gap-x-6 px-20 container mt-36 p-5">
+      <div className="flex flex-col-reverse md:flex-row items-start gap-x-6 px-20 container mt-36 p-5 overflow-hidden">
         <div className="w-full md:w-6/12">
           {id !== 5 ? (
             <div className="flex items-center gap-3 font-ContentText">

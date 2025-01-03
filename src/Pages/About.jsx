@@ -5,13 +5,9 @@ import { AboutHero } from "../Components/Aboutcomp/AboutHero";
 import { FaLinkedinIn } from "react-icons/fa";
 import { SiInstagram } from "react-icons/si";
 import { ImWhatsapp } from "react-icons/im";
-import SridharNatrajanImg from "../assets/Images/Pillars/sridharnatarajan.jpg";
-import NareshImg from "../assets/Images/Pillars/naresh.jpg";
-import SanthoshImg from "../assets/Images/Pillars/santhosh.jpg";
-import SaravanaPrabuImg from "../assets/Images/Pillars/saravanan.jpg";
-import Aboutcardicon from "../assets/Images/about/aboutcardicon.png";
+import SridharNatrajanImg from "../assets/Images/Pillars/sridharnatarajan.webp";
 import MindsetCard from "../Components/Aboutcomp/Mindsetcards";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import WorldClients from "../Components/Aboutcomp/Worldclients";
 import ClientsCard from "../Components/Aboutcomp/Clientscard";
 import { verticals } from "../Components/ServicesComp/Verticles";
@@ -20,19 +16,19 @@ import { MdStar } from "react-icons/md";
 import CustomerReview from "../Components/Aboutcomp/CustomerReview";
 import StarRating from "../Components/Aboutcomp/StarRating";
 import Counter from "../Components/Aboutcomp/RunningNumbers";
-import IAAS from "../assets/Images/about/iaas.png";
-import sangumark from "../assets/Images/about/sangumak.png";
-import maxima from "../assets/Images/about/maxima.png";
-import infinityPotential from "../assets/Images/about/infinitePotential.png";
-import soulfullSpace from "../assets/Images/about/soulful.png";
-import PSCS from "../assets/Images/about/pscs-1.png";
-import jathi from "../assets/Images/about/jathi.png";
-import appDocker from "../assets/Images/about/appDocker.png";
-import TAAS from "../assets/Images/about/taas.png";
-import shazab from "../assets/Images/about/shazab-1.png";
-import whichcourse from "../assets/Images/about/which.png";
-import luckygame from "../assets/Images/about/lucky8games.png";
-import { GoArrowRight } from "react-icons/go";;
+import IAAS from "../assets/Images/about/IAASAcademy.webp";
+import sangumark from "../assets/Images/about/sangumak.webp";
+import maxima from "../assets/Images/about/Maxima.webp";
+import infinityPotential from "../assets/Images/about/infinitePotential.webp";
+import soulfullSpace from "../assets/Images/about/SoulfulSpaces.webp";
+import PSCS from "../assets/Images/about/pscs.webp";
+import jathi from "../assets/Images/about/JathiShruthi.webp";
+import appDocker from "../assets/Images/about/appDocker.webp";
+import TAAS from "../assets/Images/about/TechAsAService.webp";
+import shazab from "../assets/Images/about/shazab.webp";
+import whichcourse from "../assets/Images/about/WhichCourse.webp";
+import luckygame from "../assets/Images/about/lucky8games.webp";
+import { GoArrowRight } from "react-icons/go";
 import Uxdesign from "../assets/animated-icons/about/ux-design.gif";
 import brand from "../assets/animated-icons/about/globe-earth.gif";
 import html from "../assets/animated-icons/about/html.gif";
@@ -40,18 +36,19 @@ import chart from "../assets/animated-icons/about/line-chart.gif";
 import responsive from "../assets/animated-icons/about/responsive.gif";
 import camera from "../assets/animated-icons/about/camera.gif";
 import witness from "../assets/animated-icons/about/witness.gif";
-import travel1 from "../assets/Images/Business Domains/Travel.jpg";
-import travel2 from "../assets/Images/Business Domains/E-commerce.jpg";
-import travel3 from "../assets/Images/Business Domains/Hospitality.jpg";
-import travel4 from "../assets/Images/Business Domains/Real-Estate.jpg";
-import travel5 from "../assets/Images/Business Domains/Retail.jpg";
-import travel6 from "../assets/Images/Business Domains/Automotive.jpg";
-import travel7 from "../assets/Images/Business Domains/Health-Care.jpg";
-import travel8 from "../assets/Images/Business Domains/Education.jpg";
-import travel9 from "../assets/Images/Business Domains/events.jpg";
+import travel1 from "../assets/Images/Business Domains/Travel.webp";
+import travel2 from "../assets/Images/Business Domains/E-commerce.webp";
+import travel3 from "../assets/Images/Business Domains/Hospitality.webp";
+import travel4 from "../assets/Images/Business Domains/Real-Estate.webp";
+import travel5 from "../assets/Images/Business Domains/Retail.webp";
+import travel6 from "../assets/Images/Business Domains/Automotive.webp";
+import travel7 from "../assets/Images/Business Domains/Health-Care.webp";
+import travel8 from "../assets/Images/Business Domains/Education.webp";
+import travel9 from "../assets/Images/Business Domains/events.webp";
 
 
 const About = () => {
+  const navgate = useNavigate();
   let content1="We bring your travel vision to life with cutting-edge web development solutions designed to engage, inspire, and convert visitors into loyal customers.";
   let content2="From user-friendly booking systems to stunning designs, we build travel websites that deliver.";
   let content3="From user-friendly booking systems to stunning designs, we build travel websites that deliver."
@@ -160,7 +157,6 @@ const handleChangeColor=(id)=>{
       title: "Founder, UX/UI LEAD",
       exp: 15,
       profession: "design",
-      icon: Aboutcardicon,
       about1:
         "Founder and lead designer at UXIS, specializes in deep UX/UI design for complex product interfaces. Achieving an 88% success rate in planned KPIs after redesigns.",
       about2:
@@ -236,22 +232,22 @@ const handleChangeColor=(id)=>{
   };
   const Clientslogo = {
     part1: [
-      { id: 1, logo: IAAS },
-      { id: 2, logo: PSCS },
-      { id: 3, logo: shazab },
-      { id: 4, logo: infinityPotential },
+      { id: 1, logo: IAAS, link:"https://iaasacademy.com/" },
+      { id: 2, logo: PSCS, link:"https://pscs.in/" },
+      { id: 3, logo: shazab, link:"https://shazab.in/" },
+      { id: 4, logo: infinityPotential, link:"https://www.infinitepotentials.in/" },
     ],
     part2: [
-      { id: 5, logo: soulfullSpace },
-      { id: 6, logo: sangumark },
-      { id: 7, logo: jathi },
-      { id: 8, logo: appDocker },
+      { id: 5, logo: soulfullSpace, link:"" },
+      { id: 6, logo: sangumark, link:"https://www.sangumark.in/" },
+      { id: 7, logo: jathi, link:"" },
+      { id: 8, logo: appDocker, link:"https://appsdocker.com/" },
     ],
     part3: [
-      { id: 9, logo: TAAS },
-      { id: 10, logo: maxima },
-      { id: 11, logo: whichcourse },
-      { id: 12, logo: luckygame },
+      { id: 9, logo: TAAS, link:"https://techasasrvc.com/" },
+      { id: 10, logo: maxima, link:"https://www.maximaautomation.co.in" },
+      { id: 11, logo: whichcourse, link:"" },
+      { id: 12, logo: luckygame, link:"" },
     ],
   };
 
@@ -306,7 +302,7 @@ const handleChangeColor=(id)=>{
       {/* hero section */}
       <AboutHero />
       {/* Exp card */}
-      <div id="team" className="grid grid-cols-1 md:grid-cols-2">
+      <div id="team" className="grid grid-cols-1 md:grid-cols-2 border-t border-b border-gray-200">
         {ExperienceCard.map((items, index) => {
           return (
             <>
@@ -374,7 +370,7 @@ const handleChangeColor=(id)=>{
           <div className="flex flex-col md:flex-row gap-3 mt-10 items-center">
             <Link
               to={"/services"}
-              className="w-fit text-darkblue border-4 border-dashed bg-white no-underline rounded-lg p-3 flex items-center gap-3 hover:rounded-tr-3xl hover:rounded-bl-3xl transition-all duration-700"
+              className="w-fit text-darkblue border-2 border-gray-400 border-dashed bg-white no-underline px-5 py-3 flex items-center gap-3 hover:rounded-br-lg rounded-md hover:rounded-tl-lg hover:rounded-tr-3xl hover:rounded-bl-3xl transition-all duration-700"
             >
               <span className="font-ContentText font-semibold">
                 Explore Our Services
@@ -383,7 +379,7 @@ const handleChangeColor=(id)=>{
             </Link>
             <Link
               to={"/portfolio"}
-              className=" bg-darkblue text-white w-fit no-underline rounded-lg p-3 flex items-center gap-3 hover:rounded-tr-3xl hover:rounded-bl-3xl transition-all duration-700"
+              className=" bg-darkblue text-white w-fit no-underline px-5 py-3 flex items-center gap-3 hover:rounded-br-lg hover:rounded-tl-lg hover:rounded-tr-3xl rounded-md hover:rounded-bl-3xl transition-all duration-700"
             >
               <span className="font-ContentText font-semibold">
                 Explore Our Portfolio
@@ -402,10 +398,10 @@ const handleChangeColor=(id)=>{
             Our Clients
           </h3>
           <h1 className="font-Heading text-6xl font-bold pt-2">Some Of Them</h1>
-          <p className="font-medium text-[15px] pt-2">
+          <p className="font-medium text-[15px] pt-2 w-full lg:w-5/6">
             We are working with a diverse range of clients, spanning from
-            globally renowned entities with <span className='block mt-1'>millions of users to innovative
-            startups seeking for MVP design solutions.</span>
+            globally renowned entities with millions of users to innovative
+            startups seeking for MVP design solutions.
           </p>
         </div>
         <div className="w-full md:w-1/2">
@@ -434,48 +430,47 @@ const handleChangeColor=(id)=>{
         </div>
       </div>
 
-      <div className="container w-full md:w-full py-20">
-            <div>
-          <h1>Business Domains</h1>
-          <p className="mt-6 font-semibold text-xl capitalize">
-            We boast extensive experience with products and projects across
-            various business niches, including
-          </p>
+      <div className="w-full md:w-full pt-10 px-5">
+          <div>
+            <h1 className='font-Heading text-3xl md:text-6xl font-bold'>Business Domains</h1>
+            <p className="font-medium text-[15px] pt-2">
+              We boast extensive experience with products and projects across
+              various business niches, including
+            </p>
           </div>
-          <div className="lg:flex md:flex w-full lg:py-20 md:py-20 lg:px-10 md:px-10">
-          <div className="grid grid-cols-2 lg:block md:block w-full lg:w-2/12 lg:p-0 p-2">
-            {" "}
-            {verticals.map(({ title,id }, index) => {
-              return (
-                <span
-                
-                  onMouseEnter={() => handleMouseEnter(id)}
-                  onClick={()=>handleChangeColor(id)}
-                  key={index}
-                  className={`${index==color?"bg-darkblue text-white":""} border-1 w-40 lg:mr-2 mb-2 border-black lg:px-4  py-2 px-4  rounded-lg font-bold text-[14px] text-center tracking-widest block uppercase hover:bg-darkblue hover:text-white`}
-                >
-                  {title}
-                </span>
-              );
-            })}
+          <div className='flex items-start py-10'>
+          <div className="w-2/3 lg:flex md:flex">
+            <div className="w-1/3 lg:p-0 p-2">
+              {" "}
+              {verticals.map(({ title,id }, index) => {
+                return (
+                  <span
+                  
+                    onMouseEnter={() => handleMouseEnter(id)}
+                    onClick={()=>handleChangeColor(id)}
+                    key={index}
+                    className={`${index==color?"bg-darkblue text-white":""} border-1 w-40 lg:mr-2 mb-2 border-black lg:px-4  py-2 px-4  rounded-lg font-bold text-[14px] text-center tracking-widest block uppercase hover:bg-yellow-400 hover:text-white`}
+                  >
+                    {title}
+                  </span>
+                );
+              })}
+            </div>
+            <div className="w-2/3">
+                <h2>{domains["title"]}</h2>
+                <div className="w-full">
+                <p className="font-semibold pb-2">{text1}</p>
+                <p className="font-semibold pb-2">{text2}</p>
+                <p className="font-semibold">{text3}</p>
+                </div>
+            </div>
           </div>
-          <div className=" md:w-3/12 lg:w-3/12 pl-5">
-              <h2>{domains["title"]}</h2>
-              <div className="mt-4  w-full">
-              <p className="font-semibold pb-2">{text1}</p>
-              <p className="font-semibold pb-2">{text2}</p>
-              <p className="font-semibold">{text3}</p>
+          <div className="w-1/3 lg:pl-10 md:pl-10 flex items-center justify-center object-cover  md:w-7/12 lg:w-7/12">
+              <div className="w-full border" >
+                <img src={image} alt="" />
               </div>
           </div>
-          <div className=" lg:pl-10 md:pl-10 flex items-center w-full justify-center object-cover  md:w-7/12 lg:w-7/12">
-            <div className="w-full border" >
-              <img src={image} alt="" />
-            </div>
-            
           </div>
-          </div>
-        
-        
       </div>
       {/* what clients says */}
       <div className="w-full md:flex border">

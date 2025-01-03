@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { Services } from "../Components/Navbar/ResponsiveNavbar";
-import TypesofApp from "../assets/Images/footer/typesofapp.png";
+import TypesofApp from "../assets/Images/footer/typesofapp.webp";
 const NativeMobileApp = ()=>{
     const navigate = useNavigate();
     const moveServicePage = (to)=>{
