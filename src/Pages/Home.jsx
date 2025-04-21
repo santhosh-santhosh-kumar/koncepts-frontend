@@ -94,8 +94,8 @@ const Home = () => {
           <DesignPreviewSlider />
         </div>
 
-        <PriceDetails />
-        <div className="pb-20">
+        {/* <PriceDetails /> */}
+        <div className="py-20">
           <Verticles />
         </div>
         <div className="container">

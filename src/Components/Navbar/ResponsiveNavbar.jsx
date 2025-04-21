@@ -1,8 +1,8 @@
 import { useContext, useEffect, useState } from "react";
 import { MenuStateContext } from "../Usecontext/UseContext";
 import { TfiClose } from "react-icons/tfi";
-import FacIconLogo from "../../assets/Images/Fav-icon-Logo-TejusDigi.webp";
-import Logo from "../../assets/Images/Logo-TejusDigi.webp";
+import FacIconLogo from "../../assets/Images/Fav-icon-Logo-TejusDigi.png";
+import Logo from "../../assets/Images/Logo-TejusDigi.svg";
 import { navlinks } from "./Navbar";
 import { Link, useNavigate } from "react-router-dom";
 import { FaFacebook } from "react-icons/fa";
@@ -14,38 +14,41 @@ import { FaYoutube } from "react-icons/fa";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 
 
+
 export const Services = [
     {id:1,service:"Web Development",to:"/web_development"},
-    {id:1,service:"Mobile App Development",to:"/mobile_app_development"},
-    {id:2,service:"Native Apps",to:"/native_apps"},
-    {id:2,service:"Cross Platform Application",to:"/cross_platform_application"},
-    {id:2,service:"Mobile App Conversion",to:"/mobile_app_conversion"},
-    {id:2,service:"Mobile App Re-Engineering",to:"/mobile_app_re_engineering"},
-    {id:1,service:"E-Commerce Development",to:"/e_commerce_development"},
-    {id:1,service:"App.Integration/ Web Service",to:"/app.integration_webServices"},
-    {id:1,service:"Requirement Engineering",to:"/requirement_engineering"},
+    {id:2,service:"Mobile App Development",to:"/mobile_app_development",sublinks:[
+        {id:1,service:"Native Apps",to:"/native_apps"},
+        {id:2,service:"Cross Platform Application",to:"/cross_platform_application"},
+        {id:3,service:"Mobile App Conversion",to:"/mobile_app_conversion"},
+        {id:4,service:"Mobile App Re-Engineering",to:"/mobile_app_re_engineering"},
+    ]},
+    {id:3,service:"E-Commerce Development",to:"/e_commerce_development"},
+    {id:4,service:"App.Integration/ Web Service",to:"/app.integration_webServices"},
+    {id:5,service:"Requirement Engineering",to:"/requirement_engineering"},
+    {id:6,service:"Dedicated Hiring",to:"/dedicated_hiring"},
+    {id:7,service:"Digital Marketing",sublinks:[
+        {id:1,service:"Search Engine Optimization",to:"/seo"},
+        {id:2,service:"Social Media Marketing",to:"/social_media_marketing"},
+        {id:3,service:"Search Engine Marketing",to:"/search_engine_marketing"},
+        {id:4,service:"Content Marketing",to:"/content_marketing"},
+    ]},
+    {id:8,service:"UI / UX Design",to:"/uiux"},
+    {id:9,service:"Brand Identity",to:"/brand_identity"},
 ]
 
 export const hiringing = [
-    {id:1,openning:"Dedicated Hiring"},
-    {id:1,openning:"Digital Marketing"},
-    {id:2,openning:"Search Engine Optimization"},
-    {id:2,openning:"Social Media Marketing"},
-    {id:2,openning:"Search Engine Marketing"},
-    {id:2,openning:"Content Marketing"},
-    {id:1,openning:"UI / UX Design"},
-    {id:1,openning:"Brand Identity"},
+
 ]
 
 export const technologies = [
-    {id:1,tech:"PHP"},
-    {id:1,tech:"DOT NET DEVELOPMENT"},
-    {id:1,tech:"ANGULAR JS"},
-    {id:1,tech:"HTML5"},
-    {id:1,tech:"iOS"},
-    {id:1,tech:"ANDROID"},
-    {id:1,tech:"UI / UX Design"},
-    {id:1,tech:"REACT NATIVE"},
+    {id:1,tech:"PHP",to:"/php"},
+    {id:2,tech:"DOT NET DEVELOPMENT",to:"/dot_net"},
+    {id:3,tech:"ANGULAR JS",to:"angular_js"},
+    {id:4,tech:"HTML5",to:"/html5"},
+    {id:5,tech:"iOS",to:"/ios"},
+    {id:6,tech:"ANDROID",to:"/android"},
+    {id:7,tech:"REACT NATIVE",to:"/react_native"},
 ]
 
 export const SocialMedia = [
@@ -65,19 +68,16 @@ const ResponsiveNavbar = ()=>{
     const claculator = window.innerWidth > 760
 
     const [serviceopen,setserviceopen] = useState(false);
-    const [hiringopen,sethiringopen] = useState(false);
     const [techopen,settechopen] = useState(false);
    
     useEffect(()=>{
         if(window.innerWidth > 760){
             settechopen(true)
             setserviceopen(true)
-            sethiringopen(true)
         }
         else{
             settechopen(false)
             setserviceopen(false)
-            sethiringopen(false)
         }
     },[claculator])
 
@@ -89,7 +89,7 @@ const ResponsiveNavbar = ()=>{
             <div className="bg-darkblue py-2 fixed right-0 left-0 text-darkblue overflow-hidden">
                 <div className="container">
                 <div className="flex items-center justify-between w-full">
-                    <div className="bg-white rounded-full p-2 w-24">
+                    <div className="w-24">
                         <Link to={'/'} onClick={()=>{SetMenuState(false);window.scrollTo(0,0)}}>
                             <img src={FacIconLogo} alt="" />
                         </Link>
@@ -112,29 +112,44 @@ const ResponsiveNavbar = ()=>{
                     }
                 </ul>
                 </div>
-                <div className="w-full md:w-1/4 overflow-hidden mt-2">
+                <div className="w-full md:w-2/4 overflow-hidden mt-2">
                     <div onClick={()=>setserviceopen(!serviceopen)} className="flex overflow-hidden cursor-pointer">
                         <h3 className="text-xl text-darkblue font-semibold font-ContentText uppercase">Services</h3>
                         <p className="block md:hidden"><MdOutlineKeyboardArrowDown size={30} color="black"/></p>
                     </div>
-                    <div className={`${serviceopen ?"opacity-100 h-auto" :"opacity-0 h-0 overflow-hidden"} border-black transition-all duration-700`}>
-                        {Services.map((items,index)=>(
-                            <li onClick={()=>{navigate(items.to);window.scrollTo(0,0);SetMenuState(false)}} key={index} className={`${items.id === 2 ? "list-disc text-sm py-1" : "list-none py-2"} cursor-pointer`}>{items.service}</li>
-                        ))}
+                    <div className="flex flex-col gap-0 md:gap-10 md:flex-row">
+                    <div className={`${serviceopen ? "opacity-100 h-auto" : "opacity-0 h-0 overflow-hidden"} border-black transition-all duration-700`}>
+                        {Services.slice(0,5).map((items, index) => {
+                            return (
+                                <div key={index}>
+                                    <li onClick={()=>{items.to && navigate(items.to);window.scrollTo(0,0);SetMenuState(false)}} className={`${items.to ? "cursor-pointer" : "cursor-default"} list-none py-2`}>
+                                        {items.service}
+                                    </li>
+                                    {items.sublinks?.map((sublink, subIndex) => (
+                                        <li onClick={()=>{navigate(items.to);window.scrollTo(0,0);SetMenuState(false)}} key={`${index}-${subIndex}`} className="text-sm pl-5 py-1 cursor-pointer">{sublink.service}</li>
+                                    ))}
+                                </div>
+                            );
+                        })}
                     </div>
-                </div>
-                <div className="w-full md:w-1/4 overflow-hidden mt-2">
-                    <div onClick={()=>sethiringopen(!hiringopen)} className="flex overflow-hidden cursor-pointer">
-                    <h3 className="text-xl invisible">.</h3>
-                    <p className="block md:hidden"><MdOutlineKeyboardArrowDown size={30} color="black"/></p>
+                    <div className={`${serviceopen ? "opacity-100 h-auto" : "opacity-0 h-0 overflow-hidden"} border-black transition-all duration-700`}>
+                        {Services.slice(5).map((items, index) => {
+                            return (
+                                <div key={index}>
+                                    <li onClick={()=>{navigate(items.to);window.scrollTo(0,0);SetMenuState(false)}} className={`${items.to ? "cursor-pointer" : "cursor-default"} list-none py-2`}>
+                                        {items.service}
+                                    </li>
+                                    {items.sublinks?.map((sublink, subIndex) => (
+                                        <li onClick={()=>{navigate(items.to);window.scrollTo(0,0);SetMenuState(false)}} key={`${index}-${subIndex}`} className="text-sm pl-5 py-1 cursor-pointer">{sublink.service}</li>
+                                    ))}
+                                </div>
+                            );
+                        })}
                     </div>
-                    <div className={`${hiringopen ?"opacity-100 h-auto":"h-0 opacity-0 overflow-hidden"} transition-all duration-700`}>
-                        {hiringing.map((items,index)=>(
-                            <li key={index} className={`${items.id === 2 ? "list-disc text-sm py-1" : "list-none py-2"}`}>{items.openning}</li>
-                        ))}
-                    </div>
-                </div>
 
+                    </div>
+                </div>
+                
                 <div className="w-full md:w-1/4 overflow-hidden mt-2">
                     <div onClick={()=>settechopen(!techopen)} className="flex overflow-hidden cursor-pointer">
                     <h3 className="text-xl text-darkblue font-semibold font-ContentText uppercase">Technologies</h3>
@@ -142,7 +157,7 @@ const ResponsiveNavbar = ()=>{
                     </div>
                     <div className={`${techopen ?"opacity-100 h-auto" :"opacity-0 h-0 overflow-hidden"} border-black transition-all duration-700`}>
                         {technologies.map((items,index)=>(
-                            <li onClick={()=>{navigate(items.to);window.scrollTo(0,0);SetMenuState(false)}} key={index} className={`${items.id === 2 ? "list-disc text-sm py-1" : "list-none py-2"} cursor-pointer`}>{items.tech}</li>
+                            <li onClick={()=>{navigate(items.to);window.scrollTo(0,0);SetMenuState(false)}} key={index} className={` list-none py-2 cursor-pointer`}>{items.tech}</li>
                         ))}
                     </div>
                 </div>

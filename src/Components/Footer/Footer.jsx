@@ -8,7 +8,7 @@ import { TiSocialInstagramCircular } from "react-icons/ti";
 import { FaLinkedin } from "react-icons/fa";
 import { FaPinterest } from "react-icons/fa6";
 import { FaYoutube } from "react-icons/fa";
-import Logo from "../../assets/Images/footer/Logo-TejusDigi.webp";
+import Logo from "../../assets/Images/Logo-TejusDigi.svg";
 
 
 const Footer = ()=>{
@@ -43,22 +43,71 @@ const Footer = ()=>{
                         </ul>
                         </div>
                         
-                        <ul className="w-1/2 md:w-1/4 pl-0">
+                        <ul className="w-1/2 md:w-2/4 pl-0">
                             <p className="text-darkblue font-bold text-xl">Services</p>
-                            {Services.map((items,index)=>(
-                                <li onClick={()=>{moveServicesPages(items.to);window.scrollTo(0,0)}} key={index} className={`${items.id === 2 ? "list-disc text-sm py-1 ml-7":"list-none py-2"} cursor-pointer`}>{items.service}</li>
-                            ))}
-                        </ul>
-                        <ul className="w-1/2 md:w-1/4 pl-0">
-                        <p className="text-white">.</p>
-                            {hiringing.map((items,index)=>(
-                                <li key={index} onClick={()=>{window.scrollTo(0,0)}} className={`${items.id === 2 ? "list-disc text-sm py-1 ml-7":"list-none py-2"} cursor-pointer`}>{items.openning}</li>
-                            ))}
+                            <div className="flex flex-col md:flex-row">
+                                {/* First Section: Services 0 to 4 */}
+                            <div className="flex-1">
+                                {Services.slice(0, 5).map((items, index) => (
+                                    <div key={index} className="">
+                                        <li
+                                            onClick={() => {
+                                                navigate(items.to);
+                                                window.scrollTo(0, 0);
+                                            }}
+                                            className={`${items.to ? "cursor-pointer" : "cursor-default"} list-none py-2`}
+                                        >
+                                            {items.service}
+                                        </li>
+                                        {items.sublinks?.map((sublink, subIndex) => (
+                                            <li
+                                                key={`${index}-${subIndex}`}
+                                                onClick={() => {
+                                                    navigate(sublink.to);
+                                                    window.scrollTo(0, 0);
+                                                }}
+                                                className="text-sm ml-10 py-1 cursor-pointer list-disc text-gray-600"
+                                            >
+                                                {sublink.service}
+                                            </li>
+                                        ))}
+                                    </div>
+                                ))}
+                            </div>
+                            {/* Second Section: Services 5 and beyond */}
+                            <div className="flex-1">
+                                {Services.slice(5).map((items, index) => (
+                                    <div key={index} className="">
+                                        <li
+                                            onClick={() => {
+                                                navigate(items.to);
+                                                window.scrollTo(0, 0);
+                                            }}
+                                            className={`${items.to ? "cursor-pointer" : "cursor-default"} list-none py-2`}
+                                        >
+                                            {items.service}
+                                        </li>
+                                        {items.sublinks?.map((sublink, subIndex) => (
+                                            <li
+                                                key={`${index}-${subIndex}`}
+                                                onClick={() => {
+                                                    navigate(sublink.to);
+                                                    window.scrollTo(0, 0);
+                                                }}
+                                                className="text-sm ml-10 py-1 cursor-pointer list-disc text-gray-600"
+                                            >
+                                                {sublink.service}
+                                            </li>
+                                        ))}
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
                         </ul>
                         <ul className="w-1/2 md:w-1/4 pl-0">
                             <p className="text-darkblue font-bold text-xl">Technologies</p>
                             {technologies.map((items,index)=>(
-                                <li key={index} className={`${items.id === 2 ? "list-disc text-sm py-1":"list-none py-2"}`}>{items.tech}</li>
+                                <li onClick={()=>{navigate(items.to);window.scrollTo(0,0)}} key={index} className={`list-none py-2 cursor-pointer`}>{items.tech}</li>
                             ))}
                         </ul>
                     </div>
@@ -80,8 +129,7 @@ const Footer = ()=>{
                             {SocialMedia.map((items,index)=>(
                                 <p key={index} title={items.title} className="bg-darkblue hover:bg-yellow-400 text-white hover:scale-125 rounded-full p-1 transition-all duration-700 cursor-pointer">{items.platform}</p>
                             ))}
-                        </div>
-
+                    </div>
                 </div>
                 <div className="w-full md:w-auto flex flex-col">
                     <div>

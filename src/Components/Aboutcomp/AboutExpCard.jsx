@@ -127,11 +127,12 @@ const AboutExpCard = ({
                     {about1}
                   </p>
                   <p className="font-medium text-[15px] w-full ">{about2}</p>
-                  <p className="font-medium text-[15px]">Porficient in:</p>
+                 
                 </div>
             </div>
         </div> 
         <div className="w-full md:w-10/12 mt-5">
+        <p className="font-ContentText text-gray-800 text-[15px]">Porficient in:</p>
               {proficient.map((items, index) => (
                 <span
                   className="text-gray-600 border-1 mr-2 mb-2 border-gray-400 px-3 py-1 rounded-full font-bold text-[11px] inline-block uppercase"

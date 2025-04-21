@@ -145,3 +145,41 @@
 .bullet-hero-review{
     @apply bg-darkblue
 }
+
+
+.custom-pagination-item {
+    @apply transition-all duration-700 ease-in-out;
+}
+
+.ios-pagination-active {
+    @apply bg-darkblue text-white font-Heading rounded-md rounded-tr-3xl rounded-tl-lg rounded-bl-3xl rounded-br-lg;
+}
+
+.ios-pagination {
+    @apply bg-gray-200 text-gray-600;
+}
+
+/* Width and background of scrollbar track */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track (background behind the scrollbar) */
+  ::-webkit-scrollbar-track {
+    background: #0a2b6d;
+    border-radius: 10px;
+  }
+  
+  /* Scrollbar handle */
+  ::-webkit-scrollbar-thumb {
+    background: #f8d100;
+    border-radius: 10px;
+  }
+  
+  /* Scrollbar handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #f8d470;
+  }
+  
+
+

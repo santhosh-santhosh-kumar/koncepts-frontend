@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import TejusDigiLogo from "../../assets/Images/Logo-TejusDigi.webp";
+import TejusDigiLogo from "../../assets/Images/Logo-TejusDigi.svg";
 import {NavLink, useNavigate} from "react-router-dom";
 import { CgMenuRight } from "react-icons/cg";
 import { MenuStateContext } from "../Usecontext/UseContext";

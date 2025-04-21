@@ -9,10 +9,9 @@ import { FaLinkedinIn } from "react-icons/fa";
 import { SiInstagram } from "react-icons/si";
 import { ImWhatsapp } from "react-icons/im";
 import SaravanaPrabuImg from "../../assets/Images/Pillars/saravanan.webp";
-import NareshImg from "../../assets/Images/Pillars/naresh.webp";
-import SanthoshImg from "../../assets/Images/Pillars/santhosh.webp";
+import NareshImg from "../../assets/Images/Pillars/naresh.jpg";
+import SanthoshImg from "../../assets/Images/Pillars/santhosh.jpg";
 import Muthuvel from "../../assets/Images/Pillars/muthuvel.webp";
-import React from "react";
 
     const EmployeeCard = ()=>{
       const employeeCard = [
@@ -20,9 +19,9 @@ import React from "react";
           id: 1,
           ProfilePic: SaravanaPrabuImg,
           Name: "Saravana Prabu",
-          title: "Designer",
-          exp: 6,
-          profession: "design",
+          title: "CEO",
+          exp: 1,
+          profession: "D & D",
           about1: "As the CEO of a dynamic design and development company, I thrive on turning ideas into impactful realities. At the heart of my leadership is a commitment to blending creativity with precision, ensuring every project not only meets but exceeds expectations. Whether you are building a brand from the ground up or elevating your existing identity, my team and I are here to deliver excellence.",
           about2:"Let’s design the future, together" ,
           proficient: ["Digital Marketing","finance", "telecommunication", "Brand Identity", "Business Strategy", "Designing", "SEO"],
@@ -73,7 +72,7 @@ import React from "react";
           profession: "design",
           about1: "A creative full-stack developer who thrives on pushing the boundaries of web development. Whether it’s building dynamic front-end experiences or optimizing back-end systems, I love blending innovation with functionality to create applications that stand out.",
           about2: 'With a keen eye for detail and a user-first approach, I excel in creating intuitive interfaces that enhance experiences and drive results.',
-          proficient: ['photoshop', 'illustrator', 'video editing', 'data analyist', 'UI/UX design'],
+          proficient: ['photoshop', 'illustrator', 'design', 'video editing', 'data analyist', 'UI/UX design'],
           socialmedia: [
             {icon:<FaLinkedinIn />,link:""},
             {icon:<SiInstagram />,link:""},
@@ -129,11 +128,11 @@ import React from "react";
                           {about1}
                         </p>
                         <p className="font-medium text-[15px] w-full ">{about2}</p>
-                        <p className="font-medium text-[15px]">Porficient in:</p>
                       </div>
                   </div>
         </div>
         <div className="w-10/12 mt-5">
+        <p className="font-ContentText text-gray-600 text-[15px]">Porficient in:</p>
               {proficient.map((items, index) => (
                 <span
                   className="border-1 mr-2 mb-2 border-gray-600 px-3 py-1 rounded-full font-bold text-[11px] inline-block uppercase text-gray-600"
